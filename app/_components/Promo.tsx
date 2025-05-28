@@ -6,7 +6,7 @@ import PromoCard from "./PromoCard";
 export default function Promo() {
   return (
     <Container className="w-full">
-      <div className="flex flex-wrap xl:flex-nowrap gap-4 justify-center">
+      <div className="flex flex-wrap xl:flex-nowrap gap-5 justify-center">
         <PromoCard className="bg-[url(/images/d083e80aa046a9748c7ca231c7b13ed20430b4b9.png)] bg-cover">
           <div
             className="absolute inset-0 bg-[#1E3A8A] opacity-[92%]"

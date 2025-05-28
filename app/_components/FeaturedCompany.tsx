@@ -14,7 +14,7 @@ export default function FeaturedCompany({
   return (
     <Card shadow="sm" className="p-10">
       <CardHeader>
-        <div className="flex w-full justify-between gap-4">
+        <div className="flex w-full justify-between gap-5">
           <h3 className="font-semibold text-2xl">{company.name}</h3>
           <div className="flex items-center gap-1">
             <svg

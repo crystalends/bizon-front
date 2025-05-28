@@ -1,20 +1,31 @@
 import TCategory from "@/app/_types/Category";
 import { Card, CardBody } from "@heroui/card";
 import { Image } from "@heroui/image";
+import Link from "next/link";
 
-type TCategoryProps = {
+type TCategoryPreviewProps = {
   category: TCategory;
 };
 
-export default function Category({
-  category: { name, image },
-}: TCategoryProps) {
+export default function CategoryPreview({
+  category: { id, name, image },
+}: TCategoryPreviewProps) {
   return (
-    <Card shadow="none" isPressable className="hover:bg-gray-50">
+    <Card
+      shadow="none"
+      as={Link}
+      href={`/companies/${id}`}
+      isPressable
+      className="hover:bg-gray-50"
+    >
       <CardBody className="py-3 px-5">
         <div className="flex items-center gap-5 justify-between">
           <div className="flex items-center gap-2">
-            <Image src={image} width={22} height={22} alt={name} />
+            {image ? (
+              <Image src={image} width={22} height={22} alt={name} />
+            ) : (
+              <div className="w-[22px] h-[22px]" />
+            )}
             <h3 className="font-semibold text-xl">{name}</h3>
           </div>
           <svg

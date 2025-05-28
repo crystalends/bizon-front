@@ -12,7 +12,7 @@ export default function PopularCategory({ category }: TPopularCategory) {
     <Card
       isPressable
       as={Link}
-      href={`/categories/${category.id}`}
+      href={`/companies/${category.id}`}
       shadow="none"
       className="bg-gray-50"
     >
