@@ -5,6 +5,9 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@heroui/navbar";
 import Logo from "./Logo";
 import { VariantProps } from "@heroui/theme";
@@ -13,18 +16,69 @@ import Button from "./ui/Button";
 import { Divider } from "@heroui/divider";
 
 export default function Navbar() {
-  const links: VariantProps<typeof Link>[] = [
+  const navbarItems: VariantProps<typeof NavbarItem>[] = [
     {
-      children: "Компании",
-      href: "/companies",
+      key: 1,
+      children: <Link href="/companies">Компании</Link>,
     },
     {
-      children: "Поиск партнера",
-      href: "/partners",
+      key: 2,
+      children: <Link href="/partners">Поиск партнера</Link>,
     },
     {
-      children: "Центр помощи",
-      href: "/help",
+      key: 3,
+      children: <Link href="/help">Центр помощи</Link>,
+    },
+    {
+      key: 4,
+      children: (
+        <div className="h-12 flex items-center">
+          <Divider orientation="vertical" />
+        </div>
+      ),
+    },
+    {
+      key: 5,
+      children: (
+        <Link className="text-xl" href="/login">
+          Войти
+        </Link>
+      ),
+    },
+    {
+      key: 6,
+      children: (
+        <Button as={Link} href="/register">
+          Зарегистрироваться
+        </Button>
+      ),
+    },
+  ];
+
+  const navbarMenuItems: VariantProps<typeof NavbarMenuItem>[] = [
+    {
+      key: 1,
+      children: <Link href="/companies">Компании</Link>,
+    },
+    {
+      key: 2,
+      children: <Link href="/partners">Поиск партнера</Link>,
+    },
+    {
+      key: 3,
+      children: <Link href="/help">Центр помощи</Link>,
+    },
+    {
+      key: 4,
+      children: <Link href="/login">Войти</Link>,
+    },
+    {
+      key: 5,
+      children: (
+        <Link color="primary" href="/register">
+          Зарегистрироваться
+        </Link>
+      ),
     },
   ];
 
@@ -43,26 +97,19 @@ export default function Navbar() {
             </Link>
           </NavbarBrand>
         </NavbarContent>
-        <NavbarContent className="gap-10" justify="end">
-          {links.map((link) => (
-            <NavbarItem key={link.href}>
-              <Link {...link} />
-            </NavbarItem>
+        <NavbarContent className="gap-10 hidden xl:flex" justify="end">
+          {navbarItems.map(({ key, ...navbarItem }) => (
+            <NavbarItem key={key} {...navbarItem} />
           ))}
-          <div className="h-12 flex items-center">
-            <Divider orientation="vertical" />
-          </div>
-          <NavbarItem>
-            <Link className="text-xl" href="/login">
-              Войти
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Button as={Link} href="/register">
-              Зарегистрироваться
-            </Button>
-          </NavbarItem>
         </NavbarContent>
+        <NavbarContent className="xl:hidden" justify="end">
+          <NavbarMenuToggle />
+        </NavbarContent>
+        <NavbarMenu>
+          {navbarMenuItems.map(({ key, ...navbarMenuItem }) => (
+            <NavbarMenuItem key={key} {...navbarMenuItem} />
+          ))}
+        </NavbarMenu>
       </HeroUINavBar>
     </div>
   );

@@ -18,6 +18,30 @@ export default function HomePage() {
       image:
         "https://i.pinimg.com/originals/fd/f6/f3/fdf6f360e0a82cf110c237ab371ac0bc.png",
     },
+    {
+      id: 3,
+      name: "Строительство",
+      image:
+        "https://i.pinimg.com/originals/fd/f6/f3/fdf6f360e0a82cf110c237ab371ac0bc.png",
+    },
+    {
+      id: 4,
+      name: "Строительство",
+      image:
+        "https://i.pinimg.com/originals/fd/f6/f3/fdf6f360e0a82cf110c237ab371ac0bc.png",
+    },
+    {
+      id: 5,
+      name: "Строительство",
+      image:
+        "https://i.pinimg.com/originals/fd/f6/f3/fdf6f360e0a82cf110c237ab371ac0bc.png",
+    },
+    {
+      id: 6,
+      name: "Строительство",
+      image:
+        "https://i.pinimg.com/originals/fd/f6/f3/fdf6f360e0a82cf110c237ab371ac0bc.png",
+    },
   ];
 
   const featuredCompanies: TCompany[] = [
@@ -118,20 +142,6 @@ export default function HomePage() {
       description:
         "Производство и установка пластиковых и деревянных оконных конструкций.",
       rating: 4.5,
-    },
-    {
-      id: 15,
-      name: "КлиматКонтроль",
-      description:
-        "Монтаж и обслуживание систем вентиляции, кондиционирования и отопления.",
-      rating: 4.4,
-    },
-    {
-      id: 16,
-      name: "ЮрКонсалт",
-      description:
-        "Юридические услуги для бизнеса: сопровождение сделок, налоги, трудовое право.",
-      rating: 4.3,
     },
   ];
 

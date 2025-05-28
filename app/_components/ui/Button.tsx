@@ -1,9 +1,10 @@
 import { Button as HeroUIButton } from "@heroui/button";
 import { VariantProps } from "@heroui/theme";
 import clsx from "clsx";
+import { HTMLAttributes } from "react";
 
 type TButtonProps = VariantProps<typeof HeroUIButton> &
-  React.HTMLAttributes<HTMLButtonElement>;
+  HTMLAttributes<HTMLButtonElement>;
 
 export default function Button({ className, ...props }: TButtonProps) {
   return (
