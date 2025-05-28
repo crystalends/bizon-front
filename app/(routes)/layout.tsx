@@ -5,6 +5,7 @@ import { siteConfig } from "@/app/_config/site";
 import { fontSans } from "@/app/_config/fonts";
 import Header from "../_components/Header";
 import { Providers } from "./providers";
+import Footer from "../_components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +42,10 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Header />
-            {children}
+            <div className="flex flex-col gap-10 xl:gap-28">
+              {children}
+              <Footer />
+            </div>
           </div>
         </Providers>
       </body>

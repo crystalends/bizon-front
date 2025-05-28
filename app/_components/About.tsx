@@ -8,7 +8,7 @@ export default function About() {
       </h2>
       <div className="max-w-[770px] mx-auto">
         <p>
-          <span className="font-medium">BizON</span> — это современная
+          <span className="font-semibold">BizON</span> — это современная
           онлайн-платформа, созданная специально для поддержки малого и среднего
           бизнеса. Мы объединяем продавцов и покупателей, предоставляя все
           необходимые инструменты для эффективного развития вашего дела.
