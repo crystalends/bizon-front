@@ -6,6 +6,6 @@ type TCompaniesProps = {
 
 export default function Companies({ categories }: TCompaniesProps) {
   return (
-    <div className="flex py-10 flex-col gap-8 xl:gap-16">{categories}</div>
+    <div className="flex pt-10 flex-col gap-8 xl:gap-16">{categories}</div>
   );
 }
