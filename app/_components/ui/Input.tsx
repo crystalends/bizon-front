@@ -1,8 +1,6 @@
-import { Input as HeroUIInput } from "@heroui/input";
-import { VariantProps } from "@heroui/theme";
+import { Input as HeroUIInput, InputProps } from "@heroui/input";
 
-type TButtonProps = VariantProps<typeof HeroUIInput> &
-  React.HTMLAttributes<HTMLButtonElement>;
+type TButtonProps = InputProps;
 
 export default function Input(props: TButtonProps) {
   return (

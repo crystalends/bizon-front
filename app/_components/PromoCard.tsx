@@ -1,10 +1,7 @@
-import { Card as HeroUICard } from "@heroui/card";
-import { VariantProps } from "@heroui/theme";
+import { CardProps, Card as HeroUICard } from "@heroui/card";
 import clsx from "clsx";
-import { HTMLAttributes } from "react";
 
-type TPromoCardProps = VariantProps<typeof HeroUICard> &
-  HTMLAttributes<HTMLButtonElement>;
+type TPromoCardProps = CardProps;
 
 export default function PromoCard({ className, ...props }: TPromoCardProps) {
   return (

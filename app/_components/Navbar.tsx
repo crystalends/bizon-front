@@ -5,18 +5,19 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarItemProps,
   NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuItemProps,
   NavbarMenuToggle,
 } from "@heroui/navbar";
 import Logo from "./Logo";
-import { VariantProps } from "@heroui/theme";
 import Link from "./ui/Link";
 import Button from "./ui/Button";
 import { Divider } from "@heroui/divider";
 
 export default function Navbar() {
-  const navbarItems: VariantProps<typeof NavbarItem>[] = [
+  const navbarItems: NavbarItemProps[] = [
     {
       key: 1,
       children: <Link href="/companies">Компании</Link>,
@@ -55,7 +56,7 @@ export default function Navbar() {
     },
   ];
 
-  const navbarMenuItems: VariantProps<typeof NavbarMenuItem>[] = [
+  const navbarMenuItems: NavbarMenuItemProps[] = [
     {
       key: 1,
       children: <Link href="/companies">Компании</Link>,

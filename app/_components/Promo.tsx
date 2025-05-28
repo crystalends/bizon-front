@@ -7,14 +7,18 @@ export default function Promo() {
   return (
     <Container className="w-full">
       <div className="flex flex-wrap xl:flex-nowrap gap-4 justify-center">
-        <PromoCard>
+        <PromoCard className="bg-[url(/images/d083e80aa046a9748c7ca231c7b13ed20430b4b9.png)] bg-cover">
+          <div
+            className="absolute inset-0 bg-[#1E3A8A] opacity-[92%]"
+            aria-hidden="true"
+          />
           <CardHeader>
-            <h2 className="font-semibold text-[24px] xl:text-[44px]">
+            <h2 className="text-white font-semibold text-[24px] xl:text-[44px]">
               Начните расти вместе с BizON
             </h2>
           </CardHeader>
           <CardBody>
-            <p className="text-base xl:text-xl">
+            <p className="text-white text-base xl:text-xl">
               Присоединяйтесь к тысячам успешных предпринимателей, которые уже
               используют возможности нашей платформы для развития своего
               бизнеса.
@@ -24,14 +28,7 @@ export default function Promo() {
             <Button color="default">Разместить компанию</Button>
           </CardFooter>
         </PromoCard>
-        <PromoCard>
-          <CardBody>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-            laudantium maxime laborum expedita quia ea error? Nemo doloribus
-            explicabo laborum reiciendis beatae repellat, error aut mollitia!
-            Perferendis error harum minus.
-          </CardBody>
-        </PromoCard>
+        <PromoCard className="bg-[url(/images/558ada7c0e75d7e82408ce27f0040cb3f639a45d.png)] hidden xl:inline bg-cover" />
       </div>
     </Container>
   );

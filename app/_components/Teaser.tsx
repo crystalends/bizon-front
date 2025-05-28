@@ -4,8 +4,8 @@ import Container from "./shared/Container";
 export default function Teaser() {
   return (
     <div className="bg-gray-50 xl:min-h-screen">
-      <Container className="flex pt-36 xl:pt-[280px] pb-16 justify-center">
-        <div className="flex flex-col gap-10 w-full text-center">
+      <Container className="flex justify-center items-center min-h-[inherit]">
+        <div className="flex flex-col gap-10 w-full text-center py-10 xl:py-0">
           <div className="max-w-[690px] mx-auto">
             <h1 className="text-[48px] md:text-[72px] xl:text-[104px] font-semibold leading-[1.1]">
               Умный B2B маркетплейс

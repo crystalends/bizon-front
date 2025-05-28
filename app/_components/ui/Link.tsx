@@ -1,8 +1,6 @@
-import { Link as HeroUILink } from "@heroui/link";
-import { VariantProps } from "@heroui/theme";
+import { Link as HeroUILink, LinkProps } from "@heroui/link";
 
-type TLinkProps = VariantProps<typeof HeroUILink> &
-  React.HTMLAttributes<HTMLLinkElement>;
+type TLinkProps = LinkProps;
 
 export default function Link(props: TLinkProps) {
   return <HeroUILink color="foreground" {...props} />;
