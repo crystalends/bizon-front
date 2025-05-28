@@ -8,9 +8,9 @@ export default function HomePage() {
   const popularCategories: TCategory[] = [
     {
       id: 1,
-      name: "Электроника",
+      name: "Строительство",
       image:
-        "https://st.shop.mts.ru/upload/tilda/prod/promosmartfony/tild6265-3039-4330-b733-313034303635__frame_2131328574_3.png",
+        "https://i.pinimg.com/originals/fd/f6/f3/fdf6f360e0a82cf110c237ab371ac0bc.png",
     },
     {
       id: 2,
