@@ -20,7 +20,7 @@ export default function Navbar() {
   const navbarItems: NavbarItemProps[] = [
     {
       key: 1,
-      children: <Link href="/companies">Компании</Link>,
+      children: <Link href="/categories">Категории</Link>,
     },
     {
       key: 2,
@@ -59,7 +59,7 @@ export default function Navbar() {
   const navbarMenuItems: NavbarMenuItemProps[] = [
     {
       key: 1,
-      children: <Link href="/companies">Компании</Link>,
+      children: <Link href="/categories">Категории</Link>,
     },
     {
       key: 2,

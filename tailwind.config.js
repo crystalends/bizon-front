@@ -16,6 +16,7 @@ const config = {
       colors: {
         gray: {
           50: "#F9F9F9",
+          300: "#D4D4D4",
         },
       },
     },
@@ -26,6 +27,9 @@ const config = {
       layout: {
         radius: {
           medium: "8px",
+        },
+        boxShadow: {
+          small: "0 3px 26px rgba(0, 0, 0, 0.03)",
         },
       },
       themes: {

@@ -1,0 +1,43 @@
+import { ImageProps } from "@heroui/image";
+import { ReactNode } from "react";
+import { Image } from "@heroui/image";
+import VerifiedBadgeIcon from "../icons/VerifiedBadgeIcon";
+
+type TCompanyGridItemProps = {
+  name: string;
+  description?: string;
+  isVerified?: boolean;
+  categoryChipsSlot?: ReactNode;
+  imageProps?: ImageProps;
+  ratingSlot?: ReactNode;
+  endContent?: ReactNode;
+};
+export default function CompanyGridItem({
+  name,
+  description,
+  isVerified,
+  categoryChipsSlot,
+  imageProps,
+  ratingSlot,
+  endContent,
+}: TCompanyGridItemProps) {
+  return (
+    <div className="flex flex-col gap-5">
+      <div className="flex justify-center">
+        {imageProps && (
+          <Image shadow="sm" {...imageProps} width={1200} alt={name} />
+        )}
+      </div>
+      <div className="flex flex-wrap items-center justify-between gap-5">
+        <div className="flex flex-wrap gap-2">
+          {isVerified && <VerifiedBadgeIcon />}
+          <h3 className="text-2xl font-semibold">{name}</h3>
+        </div>
+        {ratingSlot}
+      </div>
+      {description && <p>{description}</p>}
+      {categoryChipsSlot}
+      {endContent}
+    </div>
+  );
+}

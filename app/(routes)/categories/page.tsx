@@ -1,8 +1,7 @@
 import TCategory from "@/app/_types/Category";
-import Companies from "./_components/Companies";
 import Categories from "./_components/Categories";
 
-export default function CompaniesPage() {
+export default function CategoriesPage() {
   const categories: TCategory[] = [
     {
       id: 1,
@@ -48,5 +47,5 @@ export default function CompaniesPage() {
     },
   ];
 
-  return <Companies categories={<Categories categories={categories} />} />;
+  return <Categories categories={categories} />;
 }

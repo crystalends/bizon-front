@@ -51,6 +51,7 @@ export default function HomePage() {
       description:
         "Продажа кабельных систем электрического обогрева - теплые полы, саморегулируемые кабели, наружный обогрев, терморегуляторы и автоматика.",
       rating: 5,
+      isVerified: true,
     },
     {
       id: 2,
@@ -58,6 +59,7 @@ export default function HomePage() {
       description:
         "Разработка и производство инновационных технологических решений для промышленности и бытового использования.",
       rating: 4.8,
+      isVerified: true,
     },
     {
       id: 3,
@@ -65,6 +67,7 @@ export default function HomePage() {
       description:
         "Строительная компания, специализирующаяся на экологически чистых материалах и энергоэффективных технологиях.",
       rating: 4.7,
+      isVerified: true,
     },
     {
       id: 4,
@@ -72,6 +75,7 @@ export default function HomePage() {
       description:
         "Разработка программного обеспечения и комплексных IT-решений для бизнеса любого масштаба.",
       rating: 4.9,
+      isVerified: true,
     },
     {
       id: 5,
@@ -79,6 +83,7 @@ export default function HomePage() {
       description:
         "Продажа и обслуживание медицинского оборудования для клиник и частных практик.",
       rating: 4.6,
+      isVerified: true,
     },
     {
       id: 6,
@@ -86,6 +91,7 @@ export default function HomePage() {
       description:
         "Сеть автосервисов, предлагающая полный спектр услуг по ремонту и обслуживанию автомобилей.",
       rating: 4.5,
+      isVerified: true,
     },
     {
       id: 7,
@@ -93,6 +99,7 @@ export default function HomePage() {
       description:
         "Установка и обслуживание систем умного дома, безопасности и климат-контроля.",
       rating: 4.4,
+      isVerified: true,
     },
     {
       id: 8,
@@ -100,6 +107,7 @@ export default function HomePage() {
       description:
         "Оптовые поставки фармацевтической продукции в аптеки и медицинские учреждения.",
       rating: 4.3,
+      isVerified: true,
     },
     {
       id: 9,
@@ -107,6 +115,7 @@ export default function HomePage() {
       description:
         "Ремонтно-строительные работы под ключ для частных и коммерческих объектов.",
       rating: 4.2,
+      isVerified: true,
     },
     {
       id: 10,
@@ -114,6 +123,7 @@ export default function HomePage() {
       description:
         "Провайдер интернет-услуг и телефонии для бизнеса и частных клиентов.",
       rating: 4.1,
+      isVerified: true,
     },
     {
       id: 11,
@@ -121,6 +131,7 @@ export default function HomePage() {
       description:
         "Финансовые услуги и инвестиционные решения для промышленных предприятий.",
       rating: 4.0,
+      isVerified: true,
     },
     {
       id: 12,
@@ -128,6 +139,7 @@ export default function HomePage() {
       description:
         "Сельскохозяйственная техника и оборудование для фермерских хозяйств.",
       rating: 4.7,
+      isVerified: true,
     },
     {
       id: 13,
@@ -135,6 +147,7 @@ export default function HomePage() {
       description:
         "Комплексные логистические решения и грузоперевозки по всей стране.",
       rating: 4.6,
+      isVerified: true,
     },
     {
       id: 14,
@@ -142,13 +155,18 @@ export default function HomePage() {
       description:
         "Производство и установка пластиковых и деревянных оконных конструкций.",
       rating: 4.5,
+      isVerified: true,
     },
   ];
 
   return (
     <Home
-      popularCategories={<PopularCategories categories={popularCategories} />}
-      featuredCompanies={<FeaturedCompanies companies={featuredCompanies} />}
+      popularCategoriesSlot={
+        <PopularCategories categories={popularCategories} />
+      }
+      featuredCompaniesSlot={
+        <FeaturedCompanies companies={featuredCompanies} />
+      }
     />
   );
 }

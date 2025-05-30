@@ -5,19 +5,19 @@ import About from "./About";
 import Advantages from "./Advantages";
 
 type THomeProps = {
-  popularCategories: ReactNode;
-  featuredCompanies: ReactNode;
+  popularCategoriesSlot: ReactNode;
+  featuredCompaniesSlot: ReactNode;
 };
 
 export default function Home({
-  popularCategories,
-  featuredCompanies,
+  popularCategoriesSlot,
+  featuredCompaniesSlot,
 }: THomeProps) {
   return (
     <div className="flex flex-col gap-8 xl:gap-16">
       <Teaser />
-      {popularCategories}
-      {featuredCompanies}
+      {popularCategoriesSlot}
+      {featuredCompaniesSlot}
       <Promo />
       <About />
       <Advantages />

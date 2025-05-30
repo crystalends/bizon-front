@@ -1,0 +1,21 @@
+import { SVGProps } from "react";
+
+export default function RatingIcon({
+  fill = "#1E3A8A",
+  ...props
+}: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width="20"
+      height="19"
+      viewBox="0 0 20 19"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M10 0.5L12.2451 7.40983H19.5106L13.6327 11.6803L15.8779 18.5902L10 14.3197L4.12215 18.5902L6.36729 11.6803L0.489435 7.40983H7.75486L10 0.5Z"
+        fill={fill}
+      />
+    </svg>
+  );
+}
