@@ -26,6 +26,16 @@ export default function Categories({ categories }: TCategoriesProps) {
   return (
     <CategoryTemplate title="Категории" breadcrumbItems={breadcrumbItems}>
       <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(375px,1fr))] gap-x-5">
+        <CategoryPreview
+          name={"Все категории"}
+          cardProps={{
+            className: "hover:bg-gray-50",
+            isPressable: true,
+            as: Link,
+            href: `/companies`,
+          }}
+          endIcon={<ArrowRightIcon />}
+        />
         {categories.map(({ id, name, image }) => (
           <CategoryPreview
             key={id}

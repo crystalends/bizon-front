@@ -1,4 +1,4 @@
-import ContactInfrmation from "@/app/_components/Contacts";
+import ContactInformation from "@/app/_components/shared/ContactInformation";
 import { Card, CardBody } from "@heroui/card";
 import { Divider } from "@heroui/divider";
 
@@ -15,7 +15,7 @@ export default function ContactInfrmationCard({
         <div className="flex flex-col gap-4">
           <h3 className="text-2xl font-semibold">Контактная информация:</h3>
           <Divider />
-          <ContactInfrmation
+          <ContactInformation
             phone={phone}
             email={email}
             site={site}

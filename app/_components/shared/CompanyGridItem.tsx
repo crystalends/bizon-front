@@ -5,6 +5,7 @@ import VerifiedBadgeIcon from "../icons/VerifiedBadgeIcon";
 
 type TCompanyGridItemProps = {
   name: string;
+  renderName?: (name: string) => ReactNode;
   description?: string;
   isVerified?: boolean;
   categoryChipsSlot?: ReactNode;
@@ -14,6 +15,7 @@ type TCompanyGridItemProps = {
 };
 export default function CompanyGridItem({
   name,
+  renderName = (name) => <h3 className="text-2xl font-semibold">{name}</h3>,
   description,
   isVerified,
   categoryChipsSlot,
@@ -25,17 +27,21 @@ export default function CompanyGridItem({
     <div className="flex flex-col gap-5">
       <div className="flex justify-center">
         {imageProps && (
-          <Image shadow="sm" {...imageProps} width={1200} alt={name} />
+          <Image shadow="md" {...imageProps} width={1200} alt={name} />
         )}
       </div>
       <div className="flex flex-wrap items-center justify-between gap-5">
         <div className="flex flex-wrap gap-2">
           {isVerified && <VerifiedBadgeIcon />}
-          <h3 className="text-2xl font-semibold">{name}</h3>
+          {renderName(name)}
         </div>
         {ratingSlot}
       </div>
-      {description && <p>{description}</p>}
+      {description && (
+        <p className="line-clamp-3 text-ellipsis overflow-hidden">
+          {description}
+        </p>
+      )}
       {categoryChipsSlot}
       {endContent}
     </div>

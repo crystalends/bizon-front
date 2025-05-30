@@ -38,6 +38,7 @@ export default function CategoryPage() {
         email: "lorem@icloud.com",
         VK: "https://vk.com/",
         linkedIn: "https://ru.linkedin.com/",
+        companyId: 3,
       },
       products: [
         {
@@ -117,6 +118,7 @@ export default function CategoryPage() {
         phone: "+74957894561",
         email: "info@stroigarant.ru",
         site: "https://stroigarant.ru",
+        companyId: 4,
       },
       isVerified: true,
       _count: {
@@ -150,6 +152,7 @@ export default function CategoryPage() {
         phone: "+79261234567",
         email: "contact@fundamentpro.ru",
         VK: "https://vk.com/fundamentpro",
+        companyId: 5,
       },
       isVerified: false,
       _count: {
@@ -181,6 +184,7 @@ export default function CategoryPage() {
       contactInformation: {
         phone: "+78003334567",
         email: "krovlya@master.ru",
+        companyId: 6,
       },
       isVerified: true,
       _count: {

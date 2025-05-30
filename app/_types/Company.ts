@@ -1,4 +1,5 @@
 import TCategory from "./Category";
+import TDetails from "./Details";
 import TProduct from "./Product";
 
 type TCompany = {
@@ -9,6 +10,8 @@ type TCompany = {
   categories?: TCategory[];
   products?: TProduct[];
   rating: number;
+  regions?: TRegion[];
+  details?: TDetails;
   isVerified: boolean;
   contactInformation?: TContactInformation;
   _count?: {

@@ -5,6 +5,7 @@ import { ElementType, ReactNode } from "react";
 
 type TCategoryPreviewProps<T extends ElementType = "div"> = {
   name: string;
+  renderName?: (name: string) => ReactNode;
   imageProps?: ImageProps;
   endIcon?: ReactNode;
   cardProps?: TPolymorphicProps<T, CardProps>;
@@ -12,6 +13,7 @@ type TCategoryPreviewProps<T extends ElementType = "div"> = {
 
 export default function CategoryPreview<T extends ElementType = "div">({
   name,
+  renderName = (name) => <h3 className="font-semibold text-xl">{name}</h3>,
   imageProps,
   endIcon,
   cardProps,
@@ -26,7 +28,7 @@ export default function CategoryPreview<T extends ElementType = "div">({
             ) : (
               <div className="w-[22px] h-[22px]" />
             )}
-            <h3 className="font-semibold text-xl">{name}</h3>
+            {renderName(name)}
           </div>
           {endIcon}
         </div>

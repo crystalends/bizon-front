@@ -5,4 +5,5 @@ type TContactInformation = {
   geo?: string;
   VK?: string;
   linkedIn?: string;
+  companyId: number;
 };

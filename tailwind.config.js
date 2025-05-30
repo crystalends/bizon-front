@@ -29,7 +29,8 @@ const config = {
           medium: "8px",
         },
         boxShadow: {
-          small: "0 3px 26px rgba(0, 0, 0, 0.03)",
+          small: "0 2px 10px rgba(0, 0, 0, 0.04)",
+          medium: "0 3px 26px rgba(0, 0, 0, 0.04)",
         },
       },
       themes: {

@@ -1,9 +1,17 @@
 import { Input as HeroUIInput, InputProps } from "@heroui/input";
+import { ElementType } from "react";
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
 
-export type TInputProps = InputProps;
+export type TInputProps<T extends ElementType = "input"> = TPolymorphicProps<
+  T,
+  InputProps
+>;
 
-export default function Input({ classNames = {}, ...props }: TInputProps) {
+export default function Input<T extends ElementType = "input">({
+  classNames = {},
+  ...props
+}: TInputProps<T>) {
   return (
     <HeroUIInput
       classNames={{

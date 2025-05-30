@@ -1,12 +1,14 @@
-import TContactGridItem from "../_types/ContactGridItem";
-import TContactListItem from "../_types/ContactListItem";
-import EmailIcon from "./icons/EmailIcon";
-import GeoIcon from "./icons/GeoIcon";
-import LinkedInIcon from "./icons/LinkedInIcon";
-import PhoneIcon from "./icons/PhoneIcon";
-import SiteIcon from "./icons/SiteIcon";
-import VKIcon from "./icons/VKIcon";
-import Link from "./ui/Link";
+import { ComponentPropsWithoutRef } from "react";
+import EmailIcon from "../icons/EmailIcon";
+import GeoIcon from "../icons/GeoIcon";
+import PhoneIcon from "../icons/PhoneIcon";
+import SiteIcon from "../icons/SiteIcon";
+import LinkedInIcon from "../icons/LinkedInIcon";
+import VKIcon from "../icons/VKIcon";
+import Link from "../ui/Link";
+import TContactListItem from "@/app/_types/ContactListItem";
+import TContactGridItem from "@/app/_types/ContactGridItem";
+import clsx from "clsx";
 
 type TContactInformationProps = {
   phone?: string | null;
@@ -15,8 +17,7 @@ type TContactInformationProps = {
   geo?: string | null;
   VK?: string | null;
   linkedIn?: string | null;
-  className?: string;
-};
+} & ComponentPropsWithoutRef<"div">;
 
 export default function ContactInformation({
   phone,
@@ -25,7 +26,8 @@ export default function ContactInformation({
   geo,
   VK,
   linkedIn,
-  className = "",
+  className,
+  ...props
 }: TContactInformationProps) {
   const contactList: TContactListItem[] = [
     {
@@ -68,7 +70,7 @@ export default function ContactInformation({
   ].filter((contact) => contact.href);
 
   return (
-    <div className={`flex flex-col gap-5 ${className}`}>
+    <div className={clsx("flex flex-col gap-5", className)} {...props}>
       {contactList.map(({ icon, value, href }) => (
         <div
           key={`${value}-${href}`}

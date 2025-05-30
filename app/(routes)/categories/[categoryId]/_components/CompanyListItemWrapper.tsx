@@ -3,6 +3,7 @@ import TCompany from "@/app/_types/Company";
 import ContactInfrmationCard from "./ContactInformationCard";
 import Actions from "./Actions";
 import { ReactNode } from "react";
+import Link from "@/app/_components/ui/Link";
 
 type TCompanyListItemWrapperProps = {
   company: TCompany;
@@ -12,7 +13,7 @@ type TCompanyListItemWrapperProps = {
 };
 
 export default function CompanyListItemWrapper({
-  company: { name, description, image, isVerified, contactInformation },
+  company: { id, name, description, image, isVerified, contactInformation },
   ratingSlot,
   categoryChipsSlot,
   productsPreviewGridSlot,
@@ -20,6 +21,11 @@ export default function CompanyListItemWrapper({
   return (
     <CompanyListItem
       name={name}
+      renderName={(name) => (
+        <Link href={`/companies/${id}`}>
+          <h2 className="text-[32px] font-semibold">{name}</h2>
+        </Link>
+      )}
       description={description}
       isVerified={isVerified}
       rightContent={

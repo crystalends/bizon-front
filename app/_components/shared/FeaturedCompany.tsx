@@ -10,6 +10,7 @@ import { ElementType, ReactNode } from "react";
 
 type TFeaturedCompanyProps<T extends ElementType = "div"> = {
   name: string;
+  renderName?: (name: string) => ReactNode;
   ratingSlot?: ReactNode;
   description?: string;
   endContent?: ReactNode;
@@ -18,16 +19,17 @@ type TFeaturedCompanyProps<T extends ElementType = "div"> = {
 
 export default function FeaturedCompany<T extends ElementType = "div">({
   name,
+  renderName = (name) => <h3 className="font-semibold text-2xl">{name}</h3>,
   ratingSlot,
   description,
   endContent,
   cardProps,
 }: TFeaturedCompanyProps<T>) {
   return (
-    <Card shadow="sm" className="p-10" {...cardProps}>
+    <Card shadow="md" className="p-10" {...cardProps}>
       <CardHeader>
         <div className="flex w-full justify-between gap-5">
-          <h3 className="font-semibold text-2xl">{name}</h3>
+          {renderName(name)}
           {ratingSlot}
         </div>
       </CardHeader>
