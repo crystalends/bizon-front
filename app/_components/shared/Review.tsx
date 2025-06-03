@@ -9,7 +9,7 @@ import Button from "../ui/Button";
 type TReviewProps = {
   userProps: UserProps;
   value: string;
-  rating: number;
+  rating?: number;
   defaultLines?: number;
 } & ComponentPropsWithoutRef<"div">;
 
@@ -38,7 +38,7 @@ export default function Review({
   return (
     <div className={clsx("flex flex-col gap-4", className)} {...props}>
       <User className="justify-start" {...userProps} />
-      <StarsRating value={rating} readOnly />
+      {rating && <StarsRating value={rating} readOnly />}
       <p
         ref={textRef}
         className={`${isExpanded ? "" : "line-clamp-3 text-ellipsis overflow-hidden"}`}

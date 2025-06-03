@@ -11,8 +11,8 @@ import TContactGridItem from "@/app/_types/ContactGridItem";
 import clsx from "clsx";
 
 type TContactInformationProps = {
-  phone?: string | null;
-  email?: string | null;
+  phone: string;
+  email: string;
   site?: string | null;
   region?: string | null;
   VK?: string | null;

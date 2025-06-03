@@ -5,12 +5,12 @@ import TProduct from "./Product";
 type TCompany = {
   id: number;
   name: string;
-  description: string;
+  description?: string;
   image?: string;
   categories?: TCategory[];
   products?: TProduct[];
-  rating: number;
-  regions?: string[];
+  rating?: number;
+  regions?: TRegion[];
   details?: TDetails;
   isVerified: boolean;
   contactInformation?: TContactInformation;

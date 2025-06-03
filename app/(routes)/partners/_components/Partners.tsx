@@ -16,6 +16,8 @@ import {
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
 import Input from "@/app/_components/ui/Input";
+import TPartner from "@/app/_types/Partner";
+import RegionChips from "@/app/_components/RegionChips";
 
 type TPartnersProps = {
   partners: TPartner[];
@@ -45,15 +47,12 @@ export default function Partners({ partners }: TPartnersProps) {
           <Block className="w-full" title="Поиск партнера ">
             <div className="flex gap-5 flex-col">
               <p className="text-xl">
-                Заполните форму "Мне нужен поставщик...", чтобы другие
-                пользователи и компании могли откликнуться на ваш запрос.
+                Заполните данную форму, чтобы другие пользователи и компании
+                могли откликнуться на ваш запрос на оказание необходимой услуги
+                или доставку товара.
               </p>
               <div className="flex flex-col gap-3">
-                <Input placeholder="ФИО или название вашей компании" />
-                <Input placeholder="Телефон" />
-                <Input placeholder="Почта" />
-                <Input placeholder="Товар/услуга" />
-                <Input placeholder="Регион" />
+                <Input placeholder="Товар или услуга" />
                 <Button className="h-[66px] px-10 py-4">Поиск</Button>
                 <p className="text-xs">
                   Отправляя данную форму, Вы даете согласие на обработку
@@ -64,7 +63,7 @@ export default function Partners({ partners }: TPartnersProps) {
           </Block>
           <Image
             width={638}
-            height={668}
+            height={450}
             className="object-cover min-w-[638] hidden xl:inline"
             src="/images/7a0016f4d1161ba85883a2f836c017bb0a7926ca.png"
           />
@@ -81,12 +80,16 @@ export default function Partners({ partners }: TPartnersProps) {
             </Button>
           }
         >
-          {partners.map(({ id, product, searcher, region, createdAt }) => (
+          {partners.map(({ id, product, user, createdAt }) => (
             <Partner
               key={id}
               product={product}
-              searcher={searcher}
-              region={region}
+              user={user?.company?.name || user?.name}
+              regionChipsSlot={
+                user?.company?.regions && (
+                  <RegionChips regions={user.company.regions} />
+                )
+              }
               createdAt={format(createdAt, "dd.MM.yyyy", {
                 locale: ru,
               })}

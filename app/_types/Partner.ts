@@ -1,10 +1,12 @@
+import TUser from "./User";
+
 type TPartner = {
   id: number;
-  searcher: string;
-  phone?: string;
-  email: string;
   product: string;
-  region: string;
+  userId: number;
+  user?: TUser;
   createdAt: Date;
   updatedAt: Date;
 };
+
+export default TPartner;

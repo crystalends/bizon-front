@@ -13,6 +13,7 @@ export default function ReviewsPage() {
       user: {
         id: 1,
         name: "Александр Петров",
+        companyId: 1,
       },
       companyId: 6,
       createdAt: new Date("2024-05-15T10:30:00.000Z"),
@@ -27,6 +28,7 @@ export default function ReviewsPage() {
       user: {
         id: 2,
         name: "Екатерина Смирнова",
+        companyId: 2,
       },
       companyId: 6,
       createdAt: new Date("2024-05-20T14:45:22.123Z"),
@@ -41,6 +43,7 @@ export default function ReviewsPage() {
       user: {
         id: 5,
         name: "Алена Сорокина",
+        companyId: 3,
       },
       companyId: 6,
       createdAt: new Date("2024-05-20T14:45:22.123Z"),

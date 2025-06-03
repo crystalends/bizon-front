@@ -4,7 +4,7 @@ import TUser from "./User";
 type TReview = {
   id: number;
   value: string;
-  rating: number;
+  rating?: number;
   userId: number;
   user?: TUser;
   companyId: number;

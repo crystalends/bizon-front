@@ -1,24 +1,44 @@
+import TPartner from "@/app/_types/Partner";
 import Partners from "./_components/Partners";
 
 export default function PartnersPage() {
   const partners: TPartner[] = [
     {
       id: 1,
-      searcher: "Иванов Иван Петрович",
-      phone: "+79258889898",
-      email: "lorem@icloud.com",
+      userId: 1,
       product: "Перевозка крупногабаритных товаров",
-      region: "Москва",
+      user: {
+        id: 1,
+        name: "Владимир Иванов",
+      },
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
       id: 2,
-      searcher: "Пешков Владимир Алексеевич",
-      phone: "+79258889800",
-      email: "ipsum@icloud.com",
-      product: "Поставщик сварочных материалов",
-      region: "Москва",
+      userId: 2,
+      product: "Строительство недвижемости",
+      user: {
+        id: 2,
+        name: "Андрей Алексеев",
+        companyId: 2,
+        company: {
+          id: 2,
+          name: "ИП Алексеев А.В.",
+          rating: 5,
+          regions: [
+            {
+              id: 1,
+              name: "Москва",
+            },
+            {
+              id: 2,
+              name: "Электроугли",
+            },
+          ],
+          isVerified: false,
+        },
+      },
       createdAt: new Date(),
       updatedAt: new Date(),
     },
