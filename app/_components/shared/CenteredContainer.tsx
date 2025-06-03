@@ -15,7 +15,7 @@ export default function CenteredContainer({
   return (
     <Container
       className={clsx(
-        "pt-10 xl:pt-0 flex items-center justify-center min-h-[calc(100vh-80px)]",
+        "pt-10 xl:pt-0 flex items-center justify-center min-h-screen",
         className,
       )}
       {...props}
