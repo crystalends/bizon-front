@@ -10,12 +10,12 @@ type TCompany = {
   categories?: TCategory[];
   products?: TProduct[];
   rating: number;
-  regions?: TRegion[];
+  regions?: string[];
   details?: TDetails;
   isVerified: boolean;
   contactInformation?: TContactInformation;
   _count?: {
-    ratings?: number;
+    reviews?: number;
     products?: number;
   };
 };

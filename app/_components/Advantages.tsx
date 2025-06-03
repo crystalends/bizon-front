@@ -1,14 +1,12 @@
-import AdvantageCard from "./AdvantageCard";
-import AdvantageCardBody, {
-  TAdvantageCardBodyProps,
-} from "./AdvantageCardBody";
+import FeatureCardBody, { TFeatureCardBodyProps } from "./FeatureCardBody";
 import DialogIcon from "./icons/DialogIcon";
 import StarInCircleIcon from "./icons/StarInCircleIcon";
 import CommunityIcon from "./icons/СommunityIcon";
 import Container from "./shared/Container";
+import FeatureCard from "./ui/FeatureCard";
 
 export default function Advantages() {
-  const advantages: TAdvantageCardBodyProps[] = [
+  const advantages: TFeatureCardBodyProps[] = [
     {
       key: 1,
       title: "Широкий охват аудитории",
@@ -39,9 +37,9 @@ export default function Advantages() {
       </h2>
       <div className="flex flex-wrap xl:flex-nowrap justify-center gap-5">
         {advantages.map(({ key, ...advantage }) => (
-          <AdvantageCard key={key}>
-            <AdvantageCardBody {...advantage} />
-          </AdvantageCard>
+          <FeatureCard key={key}>
+            <FeatureCardBody {...advantage} />
+          </FeatureCard>
         ))}
       </div>
     </Container>

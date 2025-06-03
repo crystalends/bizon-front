@@ -1,11 +1,11 @@
 "use client";
 
 import { ReactNode } from "react";
-import Block from "@/app/_components/Block";
 import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
 import Container from "@/app/_components/shared/Container";
 import GlobalSearch from "@/app/_components/GlobalSearch";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
+import Block from "@/app/_components/shared/Block";
 
 type TCategoryTemplateProps = {
   title: string;
@@ -32,8 +32,10 @@ export default function CategoryTemplate({
             <GlobalSearch
               inputProps={{
                 classNames: {
-                  inputWrapper: "border border-primary",
+                  input: "text-xl",
                 },
+                variant: "bordered",
+                color: "primary",
               }}
             />
             {children}

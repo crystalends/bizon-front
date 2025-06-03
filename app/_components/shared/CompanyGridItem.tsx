@@ -1,7 +1,8 @@
 import { ImageProps } from "@heroui/image";
-import { ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { Image } from "@heroui/image";
 import VerifiedBadgeIcon from "../icons/VerifiedBadgeIcon";
+import clsx from "clsx";
 
 type TCompanyGridItemProps = {
   name: string;
@@ -12,7 +13,7 @@ type TCompanyGridItemProps = {
   imageProps?: ImageProps;
   ratingSlot?: ReactNode;
   endContent?: ReactNode;
-};
+} & ComponentPropsWithoutRef<"div">;
 export default function CompanyGridItem({
   name,
   renderName = (name) => <h3 className="text-2xl font-semibold">{name}</h3>,
@@ -22,9 +23,11 @@ export default function CompanyGridItem({
   imageProps,
   ratingSlot,
   endContent,
+  className,
+  ...props
 }: TCompanyGridItemProps) {
   return (
-    <div className="flex flex-col gap-5">
+    <div className={clsx("flex flex-col gap-5", className)} {...props}>
       <div className="flex justify-center">
         {imageProps && (
           <Image shadow="md" {...imageProps} width={1200} alt={name} />

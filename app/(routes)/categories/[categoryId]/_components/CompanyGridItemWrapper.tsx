@@ -1,8 +1,8 @@
 import CompanyGridItem from "@/app/_components/shared/CompanyGridItem";
 import TCompany from "@/app/_types/Company";
-import Actions from "./Actions";
 import { ReactNode } from "react";
 import Link from "@/app/_components/ui/Link";
+import Actions from "./Actions";
 
 type TCompanyGridItemWrapperProps = {
   company: TCompany;

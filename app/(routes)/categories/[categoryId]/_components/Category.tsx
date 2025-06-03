@@ -5,7 +5,7 @@ import { BreadcrumbItemProps } from "@heroui/breadcrumbs";
 import CategoryTemplate from "../../_components/CategoryTemplate";
 import TCompany from "@/app/_types/Company";
 import CompanyListItemWrapper from "./CompanyListItemWrapper";
-import ProductPreviewsGrid from "./ProductPreviewsGrid";
+import ProductPreviewGrid from "./ProductPreviewGrid";
 import DetailRating from "./DetailRating";
 import CategoryChips from "@/app/_components/CategoryChips";
 import Button from "@/app/_components/ui/Button";
@@ -95,10 +95,10 @@ export default function Category({
                     key={company.id}
                     company={company}
                     ratingSlot={
-                      _count?.ratings && (
+                      _count?.reviews && (
                         <DetailRating
                           rating={rating}
-                          ratingCount={_count.ratings}
+                          ratingCount={_count.reviews}
                         />
                       )
                     }
@@ -111,7 +111,7 @@ export default function Category({
                     productsPreviewGridSlot={
                       products &&
                       products.length > 0 && (
-                        <ProductPreviewsGrid
+                        <ProductPreviewGrid
                           products={products}
                           companyId={company.id}
                           productsCount={_count?.products}
@@ -152,7 +152,7 @@ export default function Category({
               <DrawerHeader>
                 <h1 className="text-[40px] font-semibold">Фильтры</h1>
               </DrawerHeader>
-              <DrawerBody></DrawerBody>
+              <DrawerBody />
               <DrawerFooter>
                 <Button fullWidth color="primary" onPress={onClose}>
                   Применить фильтры

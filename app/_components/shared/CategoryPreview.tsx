@@ -8,18 +8,17 @@ type TCategoryPreviewProps<T extends ElementType = "div"> = {
   renderName?: (name: string) => ReactNode;
   imageProps?: ImageProps;
   endIcon?: ReactNode;
-  cardProps?: TPolymorphicProps<T, CardProps>;
-};
+} & TPolymorphicProps<T, Omit<CardProps, "children">>;
 
 export default function CategoryPreview<T extends ElementType = "div">({
   name,
   renderName = (name) => <h3 className="font-semibold text-xl">{name}</h3>,
   imageProps,
   endIcon,
-  cardProps,
+  ...props
 }: TCategoryPreviewProps<T>) {
   return (
-    <Card {...cardProps} shadow="none">
+    <Card {...props} shadow="none">
       <CardBody className="py-3 px-5">
         <div className="flex items-center gap-5 justify-between">
           <div className="flex items-center gap-2">

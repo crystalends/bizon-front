@@ -4,32 +4,19 @@ import HeartIcon from "@/app/_components/icons/HeartIcon";
 import Container from "@/app/_components/shared/Container";
 import Button from "@/app/_components/ui/Button";
 import TCompany from "@/app/_types/Company";
-import { Tab, TabItemProps, Tabs } from "@heroui/tabs";
-import { Image } from "@heroui/image";
+import { Tab, TabItemProps } from "@heroui/tabs";
 import { usePathname } from "next/navigation";
-import { Card, CardBody } from "@heroui/card";
-import DetailIsVerified from "@/app/_components/shared/DetailIsVerified";
-import CategoryChips from "@/app/_components/CategoryChips";
-import RegionChips from "@/app/_components/RegionChips";
-import ContactInformation from "@/app/_components/shared/ContactInformation";
-import Details from "@/app/_components/shared/Details";
 import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
+import { ReactNode } from "react";
+import Tabs from "@/app/_components/ui/Tabs";
+import Link from "next/link";
 
-type TCompanyProps = { company: TCompany };
+type TCompanyProps = { company: TCompany; children?: ReactNode };
 
 export default function Company({
-  company: {
-    id,
-    name,
-    description,
-    categories,
-    regions,
-    image,
-    details,
-    isVerified,
-    contactInformation,
-  },
+  company: { id, name },
+  children,
 }: TCompanyProps) {
   const pathname = usePathname();
 
@@ -52,14 +39,17 @@ export default function Company({
     {
       title: "Главное",
       href: `/companies/${id}`,
+      as: Link,
     },
     {
-      title: "Товары/услуги",
+      title: "Товары и услуги",
       href: `/companies/${id}/products`,
+      as: Link,
     },
     {
       title: "Отзывы",
-      href: `/companies/${id}/ratings`,
+      href: `/companies/${id}/reviews`,
+      as: Link,
     },
   ];
 
@@ -78,9 +68,11 @@ export default function Company({
               <HeartIcon />
             </Button>
           </div>
-          <div className="flex flex-wrap gap-3">
-            <Button color="default">Оставить заявку</Button>
-            <Button>Партнерство</Button>
+          <div className="flex w-full xl:w-fit flex-wrap gap-3">
+            <Button className="w-full xl:w-80" color="default">
+              Оставить заявку
+            </Button>
+            <Button className="w-full xl:w-80">Партнерство</Button>
           </div>
         </div>
         <div>
@@ -93,83 +85,7 @@ export default function Company({
             {(item) => <Tab key={item.href} {...item} />}
           </Tabs>
         </div>
-        <div className="flex flex-col xl:flex-row gap-5">
-          {image && (
-            <div className="xl:min-w-[375] h-fit flex justify-center shadow-sm rounded-lg">
-              <Image src={image} width={375} />
-            </div>
-          )}
-          <div className="flex w-full flex-col gap-5">
-            <Card shadow="md">
-              <CardBody>
-                <div className="flex flex-col gap-5">
-                  {isVerified && <DetailIsVerified />}
-                  <h1 className="text-[40px] font-semibold">{name}</h1>
-                  <p>
-                    Продажа кабельных систем электрического обогрева - теплые
-                    полы, саморегулируемые кабели, наружный обогрев,
-                    терморегуляторы и автоматика.
-                  </p>
-                </div>
-              </CardBody>
-            </Card>
-            {categories && categories.length > 0 && (
-              <Card shadow="md">
-                <CardBody>
-                  <div className="flex flex-col gap-5">
-                    <h1 className="text-2xl font-semibold">
-                      Отрасли деятельности
-                    </h1>
-                    <CategoryChips categories={categories} />
-                  </div>
-                </CardBody>
-              </Card>
-            )}
-            {regions && regions.length > 0 && (
-              <Card shadow="md">
-                <CardBody>
-                  <div className="flex flex-col gap-5">
-                    <h1 className="text-2xl font-semibold">Регионы работы</h1>
-                    <RegionChips regions={regions} />
-                  </div>
-                </CardBody>
-              </Card>
-            )}
-            {details && (
-              <Card shadow="md">
-                <CardBody>
-                  <div className="flex flex-col gap-5">
-                    <h1 className="text-2xl font-semibold">Реквизиты</h1>
-                    <Details
-                      INN={details.INN}
-                      KPP={details.KPP}
-                      OGRN={details.OGRN}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
-            )}
-            {contactInformation && (
-              <Card shadow="md">
-                <CardBody>
-                  <div className="flex flex-col gap-5">
-                    <h1 className="text-2xl font-semibold">
-                      Контактная информация
-                    </h1>
-                    <ContactInformation
-                      VK={contactInformation.VK}
-                      linkedIn={contactInformation.linkedIn}
-                      email={contactInformation.email}
-                      phone={contactInformation.phone}
-                      site={contactInformation.site}
-                      geo={contactInformation.geo}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
-            )}
-          </div>
-        </div>
+        {children}
       </div>
     </Container>
   );

@@ -14,7 +14,7 @@ type TContactInformationProps = {
   phone?: string | null;
   email?: string | null;
   site?: string | null;
-  geo?: string | null;
+  region?: string | null;
   VK?: string | null;
   linkedIn?: string | null;
 } & ComponentPropsWithoutRef<"div">;
@@ -23,7 +23,7 @@ export default function ContactInformation({
   phone,
   email,
   site,
-  geo,
+  region,
   VK,
   linkedIn,
   className,
@@ -47,7 +47,7 @@ export default function ContactInformation({
     },
     {
       icon: <GeoIcon />,
-      value: geo,
+      value: region,
       href: null,
     },
   ].filter((contact) => contact.value);

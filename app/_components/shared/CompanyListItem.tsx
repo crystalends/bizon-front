@@ -4,8 +4,7 @@ import { ElementType, ReactNode } from "react";
 import { Image } from "@heroui/image";
 import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
-import VerifiedBadgeIcon from "../icons/VerifiedBadgeIcon";
-import DetailIsVerified from "./DetailIsVerified";
+import DetailIsVerified from "../DetailIsVerified";
 
 type TCompanyListItemProps<T extends ElementType = "div"> = {
   name: string;
@@ -16,9 +15,8 @@ type TCompanyListItemProps<T extends ElementType = "div"> = {
   productsPreviewGridSlot?: ReactNode;
   imageProps?: ImageProps;
   ratingSlot?: ReactNode;
-  cardProps?: TPolymorphicProps<T, CardProps>;
   rightContent?: ReactNode;
-};
+} & TPolymorphicProps<T, Omit<CardProps, "children">>;
 export default function CompanyListItem<T extends ElementType = "div">({
   name,
   renderName = (name) => <h2 className="text-[32px] font-semibold">{name}</h2>,
@@ -28,13 +26,12 @@ export default function CompanyListItem<T extends ElementType = "div">({
   productsPreviewGridSlot,
   imageProps,
   ratingSlot,
-  cardProps,
   rightContent,
+  className,
+  ...props
 }: TCompanyListItemProps<T>) {
-  const { className, ...restCardProps } = cardProps || {};
-
   return (
-    <Card shadow="md" className={clsx("p-2", className)} {...restCardProps}>
+    <Card shadow="md" className={clsx("p-2", className)} {...props}>
       <CardBody>
         <div className="flex flex-wrap justify-center xl:justify-normal xl:flex-nowrap gap-5">
           {(imageProps || ratingSlot) && (

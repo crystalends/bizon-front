@@ -72,7 +72,7 @@ export default function CategoryPage() {
       ],
       isVerified: true,
       _count: {
-        ratings: 182,
+        reviews: 182,
         products: 24,
       },
     },
@@ -122,7 +122,7 @@ export default function CategoryPage() {
       },
       isVerified: true,
       _count: {
-        ratings: 156,
+        reviews: 156,
         products: 2,
       },
     },
@@ -156,7 +156,7 @@ export default function CategoryPage() {
       },
       isVerified: false,
       _count: {
-        ratings: 89,
+        reviews: 89,
       },
     },
     {
@@ -188,7 +188,7 @@ export default function CategoryPage() {
       },
       isVerified: true,
       _count: {
-        ratings: 112,
+        reviews: 112,
       },
     },
   ];

@@ -1,5 +1,5 @@
 import Rating from "@/app/_components/shared/Rating";
-import getRatingCountWord from "@/app/_utils/getRatingCountWord";
+import { pluralize } from "@/app/_utils/pluralize";
 
 type TDetailRatingProps = { rating: number; ratingCount: number };
 
@@ -12,7 +12,12 @@ export default function DetailRating({
       <Rating rating={rating} />
       {ratingCount && (
         <p className="text-sm">
-          {ratingCount} {getRatingCountWord(ratingCount)}
+          {ratingCount}{" "}
+          {pluralize(ratingCount, {
+            one: "оценка",
+            few: "оценки",
+            many: "оценок",
+          })}
         </p>
       )}
     </div>

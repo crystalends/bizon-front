@@ -1,8 +1,8 @@
 import TCategory from "../_types/Category";
-import Block from "./Block";
 import PopularCategory from "./shared/PopularCategory";
 import Container from "./shared/Container";
 import Link from "next/link";
+import Block from "./shared/Block";
 
 type TPopularCategoriesProps = {
   categories: TCategory[];
@@ -20,11 +20,9 @@ export default function PopularCategories({
               key={id}
               name={name}
               imageProps={{ src: image }}
-              cardProps={{
-                isPressable: true,
-                as: Link,
-                href: `/categories/${id}`,
-              }}
+              isPressable
+              as={Link}
+              href={`/categories/${id}`}
             />
           ))}
         </div>

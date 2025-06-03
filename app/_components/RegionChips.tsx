@@ -1,14 +1,14 @@
-import Chip from "./shared/CategoryChip";
+import Chip from "./ui/Chip";
 
 type TRegionChipsProps = {
-  regions: TRegion[];
+  regions: string[];
 };
 
 export default function RegionChips({ regions }: TRegionChipsProps) {
   return (
     <div className="flex flex-wrap gap-1">
-      {regions.map(({ id, name }) => (
-        <Chip key={id} name={name} />
+      {regions.map((region, index) => (
+        <Chip key={region + index}>{region}</Chip>
       ))}
     </div>
   );

@@ -1,10 +1,27 @@
-import Button from "@/app/_components/ui/Button";
+import Button, { TButtonProps } from "@/app/_components/ui/Button";
+import clsx from "clsx";
+import { ComponentPropsWithoutRef } from "react";
 
-export default function Actions() {
+type TActionsProps = ComponentPropsWithoutRef<"div">;
+
+export default function Actions({ className, ...props }: TActionsProps) {
+  const actions: TButtonProps[] = [
+    {
+      key: 1,
+      color: "default",
+      children: "Оставить заявку",
+    },
+    {
+      key: 2,
+      children: "Партнерство",
+    },
+  ];
+
   return (
-    <div className="flex flex-col gap-3">
-      <Button color="default">Оставить заявку</Button>
-      <Button>Партнерство</Button>
+    <div className={clsx("flex flex-col gap-3", className)} {...props}>
+      {actions.map(({ key, ...action }) => (
+        <Button key={key} {...action} />
+      ))}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import clsx from "clsx";
+import { ComponentPropsWithoutRef } from "react";
 
-type TContainerProps = React.HTMLAttributes<HTMLDivElement>;
+type TContainerProps = ComponentPropsWithoutRef<"div">;
 
 export default function Container({ className, ...props }: TContainerProps) {
   return (

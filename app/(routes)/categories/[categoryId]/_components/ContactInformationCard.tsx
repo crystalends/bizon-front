@@ -7,7 +7,7 @@ type TContactInfrmationCardProps = {
 };
 
 export default function ContactInfrmationCard({
-  contactInformation: { phone, email, site, VK, linkedIn, geo },
+  contactInformation: { phone, email, site, VK, linkedIn, region },
 }: TContactInfrmationCardProps) {
   return (
     <Card shadow="none" className="bg-gray-50 p-5">
@@ -21,7 +21,7 @@ export default function ContactInfrmationCard({
             site={site}
             VK={VK}
             linkedIn={linkedIn}
-            geo={geo}
+            region={region}
           />
         </div>
       </CardBody>

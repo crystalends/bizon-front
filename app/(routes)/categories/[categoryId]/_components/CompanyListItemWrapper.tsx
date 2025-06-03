@@ -1,9 +1,9 @@
 import CompanyListItem from "@/app/_components/shared/CompanyListItem";
 import TCompany from "@/app/_types/Company";
 import ContactInfrmationCard from "./ContactInformationCard";
-import Actions from "./Actions";
 import { ReactNode } from "react";
 import Link from "@/app/_components/ui/Link";
+import Actions from "./Actions";
 
 type TCompanyListItemWrapperProps = {
   company: TCompany;

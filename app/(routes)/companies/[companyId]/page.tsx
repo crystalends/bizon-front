@@ -1,5 +1,5 @@
 import TCompany from "@/app/_types/Company";
-import Company from "./_components/Company";
+import CompanyGeneral from "./_components/CompanyGeneral";
 
 export default function CompanyPage() {
   const company: TCompany = {
@@ -35,17 +35,12 @@ export default function CompanyPage() {
       KPP: 212321321312,
       companyId: 6,
     },
-    regions: [
-      {
-        id: 1,
-        name: "Москва",
-      },
-    ],
+    regions: ["Москва"],
     isVerified: true,
     _count: {
-      ratings: 112,
+      reviews: 112,
     },
   };
 
-  return <Company company={company} />;
+  return <CompanyGeneral company={company} />;
 }

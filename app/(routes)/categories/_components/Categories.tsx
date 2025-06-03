@@ -28,12 +28,10 @@ export default function Categories({ categories }: TCategoriesProps) {
       <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(375px,1fr))] gap-x-5">
         <CategoryPreview
           name={"Все категории"}
-          cardProps={{
-            className: "hover:bg-gray-50",
-            isPressable: true,
-            as: Link,
-            href: `/companies`,
-          }}
+          className="hover:bg-gray-50"
+          isPressable
+          as={Link}
+          href="/companies"
           endIcon={<ArrowRightIcon />}
         />
         {categories.map(({ id, name, image }) => (
@@ -41,12 +39,10 @@ export default function Categories({ categories }: TCategoriesProps) {
             key={id}
             name={name}
             imageProps={{ src: image }}
-            cardProps={{
-              className: "hover:bg-gray-50",
-              isPressable: true,
-              as: Link,
-              href: `/categories/${id}`,
-            }}
+            className="hover:bg-gray-50"
+            isPressable
+            as={Link}
+            href={`/categories/${id}`}
             endIcon={<ArrowRightIcon />}
           />
         ))}

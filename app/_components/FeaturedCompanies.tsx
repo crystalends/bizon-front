@@ -1,11 +1,11 @@
 import { Link } from "@heroui/link";
 import TCompany from "../_types/Company";
-import Block from "./Block";
 import FeaturedCompany from "./shared/FeaturedCompany";
 import Button from "./ui/Button";
 import { ScrollShadow } from "@heroui/scroll-shadow";
 import Container from "./shared/Container";
 import Rating from "./shared/Rating";
+import Block from "./shared/Block";
 
 type TFeaturedCompanies = {
   companies: TCompany[];

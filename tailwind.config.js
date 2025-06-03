@@ -14,6 +14,7 @@ const config = {
         mono: ["var(--font-mono)"],
       },
       colors: {
+        black: "#2F3742",
         gray: {
           50: "#F9F9F9",
           300: "#D4D4D4",
