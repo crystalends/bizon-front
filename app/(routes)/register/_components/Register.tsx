@@ -1,5 +1,5 @@
 import Container from "@/app/_components/shared/Container";
-import Button from "@/app/_components/ui/Button";
+import FormButton from "@/app/_components/ui/FormButton";
 import Input from "@/app/_components/ui/Input";
 import Link from "@/app/_components/ui/Link";
 
@@ -18,9 +18,9 @@ export default function Register() {
               <Input placeholder="ИНН компании (если есть)" />
               <Input placeholder="Придумайте пароль" type="password" />
               <Input placeholder="Подтвердите пароль" type="password" />
-              <Button className="h-[66px] px-10 py-4">
+              <FormButton className="h-[66px] px-10 py-4">
                 Зарегистрироваться
-              </Button>
+              </FormButton>
             </div>
             <p className="text-xs">
               Нажимая кнопку «Зарегистрироваться», Вы даете согласие на

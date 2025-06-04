@@ -20,13 +20,11 @@ export default function Login({ children }: TLoginProps) {
       key: "/login",
       title: "Почта",
       href: "/login",
-      as: Link,
     },
     {
       key: "/login/phone",
       title: "Телефон",
       href: "/login/phone",
-      as: Link,
     },
   ];
 
@@ -36,7 +34,7 @@ export default function Login({ children }: TLoginProps) {
         <h2 className="text-[44px] font-semibold">Вход</h2>
         <div className="flex flex-col gap-5 w-full">
           <Tabs fullWidth items={tabs} selectedKey={pathname}>
-            {({ key, ...item }) => <Tab key={key} {...item} />}
+            {({ key, ...item }) => <Tab as={Link} key={key} {...item} />}
           </Tabs>
           {children}
           <p className="text-xs">

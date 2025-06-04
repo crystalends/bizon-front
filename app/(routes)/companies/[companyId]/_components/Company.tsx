@@ -39,17 +39,14 @@ export default function Company({
     {
       title: "Главное",
       href: `/companies/${id}`,
-      as: Link,
     },
     {
       title: "Товары и услуги",
       href: `/companies/${id}/products`,
-      as: Link,
     },
     {
       title: "Отзывы",
       href: `/companies/${id}/reviews`,
-      as: Link,
     },
   ];
 
@@ -82,7 +79,7 @@ export default function Company({
             items={tabs}
             selectedKey={pathname}
           >
-            {(item) => <Tab key={item.href} {...item} />}
+            {(item) => <Tab as={Link} key={item.href} {...item} />}
           </Tabs>
         </div>
         {children}

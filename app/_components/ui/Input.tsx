@@ -12,14 +12,14 @@ export default function Input<T extends ElementType = "input">({
   classNames = {},
   ...props
 }: TInputProps<T>) {
-  const { input, inputWrapper, ...restClassNames } = classNames;
+  const { input, inputWrapper, label, ...restClassNames } = classNames;
 
   return (
     <HeroUIInput
       classNames={{
-        ...restClassNames,
         input: clsx("text-base", input),
         inputWrapper: clsx("h-[66px] px-6 py-[21px]", inputWrapper),
+        ...restClassNames,
       }}
       variant="bordered"
       color="primary"

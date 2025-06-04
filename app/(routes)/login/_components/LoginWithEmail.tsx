@@ -1,4 +1,4 @@
-import Button from "@/app/_components/ui/Button";
+import FormButton from "@/app/_components/ui/FormButton";
 import Input from "@/app/_components/ui/Input";
 
 export default function LoginWithEmail() {
@@ -6,7 +6,7 @@ export default function LoginWithEmail() {
     <div className="flex flex-col gap-3">
       <Input placeholder="Почта" />
       <Input placeholder="Пароль" type="password" />
-      <Button className="h-[66px] px-10 py-4">Войти</Button>
+      <FormButton className="h-[66px] px-10 py-4">Войти</FormButton>
     </div>
   );
 }

@@ -18,6 +18,7 @@ import { Image } from "@heroui/image";
 import Input from "@/app/_components/ui/Input";
 import TPartner from "@/app/_types/Partner";
 import RegionChips from "@/app/_components/RegionChips";
+import FormButton from "@/app/_components/ui/FormButton";
 
 type TPartnersProps = {
   partners: TPartner[];
@@ -53,7 +54,7 @@ export default function Partners({ partners }: TPartnersProps) {
               </p>
               <div className="flex flex-col gap-3">
                 <Input placeholder="Товар или услуга" />
-                <Button className="h-[66px] px-10 py-4">Поиск</Button>
+                <FormButton className="h-[66px] px-10 py-4">Поиск</FormButton>
                 <p className="text-xs">
                   Отправляя данную форму, Вы даете согласие на обработку
                   персональных данных согласно нашей политике конфиденциальности

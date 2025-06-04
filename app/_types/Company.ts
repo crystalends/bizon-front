@@ -1,6 +1,7 @@
 import TCategory from "./Category";
 import TDetails from "./Details";
 import TProduct from "./Product";
+import TRegion from "./Region";
 
 type TCompany = {
   id: number;

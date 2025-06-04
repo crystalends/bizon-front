@@ -1,4 +1,5 @@
-import Button, { TButtonProps } from "./ui/Button";
+import { TButtonProps } from "./ui/Button";
+import FormButton from "./ui/FormButton";
 import Input, { TInputProps } from "./ui/Input";
 
 type TGlobalSearchProps = {
@@ -23,9 +24,7 @@ export default function GlobalSearch({
         placeholder="Поиск товара, услуги, компании"
         {...inputProps}
       />
-      <Button className="h-[66px] px-10 py-4" {...buttonProps}>
-        Поиск
-      </Button>
+      <FormButton {...buttonProps}>Поиск</FormButton>
     </div>
   );
 }

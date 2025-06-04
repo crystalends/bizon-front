@@ -1,6 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
 import EmailIcon from "../icons/EmailIcon";
-import GeoIcon from "../icons/GeoIcon";
 import PhoneIcon from "../icons/PhoneIcon";
 import SiteIcon from "../icons/SiteIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
@@ -14,7 +13,6 @@ type TContactInformationProps = {
   phone: string;
   email: string;
   site?: string | null;
-  region?: string | null;
   VK?: string | null;
   linkedIn?: string | null;
 } & ComponentPropsWithoutRef<"div">;
@@ -23,7 +21,6 @@ export default function ContactInformation({
   phone,
   email,
   site,
-  region,
   VK,
   linkedIn,
   className,
@@ -44,11 +41,6 @@ export default function ContactInformation({
       icon: <SiteIcon className="text-gray-600" />,
       value: site,
       href: site ? (site.startsWith("http") ? site : `https://${site}`) : null,
-    },
-    {
-      icon: <GeoIcon />,
-      value: region,
-      href: null,
     },
   ].filter((contact) => contact.value);
 

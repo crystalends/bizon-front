@@ -1,0 +1,70 @@
+"use client";
+
+import BriefcaseIcon from "@/app/_components/icons/BriefcaseIcon";
+import UserIcon from "@/app/_components/icons/UserIcon";
+import Block from "@/app/_components/shared/Block";
+import Container from "@/app/_components/shared/Container";
+import IconedListItem, {
+  TIconedListItemProps,
+} from "@/app/_components/shared/IconedListItem";
+import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
+import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
+import Link from "next/link";
+import { ReactNode } from "react";
+
+type TUserProps = { children: ReactNode };
+
+export default function User({ children }: TUserProps) {
+  const iconedListItems: TIconedListItemProps<typeof Link>[] = [
+    {
+      key: 1,
+      name: "Данные профиля",
+      startIcon: <UserIcon />,
+      href: "/user",
+    },
+    {
+      key: 2,
+      name: "Данные компании",
+      startIcon: <BriefcaseIcon />,
+      href: "/user/company",
+    },
+  ];
+
+  const breadcrumbItems: BreadcrumbItemProps[] = [
+    {
+      children: "Главная",
+      href: "/",
+    },
+    {
+      children: "Личный кабинет",
+      href: "/user",
+    },
+  ];
+
+  return (
+    <Container className="pt-10 relative">
+      <div className="flex flex-col gap-12">
+        <Breadcrumbs>
+          {breadcrumbItems.map((item, index) => (
+            <BreadcrumbItem key={index} {...item} />
+          ))}
+        </Breadcrumbs>
+        <Block title="Личный кабинет">
+          <div className="flex flex-col xl:flex-row gap-5 xl:gap-48">
+            <div className="xl:sticky xl:top-10 xl:h-fit xl:self-start flex flex-col xl:min-w-[375px]">
+              {iconedListItems.map(({ key, ...iconedListItem }) => (
+                <IconedListItem
+                  key={key}
+                  as={Link}
+                  className="hover:bg-gray-50"
+                  {...iconedListItem}
+                />
+              ))}
+            </div>
+            {children}
+          </div>
+        </Block>
+      </div>
+    </Container>
+  );
+}

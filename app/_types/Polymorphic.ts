@@ -1,7 +1,11 @@
-import { ComponentPropsWithoutRef, ElementType } from "react";
+import {
+  ComponentPropsWithoutRef,
+  ElementType,
+  ForwardRefExoticComponent,
+} from "react";
 
 type TPolymorphicProps<
-  DefaultElement extends ElementType,
+  DefaultElement extends ElementType | ForwardRefExoticComponent<any>,
   InheritableElement = {},
 > = InheritableElement & {
   as?: DefaultElement;

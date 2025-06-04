@@ -19,13 +19,11 @@ export default function Restore({ children }: TRestoreProps) {
       key: "/restore",
       title: "Почта",
       href: "/restore",
-      as: Link,
     },
     {
       key: "/restore/phone",
       title: "Телефон",
       href: "/restore/phone",
-      as: Link,
     },
   ];
 
@@ -34,7 +32,7 @@ export default function Restore({ children }: TRestoreProps) {
       <div className="flex flex-col gap-8 items-center">
         <h2 className="text-[44px] font-semibold">Восстановление пароля</h2>
         <Tabs fullWidth items={tabs} selectedKey={pathname}>
-          {({ key, ...item }) => <Tab key={key} {...item} />}
+          {({ key, ...item }) => <Tab as={Link} key={key} {...item} />}
         </Tabs>
         <div className="flex flex-col gap-5 w-full">
           {children}

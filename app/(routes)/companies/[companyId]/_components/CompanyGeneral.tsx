@@ -87,7 +87,6 @@ export default function CompanyGeneral({
                     email={contactInformation.email}
                     phone={contactInformation.phone}
                     site={contactInformation.site}
-                    region={contactInformation.region}
                   />
                 </div>
               </CardBody>

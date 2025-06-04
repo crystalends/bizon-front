@@ -40,7 +40,12 @@ export default function CompanyLayout({ children }: TCompanyLayoutProps) {
       KPP: 212321321312,
       companyId: 6,
     },
-    regions: ["Москва"],
+    regions: [
+      {
+        id: 1,
+        name: "Москва",
+      },
+    ],
     isVerified: true,
     _count: {
       reviews: 112,
