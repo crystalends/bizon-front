@@ -2,6 +2,8 @@
 
 import BriefcaseIcon from "@/app/_components/icons/BriefcaseIcon";
 import CardsIcon from "@/app/_components/icons/CardsIcon";
+import DialogIcon from "@/app/_components/icons/DialogIcon";
+import FavoriteMessageIcon from "@/app/_components/icons/FavoriteMessageIcon";
 import HeartIcon from "@/app/_components/icons/HeartIcon";
 import SearchInFolder from "@/app/_components/icons/SearchInFolder";
 import UserIcon from "@/app/_components/icons/UserIcon";
@@ -48,6 +50,12 @@ export default function User({ children }: TUserProps) {
       name: "Избранные компании",
       startIcon: <HeartIcon />,
       href: "/user/favorite-companies",
+    },
+    {
+      key: 6,
+      name: "Отзывы",
+      startIcon: <FavoriteMessageIcon />,
+      href: "/user/reviews",
     },
   ];
 
