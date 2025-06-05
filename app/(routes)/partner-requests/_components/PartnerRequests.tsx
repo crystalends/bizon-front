@@ -16,15 +16,17 @@ import {
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
 import Input from "@/app/_components/ui/Input";
-import TPartner from "@/app/_types/Partner";
 import RegionChips from "@/app/_components/RegionChips";
 import FormButton from "@/app/_components/ui/FormButton";
+import TPartnerRequest from "@/app/_types/PartnerRequest";
 
-type TPartnersProps = {
-  partners: TPartner[];
+type TPartnerRequestsProps = {
+  partnerRequests: TPartnerRequest[];
 };
 
-export default function Partners({ partners }: TPartnersProps) {
+export default function PartnerRequests({
+  partnerRequests,
+}: TPartnerRequestsProps) {
   const breadcrumbItems: BreadcrumbItemProps[] = [
     {
       children: "Главная",
@@ -81,12 +83,15 @@ export default function Partners({ partners }: TPartnersProps) {
             </Button>
           }
         >
-          {partners.map(({ id, product, user, createdAt }) => (
+          {partnerRequests.map(({ id, product, user, createdAt }) => (
             <Partner
               key={id}
               product={product}
-              user={user?.company?.name || user?.name}
-              regionChipsSlot={
+              searcher={user?.company?.name || user?.name}
+              renderSearcher={(searcher) => (
+                <p className="text-xl">Ищет: {searcher}</p>
+              )}
+              middleContent={
                 user?.company?.regions && (
                   <RegionChips regions={user.company.regions} />
                 )

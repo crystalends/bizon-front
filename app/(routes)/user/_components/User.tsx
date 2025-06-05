@@ -1,6 +1,8 @@
 "use client";
 
 import BriefcaseIcon from "@/app/_components/icons/BriefcaseIcon";
+import CardsIcon from "@/app/_components/icons/CardsIcon";
+import SearchInFolder from "@/app/_components/icons/SearchInFolder";
 import UserIcon from "@/app/_components/icons/UserIcon";
 import Block from "@/app/_components/shared/Block";
 import Container from "@/app/_components/shared/Container";
@@ -27,6 +29,18 @@ export default function User({ children }: TUserProps) {
       name: "Данные компании",
       startIcon: <BriefcaseIcon />,
       href: "/user/company",
+    },
+    {
+      key: 3,
+      name: "Товары и услуги",
+      startIcon: <CardsIcon />,
+      href: "/user/products",
+    },
+    {
+      key: 4,
+      name: "Заявки и запросы",
+      startIcon: <SearchInFolder />,
+      href: "/user/partners",
     },
   ];
 

@@ -10,6 +10,7 @@ type TCompanyGridItemProps = {
   description?: string;
   isVerified?: boolean;
   categoryChipsSlot?: ReactNode;
+  regionChipsSlot?: ReactNode;
   imageProps?: ImageProps;
   ratingSlot?: ReactNode;
   endContent?: ReactNode;
@@ -20,6 +21,7 @@ export default function CompanyGridItem({
   description,
   isVerified,
   categoryChipsSlot,
+  regionChipsSlot,
   imageProps,
   ratingSlot,
   endContent,
@@ -46,6 +48,7 @@ export default function CompanyGridItem({
         </p>
       )}
       {categoryChipsSlot}
+      {regionChipsSlot}
       {endContent}
     </div>
   );

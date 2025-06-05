@@ -1,5 +1,5 @@
 type TDetails = {
-  key: number;
+  id: number;
   INN?: number;
   KPP?: number;
   OGRN?: number;

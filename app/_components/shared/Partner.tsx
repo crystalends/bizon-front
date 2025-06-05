@@ -4,25 +4,25 @@ import { ElementType, ReactNode } from "react";
 
 type TPartnerProps<T extends ElementType = "div"> = {
   product?: string;
-  user?: string;
-  regionChipsSlot?: ReactNode;
+  searcher?: string;
+  middleContent?: ReactNode;
   createdAt: string;
   rightContent?: ReactNode;
   renderProduct?: (product: string) => ReactNode;
-  renderUser?: (user: string) => ReactNode;
+  renderSearcher?: (searcher: string) => ReactNode;
   renderCreatedAt?: (createdAt: string) => ReactNode;
 } & TPolymorphicProps<T, Omit<CardProps, "children">>;
 
 export default function Partner<T extends ElementType = "div">({
   product,
-  user,
+  searcher,
   createdAt,
-  regionChipsSlot,
+  middleContent,
   rightContent,
   renderProduct = (product) => (
     <h3 className="font-semibold text-2xl">{product}</h3>
   ),
-  renderUser = (user) => <p className="text-xl">Ищет: {user}</p>,
+  renderSearcher = (searcher) => <p className="text-xl">{searcher}</p>,
   renderCreatedAt = (createdAt) => (
     <p className="text-gray-300">Опубликовано: {createdAt}</p>
   ),
@@ -35,8 +35,8 @@ export default function Partner<T extends ElementType = "div">({
         <div className="flex flex-col xl:flex-row gap-5">
           <div className="flex flex-col gap-4 flex-1">
             {product && renderProduct(product)}
-            {user && renderUser(user)}
-            {regionChipsSlot}
+            {searcher && renderSearcher(searcher)}
+            {middleContent}
             {createdAt && renderCreatedAt(createdAt)}
           </div>
           {rightContent && <div>{rightContent}</div>}

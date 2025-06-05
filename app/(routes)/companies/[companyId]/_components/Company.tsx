@@ -11,6 +11,7 @@ import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
 import { ReactNode } from "react";
 import Tabs from "@/app/_components/ui/Tabs";
 import Link from "next/link";
+import Block from "@/app/_components/shared/Block";
 
 type TCompanyProps = { company: TCompany; children?: ReactNode };
 
@@ -58,21 +59,25 @@ export default function Company({
             <BreadcrumbItem key={index} {...item} />
           ))}
         </Breadcrumbs>
-        <div className="flex flex-wrap justify-between gap-5">
-          <div className="flex gap-14 items-center flex-wrap">
-            <h1 className="text-[44px] font-semibold">{name}</h1>
-            <Button color="default">
-              <HeartIcon />
-            </Button>
-          </div>
-          <div className="flex w-full xl:w-fit flex-wrap gap-3">
-            <Button className="w-full xl:w-80" color="default">
-              Оставить заявку
-            </Button>
-            <Button className="w-full xl:w-80">Партнерство</Button>
-          </div>
-        </div>
-        <div>
+        <Block
+          title={name}
+          renderTitle={(title) => (
+            <div className="flex gap-14 w-full xl:w-fit justify-between xl:justify-normal items-center flex-wrap">
+              <h1 className="text-[44px] font-semibold">{title}</h1>
+              <Button color="default">
+                <HeartIcon />
+              </Button>
+            </div>
+          )}
+          rightContent={
+            <div className="flex w-full xl:w-fit flex-wrap gap-3">
+              <Button className="w-full xl:w-80" color="default">
+                Оставить заявку
+              </Button>
+              <Button className="w-full xl:w-80">Партнерство</Button>
+            </div>
+          }
+        >
           <Tabs
             color="primary"
             variant="light"
@@ -81,8 +86,8 @@ export default function Company({
           >
             {(item) => <Tab as={Link} key={item.href} {...item} />}
           </Tabs>
-        </div>
-        {children}
+          {children}
+        </Block>
       </div>
     </Container>
   );

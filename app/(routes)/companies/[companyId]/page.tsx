@@ -30,7 +30,7 @@ export default function CompanyPage() {
       companyId: 6,
     },
     details: {
-      key: 1,
+      id: 1,
       INN: 121213421312312,
       KPP: 212321321312,
       companyId: 6,

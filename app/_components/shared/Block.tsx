@@ -20,7 +20,7 @@ export default function Block({
 }: TBlock) {
   return (
     <div className={clsx("flex flex-col gap-6", className)} {...props}>
-      <div className="flex gap-5 flex-wrap justify-between">
+      <div className="flex gap-5 items-center flex-wrap justify-between">
         {renderTitle(title)}
         {rightContent}
       </div>

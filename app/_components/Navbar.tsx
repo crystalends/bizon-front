@@ -24,7 +24,7 @@ export default function Navbar() {
     },
     {
       key: 2,
-      children: <Link href="/partners">Поиск партнера</Link>,
+      children: <Link href="/partner-requests">Поиск партнера</Link>,
     },
     {
       key: 3,

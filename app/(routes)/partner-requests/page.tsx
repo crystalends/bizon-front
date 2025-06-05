@@ -1,8 +1,8 @@
-import TPartner from "@/app/_types/Partner";
-import Partners from "./_components/Partners";
+import TPartnerRequest from "@/app/_types/PartnerRequest";
+import PartnerRequests from "./_components/PartnerRequests";
 
-export default function PartnersPage() {
-  const partners: TPartner[] = [
+export default function PartnerRequestsPage() {
+  const partnerRequests: TPartnerRequest[] = [
     {
       id: 1,
       userId: 1,
@@ -11,6 +11,7 @@ export default function PartnersPage() {
         id: 1,
         name: "Владимир Иванов",
       },
+      customers: [],
       createdAt: new Date(),
       updatedAt: new Date(),
     },
@@ -39,10 +40,11 @@ export default function PartnersPage() {
           isVerified: false,
         },
       },
+      customers: [],
       createdAt: new Date(),
       updatedAt: new Date(),
     },
   ];
 
-  return <Partners partners={partners} />;
+  return <PartnerRequests partnerRequests={partnerRequests} />;
 }

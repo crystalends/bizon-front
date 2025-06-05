@@ -1,12 +1,13 @@
 import TUser from "./User";
 
-type TPartner = {
+type TPartnerOrder = {
   id: number;
   product: string;
   userId: number;
   user?: TUser;
+  executors: TUser[];
   createdAt: Date;
   updatedAt: Date;
 };
 
-export default TPartner;
+export default TPartnerOrder;
