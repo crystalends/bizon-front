@@ -1,8 +1,7 @@
 import TPartnerOrder from "@/app/_types/PartnerOrder";
-import PartnerOrders from "./_components/MyPartnerOrders";
-import MyPartnerOrders from "./_components/MyPartnerOrders";
+import PartnerOrdersForMe from "./_components/PartnerOrdersForMe";
 
-export default function PartnersPage() {
+export default function PartnerOrdersForMePage() {
   const partnerOrders: TPartnerOrder[] = [
     {
       id: 1,
@@ -327,5 +326,5 @@ export default function PartnersPage() {
     },
   ];
 
-  return <MyPartnerOrders partnerOrders={partnerOrders} />;
+  return <PartnerOrdersForMe partnerOrders={partnerOrders} />;
 }

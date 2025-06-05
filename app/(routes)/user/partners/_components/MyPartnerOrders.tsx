@@ -4,9 +4,11 @@ import TPartnerOrder from "@/app/_types/PartnerOrder";
 import { format } from "date-fns/format";
 import { ru } from "date-fns/locale";
 
-type TPartnerOrdersProps = { partnerOrders: TPartnerOrder[] };
+type TMyPartnerOrdersProps = { partnerOrders: TPartnerOrder[] };
 
-export default function PartnerOrders({ partnerOrders }: TPartnerOrdersProps) {
+export default function MyPartnerOrders({
+  partnerOrders,
+}: TMyPartnerOrdersProps) {
   return (
     <div className="flex flex-col gap-5">
       {partnerOrders.map(({ id, product, user, createdAt }) => (
