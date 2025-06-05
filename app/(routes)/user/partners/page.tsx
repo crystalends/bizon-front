@@ -1,5 +1,4 @@
 import TPartnerOrder from "@/app/_types/PartnerOrder";
-import PartnerOrders from "./_components/MyPartnerOrders";
 import MyPartnerOrders from "./_components/MyPartnerOrders";
 
 export default function PartnersPage() {
