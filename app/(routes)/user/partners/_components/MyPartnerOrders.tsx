@@ -2,7 +2,6 @@ import Partner from "@/app/_components/shared/Partner";
 import Link from "@/app/_components/ui/Link";
 import TPartnerOrder from "@/app/_types/PartnerOrder";
 import { format } from "date-fns/format";
-import { ru } from "date-fns/locale";
 
 type TMyPartnerOrdersProps = { partnerOrders: TPartnerOrder[] };
 
@@ -30,9 +29,7 @@ export default function MyPartnerOrders({
               </Link>
             )
           }
-          createdAt={format(createdAt, "dd.MM.yyyy", {
-            locale: ru,
-          })}
+          createdAt={format(createdAt, "dd.MM.yyyy")}
         />
       ))}
     </div>

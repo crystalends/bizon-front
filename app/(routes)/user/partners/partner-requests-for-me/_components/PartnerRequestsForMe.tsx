@@ -1,22 +1,24 @@
 import RegionChips from "@/app/_components/RegionChips";
 import Partner from "@/app/_components/shared/Partner";
-import TPartnerOrder from "@/app/_types/PartnerOrder";
-import { format } from "date-fns/format";
+import TPartnerRequest from "@/app/_types/PartnerRequest";
+import { format } from "date-fns";
 
-type TMyPartnerOrdersForMeProps = { partnerOrders: TPartnerOrder[] };
+type TPartnerRequestsForMeProps = {
+  partnerRequests: TPartnerRequest[];
+};
 
-export default function PartnerOrdersForMe({
-  partnerOrders,
-}: TMyPartnerOrdersForMeProps) {
+export default function PartnerRequestsForMe({
+  partnerRequests,
+}: TPartnerRequestsForMeProps) {
   return (
     <div className="flex flex-col gap-5">
-      {partnerOrders.map(({ id, product, user, createdAt }) => (
+      {partnerRequests.map(({ id, product, user, createdAt }) => (
         <Partner
           key={id}
           product={product}
           searcher={user?.company?.name || user?.name}
           renderSearcher={(searcher) => (
-            <p className="text-xl">От кого: {searcher}</p>
+            <p className="text-xl">Ищет: {searcher}</p>
           )}
           middleContent={
             user?.company?.regions && (

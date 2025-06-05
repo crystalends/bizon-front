@@ -88,14 +88,15 @@ export default function Category({
           {viewMode === "list" ? (
             <div className="flex flex-col gap-5">
               {companies.map((company) => {
-                const { _count, rating, categories, products } = company;
+                const { id, _count, rating, categories, products } = company;
 
                 return (
                   <CompanyListItemWrapper
-                    key={company.id}
+                    key={id}
                     company={company}
                     ratingSlot={
-                      _count?.reviews && (
+                      _count?.reviews &&
+                      rating && (
                         <DetailRating
                           rating={rating}
                           ratingCount={_count.reviews}
@@ -125,13 +126,13 @@ export default function Category({
           ) : (
             <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5">
               {companies.map((company) => {
-                const { rating, categories } = company;
+                const { id, rating, categories } = company;
 
                 return (
                   <CompanyGridItemWrapper
-                    key={company.id}
+                    key={id}
                     company={company}
-                    ratingSlot={<Rating rating={rating} />}
+                    ratingSlot={rating && <Rating rating={rating} />}
                     categoryChipsSlot={
                       categories &&
                       categories.length > 0 && (

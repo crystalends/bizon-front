@@ -2,6 +2,7 @@
 
 import BriefcaseIcon from "@/app/_components/icons/BriefcaseIcon";
 import CardsIcon from "@/app/_components/icons/CardsIcon";
+import HeartIcon from "@/app/_components/icons/HeartIcon";
 import SearchInFolder from "@/app/_components/icons/SearchInFolder";
 import UserIcon from "@/app/_components/icons/UserIcon";
 import Block from "@/app/_components/shared/Block";
@@ -41,6 +42,12 @@ export default function User({ children }: TUserProps) {
       name: "Заявки и запросы",
       startIcon: <SearchInFolder />,
       href: "/user/partners",
+    },
+    {
+      key: 5,
+      name: "Избранные компании",
+      startIcon: <HeartIcon />,
+      href: "/user/favorite-companies",
     },
   ];
 
