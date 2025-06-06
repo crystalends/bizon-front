@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  CardProps,
-} from "@heroui/card";
+import { Card, CardBody, CardFooter, CardProps } from "@heroui/card";
 import { ElementType, ReactNode } from "react";
 import clsx from "clsx";
 
@@ -33,14 +27,18 @@ export default function FeaturedCompany<T extends ElementType = "div">({
 }: TFeaturedCompanyProps<T>) {
   return (
     <Card className={clsx("p-10", className)} shadow="md" {...props}>
-      <CardHeader>
-        <div className="flex w-full justify-between gap-5">
-          {renderName(name)}
-          {ratingSlot}
+      <CardBody className="h-full flex flex-col justify-between overflow-hidden">
+        <div className="flex flex-col gap-5">
+          <div className="flex w-full justify-between gap-5">
+            {renderName(name)}
+            {ratingSlot}
+          </div>
+          {description && renderDescription(description)}
         </div>
-      </CardHeader>
-      {description && <CardBody>{renderDescription(description)}</CardBody>}
-      {endContent && <CardFooter>{renderEndContent(endContent)}</CardFooter>}
+        {endContent && (
+          <div className="pt-4">{renderEndContent(endContent)}</div>
+        )}
+      </CardBody>
     </Card>
   );
 }

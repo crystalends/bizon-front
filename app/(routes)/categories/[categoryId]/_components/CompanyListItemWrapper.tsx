@@ -35,7 +35,7 @@ export default function CompanyListItemWrapper({
         </Link>
       )}
       rightContent={
-        <div className="w-full xl:min-w-[487px] xl:w-auto flex gap-5 flex-col">
+        <div className="w-full xl:min-w-[487px] xl:w-auto flex justify-between gap-5 flex-col">
           {contactInformation && (
             <ContactInfrmationCard contactInformation={contactInformation} />
           )}

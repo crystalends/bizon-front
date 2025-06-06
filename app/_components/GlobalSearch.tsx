@@ -24,7 +24,9 @@ export default function GlobalSearch({
         variant="flat"
         {...inputProps}
       />
-      <FormButton {...buttonProps}>Поиск</FormButton>
+      <FormButton className="min-w-[166px]" {...buttonProps}>
+        Поиск
+      </FormButton>
     </div>
   );
 }

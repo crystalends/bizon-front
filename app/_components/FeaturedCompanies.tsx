@@ -20,18 +20,18 @@ export default function FeaturedCompanies({ companies }: TFeaturedCompanies) {
         <ScrollShadow className="py-4" orientation="horizontal">
           <div className="flex gap-4 w-max">
             {companies.map(({ id, name, description, rating }) => (
-              <div key={id} className="flex-[0_0_auto] w-[507px]">
-                <FeaturedCompany
-                  description={description}
-                  endContent={
-                    <Button as={Link} href={`/companies/${id}`}>
-                      Перейти
-                    </Button>
-                  }
-                  name={name}
-                  ratingSlot={rating && <Rating rating={rating} />}
-                />
-              </div>
+              <FeaturedCompany
+                key={id}
+                className="w-[506px]"
+                description={description}
+                endContent={
+                  <Button className="w-fit" as={Link} href={`/companies/${id}`}>
+                    Перейти
+                  </Button>
+                }
+                name={name}
+                ratingSlot={rating && <Rating rating={rating} />}
+              />
             ))}
           </div>
         </ScrollShadow>

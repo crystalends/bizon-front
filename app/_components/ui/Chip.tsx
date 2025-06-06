@@ -16,7 +16,10 @@ export default function Chip<T extends ElementType = "div">({
 }: TChipProps<T>) {
   return (
     <HeroUIChip
-      className={clsx("border border-gray-300 rounded-[4px]", className)}
+      className={clsx(
+        "border p-2 h-[35px] border-gray-300 rounded-[4px]",
+        className,
+      )}
       classNames={{
         content: clsx("font-medium", classNames.content),
         ...classNames,

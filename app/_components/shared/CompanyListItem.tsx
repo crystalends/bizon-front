@@ -45,8 +45,10 @@ export default function CompanyListItem<T extends ElementType = "div">({
           <div className="flex w-full flex-col gap-10">
             <div className="flex flex-col gap-5">
               {isVerified && <DetailIsVerified />}
-              {renderName(name)}
-              {description && <p>{description}</p>}
+              <div className="flex gap-3 flex-col">
+                {renderName(name)}
+                {description && <p>{description}</p>}
+              </div>
               {categoryChipsSlot}
             </div>
             {productsPreviewGridSlot}

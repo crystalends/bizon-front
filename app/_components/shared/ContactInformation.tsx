@@ -72,7 +72,9 @@ export default function ContactInformation({
         >
           {icon}
           {href ? (
-            <Link href={href}>{value}</Link>
+            <Link href={href} className="font-normal">
+              {value}
+            </Link>
           ) : (
             <span className="text-gray-800">{value}</span>
           )}

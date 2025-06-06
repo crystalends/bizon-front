@@ -32,7 +32,7 @@ export default function Advantages() {
 
   return (
     <Container className="text-center flex flex-col gap-5">
-      <h2 className="font-semibold text-[24px] xl:text-[44px]">
+      <h2 className="font-semibold text-[20px] xl:text-[32px]">
         Преимущества платформы:
       </h2>
       <div className="flex flex-wrap xl:flex-nowrap justify-center gap-5">

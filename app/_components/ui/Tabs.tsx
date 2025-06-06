@@ -13,7 +13,7 @@ export default function Tabs<T extends object = object>({
     <HeroUITabs
       classNames={{
         tab: clsx(
-          "py-[8px] px-[20px] h-[40px] data-[selected=true]:border-none border border-gray-300",
+          "py-[8px] px-[20px] h-[40px] data-[selected=true]:border-none border border-gray-300 text-xl font-medium",
           tab,
         ),
         ...restClassNames,
