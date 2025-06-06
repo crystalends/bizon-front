@@ -13,11 +13,15 @@ export default function Footer() {
     { children: "Категории", href: "/categories" },
     {
       children: "Поиск партнера",
-      href: "/partners",
+      href: "/partner-requests",
     },
     {
       children: "Центр помощи",
       href: "/help",
+    },
+    {
+      children: "Блог",
+      href: "/blog",
     },
   ];
 

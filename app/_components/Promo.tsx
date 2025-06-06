@@ -16,7 +16,7 @@ export default function Promo() {
           <CardBody className="p-10 xl:p-20">
             <div className="flex flex-col gap-11">
               <div className="flex flex-col gap-8">
-                <h2 className="text-white font-semibold text-[24px] xl:text-[44px]">
+                <h2 className="max-w-[521px] text-white font-semibold text-[24px] xl:text-[44px]">
                   Начните расти вместе с BizON
                 </h2>
                 <p className="text-white text-base xl:text-xl">

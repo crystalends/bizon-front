@@ -141,7 +141,7 @@ export default function Reviews({
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-3">
                     <h2 className="font-semibold text-2xl">Поставьте оценку</h2>
-                    <StarsRating value={2} aria-label="Поставьте оценку" />
+                    <StarsRating value={5} aria-label="Поставьте оценку" />
                   </div>
                   <div className="flex flex-col gap-3">
                     <h2 className="font-semibold text-2xl">
