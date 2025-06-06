@@ -6,9 +6,9 @@ export default function StarInCircleIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="32"
       height="32"
       viewBox="0 0 32 32"
+      width="32"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -25,10 +25,10 @@ export default function StarInCircleIcon({
       <defs>
         <clipPath id="clip0_128_9081">
           <rect
-            width="23.9062"
-            height="23.918"
             fill="white"
+            height="23.918"
             transform="translate(4 4)"
+            width="23.9062"
           />
         </clipPath>
       </defs>

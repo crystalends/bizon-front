@@ -6,9 +6,9 @@ export default function LinkedInIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="24"
       height="24"
       viewBox="0 0 24 24"
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -20,7 +20,7 @@ export default function LinkedInIcon({
       </g>
       <defs>
         <clipPath id="clip0_452_1452">
-          <rect width="24" height="24" fill="white" />
+          <rect fill="white" height="24" width="24" />
         </clipPath>
       </defs>
     </svg>

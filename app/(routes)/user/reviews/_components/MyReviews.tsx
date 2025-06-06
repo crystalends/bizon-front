@@ -1,7 +1,8 @@
-import Review from "@/app/_components/shared/Review";
-import TReview from "@/app/_types/Review";
 import { format } from "date-fns";
 import { ru } from "date-fns/locale";
+
+import Review from "@/app/_components/shared/Review";
+import TReview from "@/app/_types/Review";
 
 type TMyReviewsProps = {
   reviews: TReview[];

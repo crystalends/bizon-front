@@ -1,6 +1,7 @@
 import clsx from "clsx";
-import Button, { TButtonProps } from "./Button";
 import { ElementType } from "react";
+
+import Button, { TButtonProps } from "./Button";
 
 export default function FormButton<T extends ElementType = "button">({
   className,

@@ -11,17 +11,17 @@ export default function Products({ products }: TProductsProps) {
   return (
     <Block
       className="w-full"
-      title="Товары и услуги"
       rightContent={<Button>Добавить</Button>}
+      title="Товары и услуги"
     >
       <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(243px,1fr))] gap-5">
         {products.map(({ id, name, image, price }) => (
           <Product
             key={id}
-            name={name}
             imageProps={{
               src: image,
             }}
+            name={name}
             price={price}
           />
         ))}

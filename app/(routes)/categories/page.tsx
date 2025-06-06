@@ -1,5 +1,6 @@
-import TCategory from "@/app/_types/Category";
 import Categories from "./_components/Categories";
+
+import TCategory from "@/app/_types/Category";
 
 export default function CategoriesPage() {
   const categories: TCategory[] = [

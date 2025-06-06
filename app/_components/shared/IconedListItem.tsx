@@ -1,8 +1,10 @@
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import { Card, CardBody, CardProps } from "@heroui/card";
 import { Image, ImageProps } from "@heroui/image";
 import { ElementType, ReactNode } from "react";
+
 import ArrowRightIcon from "../icons/ArrowRightIcon";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TIconedListItemProps<T extends ElementType = "div"> = {
   name: string;
@@ -30,7 +32,7 @@ export default function IconedListItem<T extends ElementType = "div">({
                 {startIcon}
               </div>
             ) : imageProps ? (
-              <Image {...imageProps} width={22} height={22} />
+              <Image {...imageProps} height={22} width={22} />
             ) : (
               <div className="w-[22px] h-[22px]" />
             )}

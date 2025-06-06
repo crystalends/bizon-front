@@ -1,11 +1,12 @@
 "use client";
 
-import Tabs from "@/app/_components/ui/Tabs";
 import { Tab, TabItemProps } from "@heroui/tabs";
 import Link from "next/link";
-import CustomLink from "@/app/_components/ui/Link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
+
+import CustomLink from "@/app/_components/ui/Link";
+import Tabs from "@/app/_components/ui/Tabs";
 import CenteredContainer from "@/app/_components/shared/CenteredContainer";
 
 type TLoginProps = {
@@ -34,14 +35,14 @@ export default function Login({ children }: TLoginProps) {
         <h2 className="text-[44px] font-semibold">Вход</h2>
         <div className="flex flex-col gap-5 w-full">
           <Tabs fullWidth items={tabs} selectedKey={pathname}>
-            {({ key, ...item }) => <Tab as={Link} key={key} {...item} />}
+            {({ key, ...item }) => <Tab key={key} as={Link} {...item} />}
           </Tabs>
           {children}
           <p className="text-xs">
             Продолжая, вы принимаете политику конфиденциальности.
           </p>
           <div className="flex justify-center">
-            <CustomLink className="font-medium" href="/restore" color="primary">
+            <CustomLink className="font-medium" color="primary" href="/restore">
               Не помню пароль
             </CustomLink>
           </div>
@@ -50,9 +51,9 @@ export default function Login({ children }: TLoginProps) {
           <p className="text-xs">Впервые на сайте?</p>
           <CustomLink
             className="font-medium text-xl"
-            underline="always"
-            href="/register"
             color="primary"
+            href="/register"
+            underline="always"
           >
             Зарегистрироваться
           </CustomLink>

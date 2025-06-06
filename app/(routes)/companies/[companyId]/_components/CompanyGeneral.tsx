@@ -1,6 +1,7 @@
-import TCompany from "@/app/_types/Company";
 import { Image } from "@heroui/image";
 import { Card, CardBody } from "@heroui/card";
+
+import TCompany from "@/app/_types/Company";
 import CategoryChips from "@/app/_components/CategoryChips";
 import RegionChips from "@/app/_components/RegionChips";
 import ContactInformation from "@/app/_components/shared/ContactInformation";
@@ -83,8 +84,8 @@ export default function CompanyGeneral({
                   </h1>
                   <ContactInformation
                     VK={contactInformation.VK}
-                    linkedIn={contactInformation.linkedIn}
                     email={contactInformation.email}
+                    linkedIn={contactInformation.linkedIn}
                     phone={contactInformation.phone}
                     site={contactInformation.site}
                   />

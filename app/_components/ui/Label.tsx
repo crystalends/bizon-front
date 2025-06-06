@@ -1,11 +1,14 @@
 import clsx from "clsx";
 import { ComponentPropsWithoutRef } from "react";
 
-export default function Label({
-  className,
-  ...props
-}: ComponentPropsWithoutRef<"label">) {
+type LabelProps = ComponentPropsWithoutRef<"label">;
+
+export default function Label({ className, htmlFor, ...props }: LabelProps) {
   return (
-    <label className={clsx("font-medium text-xl", className)} {...props} />
+    <label
+      className={clsx("font-medium text-xl", className)}
+      htmlFor={htmlFor}
+      {...props}
+    />
   );
 }

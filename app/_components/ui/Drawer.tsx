@@ -1,7 +1,8 @@
 import { DrawerProps, Drawer as HeroUIDrawer } from "@heroui/drawer";
 import { ElementType } from "react";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TDrawerProps<T extends ElementType = "div"> = TPolymorphicProps<
   T,

@@ -1,8 +1,10 @@
 import { LinkProps } from "@heroui/link";
+
+import { contacts, externalLinks } from "../_config/constants";
+
 import Logo from "./Logo";
 import Container from "./shared/Container";
 import Link from "./ui/Link";
-import { contacts, externalLinks } from "../_config/constants";
 import VKIcon from "./icons/VKIcon";
 import IsArtIcon from "./icons/IsArtIcon";
 
@@ -29,7 +31,7 @@ export default function Footer() {
                 <Logo />
               </Link>
               <Link color="primary" href={externalLinks.bizonVK}>
-                <VKIcon width={32} height={32} />
+                <VKIcon height={32} width={32} />
               </Link>
             </div>
             <div className="flex gap-10">
@@ -41,8 +43,8 @@ export default function Footer() {
               <p>
                 По всем вопросам:{" "}
                 <Link
-                  href={`mailto:${contacts.email}`}
                   className="font-medium text-xl"
+                  href={`mailto:${contacts.email}`}
                 >
                   {contacts.email}
                 </Link>
@@ -52,7 +54,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-5 justify-between">
             <div className="flex flex-wrap gap-10">
               <p className="text-gray-300">© 2025 BizON</p>
-              <Link href="/privacy-policy" className="text-gray-300">
+              <Link className="text-gray-300" href="/privacy-policy">
                 Политика конфиденциальности
               </Link>
             </div>

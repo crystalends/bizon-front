@@ -6,9 +6,9 @@ export default function OneInCircleIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="28"
       height="28"
       viewBox="0 0 28 28"
+      width="28"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -25,10 +25,10 @@ export default function OneInCircleIcon({
       <defs>
         <clipPath id="clip0_224_50135">
           <rect
-            width="23.9062"
-            height="23.918"
             fill="white"
+            height="23.918"
             transform="translate(2 2)"
+            width="23.9062"
           />
         </clipPath>
       </defs>

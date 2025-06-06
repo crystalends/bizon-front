@@ -6,9 +6,9 @@ export default function SiteIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="20"
       height="20"
       viewBox="0 0 20 20"
+      width="20"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -21,10 +21,10 @@ export default function SiteIcon({
       <defs>
         <clipPath id="clip0_452_1436">
           <rect
-            width="17.0759"
-            height="17.0843"
             fill="white"
+            height="17.0843"
             transform="translate(1.42871 1.42859)"
+            width="17.0759"
           />
         </clipPath>
       </defs>

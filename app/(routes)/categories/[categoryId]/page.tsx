@@ -1,6 +1,7 @@
+import Category from "./_components/Category";
+
 import TCategory from "@/app/_types/Category";
 import TCompany from "@/app/_types/Company";
-import Category from "./_components/Category";
 
 export default function CategoryPage() {
   const category: TCategory = {

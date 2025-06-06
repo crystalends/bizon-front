@@ -1,5 +1,6 @@
-import TProduct from "@/app/_types/Product";
 import CompanyProducts from "./_components/CompanyProducts";
+
+import TProduct from "@/app/_types/Product";
 
 export default function CompanyProductsPage() {
   const products: TProduct[] = [

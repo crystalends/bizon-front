@@ -1,5 +1,6 @@
-import TReview from "@/app/_types/Review";
 import Reviews from "./_components/Reviews";
+
+import TReview from "@/app/_types/Review";
 import TStats from "@/app/_types/Stats";
 
 export default function ReviewsPage() {
@@ -60,6 +61,6 @@ export default function ReviewsPage() {
   };
 
   return (
-    <Reviews reviews={reviews} rating={3.33} reviewsCount={3} stats={stats} />
+    <Reviews rating={3.33} reviews={reviews} reviewsCount={3} stats={stats} />
   );
 }

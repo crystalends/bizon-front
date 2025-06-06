@@ -28,24 +28,24 @@ export default function FavoriteCompanies({
             return (
               <CompanyGridItem
                 key={id}
-                name={name}
-                renderName={(name) => (
-                  <Link href={`/companies/${id}`}>
-                    <h2 className="text-[32px] font-semibold">{name}</h2>
-                  </Link>
-                )}
-                imageProps={{
-                  src: image,
-                }}
-                description={description}
-                isVerified={isVerified}
-                ratingSlot={rating && <Rating rating={rating} />}
                 categoryChipsSlot={
                   categories &&
                   categories.length > 0 && (
                     <CategoryChips categories={categories} />
                   )
                 }
+                description={description}
+                imageProps={{
+                  src: image,
+                }}
+                isVerified={isVerified}
+                name={name}
+                ratingSlot={rating && <Rating rating={rating} />}
+                renderName={(name) => (
+                  <Link href={`/companies/${id}`}>
+                    <h2 className="text-[32px] font-semibold">{name}</h2>
+                  </Link>
+                )}
               />
             );
           },

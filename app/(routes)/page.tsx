@@ -161,11 +161,11 @@ export default function HomePage() {
 
   return (
     <Home
-      popularCategoriesSlot={
-        <PopularCategories categories={popularCategories} />
-      }
       featuredCompaniesSlot={
         <FeaturedCompanies companies={featuredCompanies} />
+      }
+      popularCategoriesSlot={
+        <PopularCategories categories={popularCategories} />
       }
     />
   );

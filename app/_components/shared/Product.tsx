@@ -1,7 +1,8 @@
-import { formatRUB } from "@/app/_utils/formatRUB";
 import { ImageProps, Image } from "@heroui/image";
 import clsx from "clsx";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
+
+import { formatRUB } from "@/app/_utils/formatRUB";
 
 type TProductProps = {
   name: string;
@@ -21,7 +22,7 @@ export default function Product({
   return (
     <div className={clsx("flex flex-col gap-[10px]", className)} {...props}>
       <div className="flex justify-center">
-        {imageProps && <Image {...imageProps} width={243} alt={name} />}
+        {imageProps && <Image {...imageProps} alt={name} width={243} />}
       </div>
       {renderName(name)}
       <p className="font-semibold text-2xl">

@@ -1,4 +1,5 @@
 import TCategory from "../_types/Category";
+
 import Chip from "./ui/Chip";
 
 type TCategoryChips = {

@@ -6,10 +6,10 @@ export default function ListIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="24"
+      fill={fill}
       height="21"
       viewBox="0 0 24 21"
-      fill={fill}
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -25,7 +25,7 @@ export default function ListIcon({
       </g>
       <defs>
         <clipPath id="clip0_452_1141">
-          <rect width="23.6133" height="20.2617" fill="white" />
+          <rect fill="white" height="20.2617" width="23.6133" />
         </clipPath>
       </defs>
     </svg>

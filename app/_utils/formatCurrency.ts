@@ -45,6 +45,7 @@ export const formatCurrency = (
 
     result = result.replace(currencySymbol, "").trim();
     const symbol = currency === "RUB" ? "₽" : currencySymbol;
+
     return `${result}${spaceBetween ? " " : ""}${symbol}`;
   }
 

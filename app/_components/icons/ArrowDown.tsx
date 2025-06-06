@@ -6,9 +6,9 @@ export default function ArrowDown({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="16"
       height="16"
       viewBox="0 0 16 16"
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_208_7044)">
@@ -20,10 +20,10 @@ export default function ArrowDown({
       <defs>
         <clipPath id="clip0_208_7044">
           <rect
-            width="16"
-            height="16"
             fill="white"
+            height="16"
             transform="translate(16) rotate(90)"
+            width="16"
           />
         </clipPath>
       </defs>

@@ -1,12 +1,5 @@
 "use client";
 
-import ArrowDown from "@/app/_components/icons/ArrowDown";
-import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
-import Block from "@/app/_components/shared/Block";
-import Container from "@/app/_components/shared/Container";
-import Partner from "@/app/_components/shared/Partner";
-import Button from "@/app/_components/ui/Button";
-import Actions from "./Actions";
 import { format } from "date-fns";
 import { ru } from "date-fns/locale";
 import {
@@ -15,6 +8,15 @@ import {
   Breadcrumbs,
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
+
+import Actions from "./Actions";
+
+import ArrowDown from "@/app/_components/icons/ArrowDown";
+import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
+import Block from "@/app/_components/shared/Block";
+import Container from "@/app/_components/shared/Container";
+import Partner from "@/app/_components/shared/Partner";
+import Button from "@/app/_components/ui/Button";
 import Input from "@/app/_components/ui/Input";
 import RegionChips from "@/app/_components/RegionChips";
 import FormButton from "@/app/_components/ui/FormButton";
@@ -65,41 +67,41 @@ export default function PartnerRequests({
             </div>
           </Block>
           <Image
-            width={638}
-            height={450}
             className="object-cover min-w-[638] hidden xl:inline"
+            height={450}
             src="/images/7a0016f4d1161ba85883a2f836c017bb0a7926ca.png"
+            width={638}
           />
         </div>
         <Block
-          title="Активные запросы"
           rightContent={
             <Button
               color="default"
-              startContent={<PerpendicularArrows />}
               endContent={<ArrowDown />}
+              startContent={<PerpendicularArrows />}
             >
               Сортировать
             </Button>
           }
+          title="Активные запросы"
         >
           {partnerRequests.map(({ id, product, user, createdAt }) => (
             <Partner
               key={id}
-              product={product}
-              searcher={user?.company?.name || user?.name}
-              renderSearcher={(searcher) => (
-                <p className="text-xl">Ищет: {searcher}</p>
-              )}
+              createdAt={format(createdAt, "dd.MM.yyyy", {
+                locale: ru,
+              })}
               middleContent={
                 user?.company?.regions && (
                   <RegionChips regions={user.company.regions} />
                 )
               }
-              createdAt={format(createdAt, "dd.MM.yyyy", {
-                locale: ru,
-              })}
+              product={product}
+              renderSearcher={(searcher) => (
+                <p className="text-xl">Ищет: {searcher}</p>
+              )}
               rightContent={<Actions className="xl:min-w-[487px]" />}
+              searcher={user?.company?.name || user?.name}
             />
           ))}
         </Block>

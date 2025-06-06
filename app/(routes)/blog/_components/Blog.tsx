@@ -1,8 +1,9 @@
+import { format } from "date-fns";
+
 import ArticlePreview from "@/app/_components/shared/ArticlePreview";
 import Block from "@/app/_components/shared/Block";
 import Container from "@/app/_components/shared/Container";
 import TArticle from "@/app/_types/Article";
-import { format } from "date-fns";
 
 type TBlogProps = {
   articles: TArticle[];
@@ -17,11 +18,11 @@ export default function Blog({ articles }: TBlogProps) {
             return (
               <ArticlePreview
                 key={id}
-                title={title}
+                createdAt={format(createdAt, "dd.MM.yyyy")}
                 imageProps={{
                   src: image,
                 }}
-                createdAt={format(createdAt, "dd.MM.yyyy")}
+                title={title}
               />
             );
           })}

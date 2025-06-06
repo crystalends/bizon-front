@@ -1,10 +1,11 @@
 "use client";
 
-import Tabs from "@/app/_components/ui/Tabs";
 import { Tab, TabItemProps } from "@heroui/tabs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
+
+import Tabs from "@/app/_components/ui/Tabs";
 
 type TPartnersProps = {
   children: ReactNode;
@@ -39,7 +40,7 @@ export default function Partners({ children }: TPartnersProps) {
   return (
     <div className="flex w-full flex-col gap-5">
       <Tabs items={tabs} selectedKey={pathname}>
-        {({ key, ...item }) => <Tab as={Link} key={key} {...item} />}
+        {({ key, ...item }) => <Tab key={key} as={Link} {...item} />}
       </Tabs>
       {children}
     </div>

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import clsx from "clsx";
+
 import PlusIcon from "../icons/PlusIcon";
 
 type ImagePickerProps = {
@@ -28,6 +29,7 @@ export default function ImagePicker({
 
   const handleSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
+
     if (file && onChange) {
       onChange(file);
     }
@@ -42,28 +44,36 @@ export default function ImagePicker({
   return (
     <div>
       <input
-        type="file"
-        accept="image/*"
         ref={inputRef}
-        onChange={handleSelect}
+        accept="image/*"
         className="hidden"
+        type="file"
+        onChange={handleSelect}
       />
       <div
-        onClick={handleClick}
         className={clsx(
           "cursor-pointer flex flex-col items-center justify-center bg-gray-50 hover:bg-gray-300 transition text-gray-700 gap-2",
           rounded,
           className,
         )}
+        role="button"
         style={{ width, height }}
+        tabIndex={0}
+        onClick={handleClick}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleClick();
+          }
+        }}
       >
         {previewUrl ? (
           <Image
-            src={previewUrl}
             alt="Preview"
-            width={width}
-            height={height}
             className={clsx("object-cover w-full h-full", rounded)}
+            height={height}
+            src={previewUrl}
+            width={width}
           />
         ) : (
           <>

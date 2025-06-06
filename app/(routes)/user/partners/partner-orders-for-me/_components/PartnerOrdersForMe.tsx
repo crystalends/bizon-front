@@ -1,7 +1,8 @@
+import { format } from "date-fns/format";
+
 import RegionChips from "@/app/_components/RegionChips";
 import Partner from "@/app/_components/shared/Partner";
 import TPartnerOrder from "@/app/_types/PartnerOrder";
-import { format } from "date-fns/format";
 
 type TMyPartnerOrdersForMeProps = { partnerOrders: TPartnerOrder[] };
 
@@ -13,17 +14,17 @@ export default function PartnerOrdersForMe({
       {partnerOrders.map(({ id, product, user, createdAt }) => (
         <Partner
           key={id}
-          product={product}
-          searcher={user?.company?.name || user?.name}
-          renderSearcher={(searcher) => (
-            <p className="text-xl">От кого: {searcher}</p>
-          )}
+          createdAt={format(createdAt, "dd.MM.yyyy")}
           middleContent={
             user?.company?.regions && (
               <RegionChips regions={user.company.regions} />
             )
           }
-          createdAt={format(createdAt, "dd.MM.yyyy")}
+          product={product}
+          renderSearcher={(searcher) => (
+            <p className="text-xl">От кого: {searcher}</p>
+          )}
+          searcher={user?.company?.name || user?.name}
         />
       ))}
     </div>

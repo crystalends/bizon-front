@@ -1,6 +1,8 @@
-import TCompany from "@/app/_types/Company";
-import Company from "./_components/Company";
 import { ReactNode } from "react";
+
+import Company from "./_components/Company";
+
+import TCompany from "@/app/_types/Company";
 
 type TCompanyLayoutProps = {
   children: ReactNode;

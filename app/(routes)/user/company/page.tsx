@@ -1,5 +1,6 @@
-import TCategory from "@/app/_types/Category";
 import Company from "./_components/Company";
+
+import TCategory from "@/app/_types/Category";
 import TRegion from "@/app/_types/Region";
 
 export default function CompanyPage() {
@@ -26,8 +27,8 @@ export default function CompanyPage() {
 
   return (
     <Company
-      regions={regions}
       categories={categories}
+      regions={regions}
       subCategories={subCategories}
     />
   );

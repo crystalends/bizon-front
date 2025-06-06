@@ -1,7 +1,8 @@
 import { ModalProps, Modal as HeroUIModal } from "@heroui/modal";
 import { ElementType } from "react";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TModalProps<T extends ElementType = "div"> = TPolymorphicProps<
   T,

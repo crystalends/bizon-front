@@ -1,5 +1,6 @@
-import TPartnerRequest from "@/app/_types/PartnerRequest";
 import PartnerRequestsForMe from "./_components/PartnerRequestsForMe";
+
+import TPartnerRequest from "@/app/_types/PartnerRequest";
 
 export default function PartnerRequestsForMePage() {
   const partnerRequests: TPartnerRequest[] = [

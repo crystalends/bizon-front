@@ -1,8 +1,9 @@
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import { Card, CardBody, CardHeader, CardProps } from "@heroui/card";
 import { Image, ImageProps } from "@heroui/image";
 import clsx from "clsx";
 import { ElementType, ReactNode } from "react";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 type TPopularCategoryProps<T extends ElementType = "div"> = {
   name: string;
@@ -18,7 +19,7 @@ export default function PopularCategory<T extends ElementType = "div">({
   ...props
 }: TPopularCategoryProps<T>) {
   return (
-    <Card shadow="none" className={clsx("bg-gray-50", className)} {...props}>
+    <Card className={clsx("bg-gray-50", className)} shadow="none" {...props}>
       <CardHeader className="px-[32px] pt-8">{renderName(name)}</CardHeader>
       <CardBody className="p-0">
         <div className="flex justify-end">

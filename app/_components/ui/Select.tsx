@@ -11,13 +11,13 @@ export default function Select<T extends object = object>({
 
   return (
     <HeroUISelect
-      variant="bordered"
-      color="primary"
       classNames={{
         trigger: clsx("h-[66px] px-6 py-[21px] text-base", trigger),
         value: clsx("text-base", value),
         ...restClassNames,
       }}
+      color="primary"
+      variant="bordered"
       {...props}
     />
   );

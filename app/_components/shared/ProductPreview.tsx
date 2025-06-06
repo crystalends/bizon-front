@@ -18,7 +18,7 @@ export default function ProductPreview({
   return (
     <div className={clsx("flex flex-col gap-1", className)} {...props}>
       <div className="flex justify-center">
-        {imageProps && <Image {...imageProps} width={112} alt={name} />}
+        {imageProps && <Image {...imageProps} alt={name} width={112} />}
       </div>
       {renderName(name)}
     </div>

@@ -6,8 +6,9 @@ import {
   CardProps,
 } from "@heroui/card";
 import { ElementType, ReactNode } from "react";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 type TFeaturedCompanyProps<T extends ElementType = "div"> = {
   name: string;
@@ -31,7 +32,7 @@ export default function FeaturedCompany<T extends ElementType = "div">({
   ...props
 }: TFeaturedCompanyProps<T>) {
   return (
-    <Card shadow="md" className={clsx("p-10", className)} {...props}>
+    <Card className={clsx("p-10", className)} shadow="md" {...props}>
       <CardHeader>
         <div className="flex w-full justify-between gap-5">
           {renderName(name)}

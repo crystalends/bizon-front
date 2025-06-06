@@ -23,5 +23,6 @@ export const pluralize = (count: number, options: TPluralOptions): string => {
   if (lastDigit >= 2 && lastDigit <= 4) {
     return options.few;
   }
+
   return options.many;
 };

@@ -5,20 +5,20 @@ export default function PlusIcon({
   ...props
 }: SVGProps<SVGSVGElement>) {
   return (
-    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" {...props}>
+    <svg fill="none" height="64" viewBox="0 0 64 64" width="64" {...props}>
       <path
         d="M16 32H48"
         stroke={stroke}
-        strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="3"
       />
       <path
         d="M32 48V16"
         stroke={stroke}
-        strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="3"
       />
     </svg>
   );

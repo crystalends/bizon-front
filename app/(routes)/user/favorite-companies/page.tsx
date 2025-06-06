@@ -1,5 +1,6 @@
-import TCompany from "@/app/_types/Company";
 import FavoriteCompanies from "./_components/FavoriteCompanies";
+
+import TCompany from "@/app/_types/Company";
 
 export default function FavoriteCompaniesPage() {
   const companies: TCompany[] = [

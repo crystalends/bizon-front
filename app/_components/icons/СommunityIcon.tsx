@@ -6,9 +6,9 @@ export default function CommunityIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="35"
       height="32"
       viewBox="0 0 35 32"
+      width="35"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -33,10 +33,10 @@ export default function CommunityIcon({
       <defs>
         <clipPath id="clip0_128_9082">
           <rect
-            width="34.957"
-            height="20.6367"
             fill="white"
+            height="20.6367"
             transform="translate(0 6)"
+            width="34.957"
           />
         </clipPath>
       </defs>

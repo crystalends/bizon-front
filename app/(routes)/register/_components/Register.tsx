@@ -30,7 +30,7 @@ export default function Register() {
           </div>
           <div className="flex items-center justify-center gap-5 flex-wrap">
             <p className="text-xs">Уже зарегистрированы?</p>
-            <Link className="font-medium text-xl" href="/login" color="primary">
+            <Link className="font-medium text-xl" color="primary" href="/login">
               Войти
             </Link>
           </div>

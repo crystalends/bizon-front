@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 import TCategory from "../_types/Category";
+
 import PopularCategory from "./shared/PopularCategory";
 import Container from "./shared/Container";
-import Link from "next/link";
 import Block from "./shared/Block";
 
 type TPopularCategoriesProps = {
@@ -18,11 +20,11 @@ export default function PopularCategories({
           {categories.map(({ id, name, image }) => (
             <PopularCategory
               key={id}
-              name={name}
-              imageProps={{ src: image }}
               isPressable
               as={Link}
               href={`/categories/${id}`}
+              imageProps={{ src: image }}
+              name={name}
             />
           ))}
         </div>

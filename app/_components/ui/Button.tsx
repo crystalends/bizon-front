@@ -1,7 +1,8 @@
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import { ButtonProps, Button as HeroUIButton } from "@heroui/button";
 import clsx from "clsx";
 import { ElementType } from "react";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TButtonProps<T extends ElementType = "button"> = TPolymorphicProps<
   T,
@@ -16,7 +17,6 @@ export default function Button<T extends ElementType = "button">({
 
   return (
     <HeroUIButton
-      color="primary"
       className={clsx(
         "text-xl",
         {
@@ -25,6 +25,7 @@ export default function Button<T extends ElementType = "button">({
         },
         className,
       )}
+      color="primary"
       {...props}
     />
   );

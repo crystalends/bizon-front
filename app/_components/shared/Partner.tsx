@@ -1,6 +1,7 @@
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import { Card, CardBody, CardProps } from "@heroui/card";
 import { ElementType, ReactNode } from "react";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 type TPartnerProps<T extends ElementType = "div"> = {
   product?: string;

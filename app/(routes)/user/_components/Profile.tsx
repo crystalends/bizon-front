@@ -1,5 +1,6 @@
-import Input from "@/app/_components/ui/Input";
 import ProfileCard from "./ProfileCard";
+
+import Input from "@/app/_components/ui/Input";
 import FormButton from "@/app/_components/ui/FormButton";
 import Label from "@/app/_components/ui/Label";
 import ImagePicker from "@/app/_components/ui/ImagePicker";

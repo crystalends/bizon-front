@@ -1,5 +1,6 @@
-import TArticle from "@/app/_types/Article";
 import Blog from "./_components/Blog";
+
+import TArticle from "@/app/_types/Article";
 
 export default function BlogPage() {
   const articles: TArticle[] = [

@@ -5,10 +5,10 @@ export default function HeartIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="29"
+      fill="none"
       height="29"
       viewBox="0 0 29 29"
-      fill="none"
+      width="29"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_207_14917)">
@@ -20,10 +20,10 @@ export default function HeartIcon({
       <defs>
         <clipPath id="clip0_207_14917">
           <rect
-            width="29"
-            height="28"
             fill="white"
+            height="28"
             transform="translate(0 0.5)"
+            width="29"
           />
         </clipPath>
       </defs>

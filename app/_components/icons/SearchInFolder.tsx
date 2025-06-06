@@ -6,9 +6,9 @@ export default function SearchInFolder({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="31"
       height="28"
       viewBox="0 0 31 28"
+      width="31"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -32,7 +32,7 @@ export default function SearchInFolder({
       </g>
       <defs>
         <clipPath id="clip0_652_7064">
-          <rect width="30.5508" height="27.457" fill="white" />
+          <rect fill="white" height="27.457" width="30.5508" />
         </clipPath>
       </defs>
     </svg>

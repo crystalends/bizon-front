@@ -1,8 +1,10 @@
 "use client";
 
 import { BreadcrumbItemProps } from "@heroui/breadcrumbs";
-import CategoryTemplate from "./CategoryTemplate";
 import Link from "next/link";
+
+import CategoryTemplate from "./CategoryTemplate";
+
 import TCategory from "@/app/_types/Category";
 import IconedListItem from "@/app/_components/shared/IconedListItem";
 
@@ -23,24 +25,24 @@ export default function Categories({ categories }: TCategoriesProps) {
   ];
 
   return (
-    <CategoryTemplate title="Категории" breadcrumbItems={breadcrumbItems}>
+    <CategoryTemplate breadcrumbItems={breadcrumbItems} title="Категории">
       <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(375px,1fr))] gap-x-5">
         <IconedListItem
-          name="Все категории"
-          className="hover:bg-gray-50"
           isPressable
           as={Link}
+          className="hover:bg-gray-50"
           href="/companies"
+          name="Все категории"
         />
         {categories.map(({ id, name, image }) => (
           <IconedListItem
             key={id}
-            name={name}
-            imageProps={{ src: image }}
-            className="hover:bg-gray-50"
             isPressable
             as={Link}
+            className="hover:bg-gray-50"
             href={`/categories/${id}`}
+            imageProps={{ src: image }}
+            name={name}
           />
         ))}
       </div>

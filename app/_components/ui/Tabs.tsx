@@ -18,8 +18,8 @@ export default function Tabs<T extends object = object>({
         ),
         ...restClassNames,
       }}
-      radius="sm"
       color="primary"
+      radius="sm"
       variant="light"
       {...props}
     />

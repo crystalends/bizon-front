@@ -1,8 +1,11 @@
 "use client";
 
+import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
+import Link from "next/link";
+import { ReactNode } from "react";
+
 import BriefcaseIcon from "@/app/_components/icons/BriefcaseIcon";
 import CardsIcon from "@/app/_components/icons/CardsIcon";
-import DialogIcon from "@/app/_components/icons/DialogIcon";
 import FavoriteMessageIcon from "@/app/_components/icons/FavoriteMessageIcon";
 import HeartIcon from "@/app/_components/icons/HeartIcon";
 import SearchInFolder from "@/app/_components/icons/SearchInFolder";
@@ -13,9 +16,6 @@ import IconedListItem, {
   TIconedListItemProps,
 } from "@/app/_components/shared/IconedListItem";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
-import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
-import Link from "next/link";
-import { ReactNode } from "react";
 
 type TUserProps = { children: ReactNode };
 

@@ -1,6 +1,7 @@
-import { ComponentPropsWithoutRef, ReactNode } from "react";
-import Container from "@/app/_components/shared/Container";
+import { ComponentPropsWithoutRef } from "react";
 import clsx from "clsx";
+
+import Container from "@/app/_components/shared/Container";
 
 type TCenteredContainerProps = {
   maxWidth?: string;

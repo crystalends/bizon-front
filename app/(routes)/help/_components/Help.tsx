@@ -1,14 +1,5 @@
 "use client";
 
-import FeatureCardBody, {
-  TFeatureCardBodyProps,
-} from "@/app/_components/FeatureCardBody";
-import OneInCircleIcon from "@/app/_components/icons/OneInCircleIcon";
-import ThreeInCircleIcon from "@/app/_components/icons/ThreeInCircleIcon";
-import TwoInCircleIcon from "@/app/_components/icons/TwoInCircleIcon";
-import Block from "@/app/_components/shared/Block";
-import Container from "@/app/_components/shared/Container";
-import FeatureCard from "@/app/_components/ui/FeatureCard";
 import {
   Accordion,
   AccordionItem,
@@ -20,6 +11,16 @@ import {
   Breadcrumbs,
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
+
+import FeatureCardBody, {
+  TFeatureCardBodyProps,
+} from "@/app/_components/FeatureCardBody";
+import OneInCircleIcon from "@/app/_components/icons/OneInCircleIcon";
+import ThreeInCircleIcon from "@/app/_components/icons/ThreeInCircleIcon";
+import TwoInCircleIcon from "@/app/_components/icons/TwoInCircleIcon";
+import Block from "@/app/_components/shared/Block";
+import Container from "@/app/_components/shared/Container";
+import FeatureCard from "@/app/_components/ui/FeatureCard";
 
 export default function Help() {
   const breadcrumbItems: BreadcrumbItemProps[] = [
@@ -123,10 +124,10 @@ export default function Help() {
             </Accordion>
           </Block>
           <Image
-            width={638}
-            height={560}
             className="object-cover min-w-[638] hidden xl:inline"
+            height={560}
             src="/images/f0f86a763732cad1bda6d183e7112771772056bc.png"
+            width={638}
           />
         </div>
         <Block title="Как добавить компанию?">

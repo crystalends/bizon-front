@@ -1,7 +1,8 @@
 import { Input as HeroUIInput, InputProps } from "@heroui/input";
 import { ElementType } from "react";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TInputProps<T extends ElementType = "input"> = TPolymorphicProps<
   T,
@@ -21,8 +22,8 @@ export default function Input<T extends ElementType = "input">({
         inputWrapper: clsx("h-[66px] px-6 py-[21px]", inputWrapper),
         ...restClassNames,
       }}
-      variant="bordered"
       color="primary"
+      variant="bordered"
       {...props}
     />
   );

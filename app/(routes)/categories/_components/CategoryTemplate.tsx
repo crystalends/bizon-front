@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
+
 import Container from "@/app/_components/shared/Container";
 import GlobalSearch from "@/app/_components/GlobalSearch";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";

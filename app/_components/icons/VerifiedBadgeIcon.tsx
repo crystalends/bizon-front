@@ -6,9 +6,9 @@ export default function VerifiedBadgeIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="28"
       height="29"
       viewBox="0 0 28 29"
+      width="28"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -32,7 +32,7 @@ export default function VerifiedBadgeIcon({
       </g>
       <defs>
         <clipPath id="clip0_429_1383">
-          <rect width="27.0352" height="28.4883" fill="white" />
+          <rect fill="white" height="28.4883" width="27.0352" />
         </clipPath>
       </defs>
     </svg>

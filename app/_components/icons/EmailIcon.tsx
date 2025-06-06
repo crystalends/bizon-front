@@ -6,9 +6,9 @@ export default function EmailIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="21"
       height="20"
       viewBox="0 0 21 20"
+      width="21"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -21,10 +21,10 @@ export default function EmailIcon({
       <defs>
         <clipPath id="clip0_452_1429">
           <rect
-            width="20.1981"
-            height="14.4391"
             fill="white"
+            height="14.4391"
             transform="translate(0 2.85712)"
+            width="20.1981"
           />
         </clipPath>
       </defs>

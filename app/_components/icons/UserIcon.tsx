@@ -6,9 +6,9 @@ export default function UserIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="28"
       height="28"
       viewBox="0 0 28 28"
+      width="28"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -21,10 +21,10 @@ export default function UserIcon({
       <defs>
         <clipPath id="clip0_591_12619">
           <rect
-            width="20.4727"
-            height="21.7148"
             fill="white"
+            height="21.7148"
             transform="translate(4 3)"
+            width="20.4727"
           />
         </clipPath>
       </defs>

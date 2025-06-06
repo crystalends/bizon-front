@@ -1,6 +1,7 @@
-import Button, { TButtonProps } from "@/app/_components/ui/Button";
 import clsx from "clsx";
 import { ComponentPropsWithoutRef } from "react";
+
+import Button, { TButtonProps } from "@/app/_components/ui/Button";
 
 type TActionsProps = ComponentPropsWithoutRef<"div">;
 

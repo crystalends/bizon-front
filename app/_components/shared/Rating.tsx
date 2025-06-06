@@ -1,6 +1,7 @@
 import { ComponentPropsWithoutRef } from "react";
-import RatingIcon from "../icons/RatingIcon";
 import clsx from "clsx";
+
+import RatingIcon from "../icons/RatingIcon";
 
 type TRatingProps = {
   rating: number;

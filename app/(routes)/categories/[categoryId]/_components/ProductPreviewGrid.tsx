@@ -18,17 +18,17 @@ export default function ProductPreviewGrid({
       {products.map(({ id, name, image }) => (
         <ProductPreview
           key={id}
-          name={name}
           imageProps={{
             src: image,
           }}
+          name={name}
         />
       ))}
       {productsCount && productsCount > 4 && (
         <Link
           color="primary"
-          underline="always"
           href={`/companies/${companyId}/products`}
+          underline="always"
         >
           Смотреть все
         </Link>

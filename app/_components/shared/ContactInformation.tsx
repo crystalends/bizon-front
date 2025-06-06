@@ -1,13 +1,15 @@
 import { ComponentPropsWithoutRef } from "react";
+import clsx from "clsx";
+
 import EmailIcon from "../icons/EmailIcon";
 import PhoneIcon from "../icons/PhoneIcon";
 import SiteIcon from "../icons/SiteIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import VKIcon from "../icons/VKIcon";
 import Link from "../ui/Link";
+
 import TContactListItem from "@/app/_types/ContactListItem";
 import TContactGridItem from "@/app/_types/ContactGridItem";
-import clsx from "clsx";
 
 type TContactInformationProps = {
   phone: string;

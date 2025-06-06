@@ -5,10 +5,10 @@ export default function FavoriteMessageIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="28"
+      fill="none"
       height="28"
       viewBox="0 0 28 28"
-      fill="none"
+      width="28"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_672_11437)">
@@ -24,10 +24,10 @@ export default function FavoriteMessageIcon({
       <defs>
         <clipPath id="clip0_672_11437">
           <rect
-            width="25.8281"
-            height="25.7461"
             fill="white"
+            height="25.7461"
             transform="translate(1 1)"
+            width="25.8281"
           />
         </clipPath>
       </defs>

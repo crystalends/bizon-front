@@ -1,5 +1,6 @@
-import TPartnerRequest from "@/app/_types/PartnerRequest";
 import PartnerRequests from "./_components/PartnerRequests";
+
+import TPartnerRequest from "@/app/_types/PartnerRequest";
 
 export default function PartnerRequestsPage() {
   const partnerRequests: TPartnerRequest[] = [

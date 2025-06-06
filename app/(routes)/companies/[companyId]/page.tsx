@@ -1,5 +1,6 @@
-import TCompany from "@/app/_types/Company";
 import CompanyGeneral from "./_components/CompanyGeneral";
+
+import TCompany from "@/app/_types/Company";
 
 export default function CompanyPage() {
   const company: TCompany = {

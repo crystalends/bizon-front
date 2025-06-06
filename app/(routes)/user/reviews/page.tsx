@@ -1,5 +1,6 @@
-import TReview from "@/app/_types/Review";
 import MyReviews from "./_components/MyReviews";
+
+import TReview from "@/app/_types/Review";
 
 export default function ReviewsPage() {
   const reviews: TReview[] = [

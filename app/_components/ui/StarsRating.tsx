@@ -11,7 +11,7 @@ const myStyles = {
 export default function StarsRating({ className, ...props }: RatingProps) {
   return (
     <Rating
-      className={clsx("max-w-[212]", className)}
+      className={clsx("max-w-[212px]", className)}
       itemStyles={myStyles}
       {...props}
     />

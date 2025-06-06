@@ -14,14 +14,14 @@ export default function GlobalSearch({
   return (
     <div className="flex w-full flex-row gap-2">
       <Input
+        fullWidth
         classNames={{
           input: "text-xl",
           inputWrapper: "!bg-white shadow-lg",
         }}
-        variant="flat"
         color="default"
-        fullWidth
         placeholder="Поиск товара, услуги, компании"
+        variant="flat"
         {...inputProps}
       />
       <FormButton {...buttonProps}>Поиск</FormButton>

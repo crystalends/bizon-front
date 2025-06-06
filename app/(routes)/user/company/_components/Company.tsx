@@ -1,17 +1,19 @@
 "use client";
 
+import type { Selection } from "@react-types/shared";
+
+import { useState } from "react";
+import { SelectItem } from "@heroui/select";
+
+import ProfileCard from "../../_components/ProfileCard";
+
 import TCategory from "@/app/_types/Category";
 import TRegion from "@/app/_types/Region";
-import ProfileCard from "../../_components/ProfileCard";
 import Label from "@/app/_components/ui/Label";
 import Input from "@/app/_components/ui/Input";
 import FormButton from "@/app/_components/ui/FormButton";
 import Textarea from "@/app/_components/ui/Textarea";
-import { useState } from "react";
-import { SelectItem } from "@heroui/select";
-import type { Selection } from "@react-types/shared";
 import Select from "@/app/_components/ui/Select";
-import Chip from "@/app/_components/ui/Chip";
 import CategoryChips from "@/app/_components/CategoryChips";
 import RegionChips from "@/app/_components/RegionChips";
 import ImagePicker from "@/app/_components/ui/ImagePicker";
@@ -50,6 +52,7 @@ export default function Company({
   ) => {
     if (current instanceof Set) {
       const updated = new Set(current);
+
       updated.delete(String(idToRemove));
       set(updated);
     }
@@ -66,12 +69,12 @@ export default function Company({
             <Textarea id="description" placeholder="Описание компании" />
             <Label htmlFor="categories">Категории</Label>
             <Select
-              selectionMode="multiple"
-              placeholder="Выберите категории"
-              items={categories}
-              selectedKeys={categoryIds}
-              onSelectionChange={setCategoryIds}
               aria-label="Категории"
+              items={categories}
+              placeholder="Выберите категории"
+              selectedKeys={categoryIds}
+              selectionMode="multiple"
+              onSelectionChange={setCategoryIds}
             >
               {(item) => <SelectItem key={item.id}>{item.name}</SelectItem>}
             </Select>
@@ -81,12 +84,12 @@ export default function Company({
             />
             <Label htmlFor="subCategories">Подкатегории</Label>
             <Select
-              selectionMode="multiple"
-              placeholder="Выберите сабкатегории"
-              items={subCategories}
-              selectedKeys={subCategoryIds}
-              onSelectionChange={setSubCategoryIds}
               aria-label="Сабкатегории"
+              items={subCategories}
+              placeholder="Выберите сабкатегории"
+              selectedKeys={subCategoryIds}
+              selectionMode="multiple"
+              onSelectionChange={setSubCategoryIds}
             >
               {(item) => <SelectItem key={item.id}>{item.name}</SelectItem>}
             </Select>
@@ -98,12 +101,12 @@ export default function Company({
             />
             <Label htmlFor="regions">Регионы</Label>
             <Select
-              selectionMode="multiple"
-              placeholder="Выберите регионы"
-              items={regions}
-              selectedKeys={regionIds}
-              onSelectionChange={setRegionIds}
               aria-label="Регионы"
+              items={regions}
+              placeholder="Выберите регионы"
+              selectedKeys={regionIds}
+              selectionMode="multiple"
+              onSelectionChange={setRegionIds}
             >
               {(item) => <SelectItem key={item.id}>{item.name}</SelectItem>}
             </Select>

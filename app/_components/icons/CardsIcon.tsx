@@ -6,9 +6,9 @@ export default function CardsIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="28"
       height="30"
       viewBox="0 0 28 30"
+      width="28"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_652_11010)">
@@ -28,10 +28,10 @@ export default function CardsIcon({
       <defs>
         <clipPath id="clip0_652_11010">
           <rect
-            width="24.7864"
-            height="29.6286"
             fill="white"
+            height="29.6286"
             transform="translate(2)"
+            width="24.7864"
           />
         </clipPath>
       </defs>

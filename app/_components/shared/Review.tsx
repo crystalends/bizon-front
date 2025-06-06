@@ -2,8 +2,9 @@
 
 import { ComponentPropsWithoutRef, useState, useRef, useEffect } from "react";
 import { User, UserProps } from "@heroui/user";
-import StarsRating from "../ui/StarsRating";
 import clsx from "clsx";
+
+import StarsRating from "../ui/StarsRating";
 import Button from "../ui/Button";
 
 type TReviewProps = {
@@ -31,6 +32,7 @@ export default function Review({
         getComputedStyle(textRef.current).lineHeight,
       );
       const maxHeight = lineHeight * defaultLines;
+
       setIsClamped(textRef.current.scrollHeight > maxHeight);
     }
   }, [value, defaultLines]);
@@ -38,7 +40,7 @@ export default function Review({
   return (
     <div className={clsx("flex flex-col gap-4", className)} {...props}>
       <User className="justify-start" {...userProps} />
-      {rating && <StarsRating value={rating} readOnly />}
+      {rating && <StarsRating readOnly value={rating} />}
       <p
         ref={textRef}
         className={`${isExpanded ? "" : "line-clamp-3 text-ellipsis overflow-hidden"}`}
@@ -48,8 +50,8 @@ export default function Review({
       {isClamped && (
         <Button
           className="w-fit text-sm p-2 h-6"
-          variant="light"
           color="primary"
+          variant="light"
           onPress={() => setIsExpanded(!isExpanded)}
         >
           {isExpanded ? "Свернуть" : "Читать полностью"}

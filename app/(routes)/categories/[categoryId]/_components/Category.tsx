@@ -1,22 +1,6 @@
 "use client";
 
-import TCategory from "@/app/_types/Category";
 import { BreadcrumbItemProps } from "@heroui/breadcrumbs";
-import CategoryTemplate from "../../_components/CategoryTemplate";
-import TCompany from "@/app/_types/Company";
-import CompanyListItemWrapper from "./CompanyListItemWrapper";
-import ProductPreviewGrid from "./ProductPreviewGrid";
-import DetailRating from "./DetailRating";
-import CategoryChips from "@/app/_components/CategoryChips";
-import Button from "@/app/_components/ui/Button";
-import CompanyGridItemWrapper from "./CompanyGridItemWrapper";
-import Rating from "@/app/_components/shared/Rating";
-import AppsIcon from "@/app/_components/icons/AppsIcon";
-import ListIcon from "@/app/_components/icons/ListIcon";
-import { useViewModeStore } from "@/app/_stores/viewModeStore";
-import SlidersIcon from "@/app/_components/icons/SlidersIcon";
-import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
-import ArrowDown from "@/app/_components/icons/ArrowDown";
 import { useDisclosure } from "@heroui/modal";
 import {
   DrawerBody,
@@ -24,6 +8,25 @@ import {
   DrawerFooter,
   DrawerHeader,
 } from "@heroui/drawer";
+
+import CategoryTemplate from "../../_components/CategoryTemplate";
+
+import CompanyListItemWrapper from "./CompanyListItemWrapper";
+import ProductPreviewGrid from "./ProductPreviewGrid";
+import DetailRating from "./DetailRating";
+import CompanyGridItemWrapper from "./CompanyGridItemWrapper";
+
+import TCategory from "@/app/_types/Category";
+import TCompany from "@/app/_types/Company";
+import CategoryChips from "@/app/_components/CategoryChips";
+import Button from "@/app/_components/ui/Button";
+import Rating from "@/app/_components/shared/Rating";
+import AppsIcon from "@/app/_components/icons/AppsIcon";
+import ListIcon from "@/app/_components/icons/ListIcon";
+import { useViewModeStore } from "@/app/_stores/viewModeStore";
+import SlidersIcon from "@/app/_components/icons/SlidersIcon";
+import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
+import ArrowDown from "@/app/_components/icons/ArrowDown";
 import Drawer from "@/app/_components/ui/Drawer";
 
 type TCategoryProps = {
@@ -57,21 +60,21 @@ export default function Category({
 
   return (
     <>
-      <CategoryTemplate title={name} breadcrumbItems={breadcrumbItems}>
+      <CategoryTemplate breadcrumbItems={breadcrumbItems} title={name}>
         <div className="flex flex-col gap-5">
           <div className="flex items-center flex-wrap justify-between gap-5">
             <div className="flex flex-wrap gap-2">
               <Button
-                onPress={onOpen}
-                startContent={<SlidersIcon />}
                 color="default"
+                startContent={<SlidersIcon />}
+                onPress={onOpen}
               >
                 Фильтры
               </Button>
               <Button
                 color="default"
-                startContent={<PerpendicularArrows />}
                 endContent={<ArrowDown />}
+                startContent={<PerpendicularArrows />}
               >
                 Сортировать
               </Button>
@@ -101,29 +104,29 @@ export default function Category({
                 return (
                   <CompanyListItemWrapper
                     key={id}
-                    company={company}
-                    ratingSlot={
-                      _count?.reviews &&
-                      rating && (
-                        <DetailRating
-                          rating={rating}
-                          ratingCount={_count.reviews}
-                        />
-                      )
-                    }
                     categoryChipsSlot={
                       categories &&
                       categories.length > 0 && (
                         <CategoryChips categories={categories} />
                       )
                     }
+                    company={company}
                     productsPreviewGridSlot={
                       products &&
                       products.length > 0 && (
                         <ProductPreviewGrid
-                          products={products}
                           companyId={company.id}
+                          products={products}
                           productsCount={_count?.products}
+                        />
+                      )
+                    }
+                    ratingSlot={
+                      _count?.reviews &&
+                      rating && (
+                        <DetailRating
+                          rating={rating}
+                          ratingCount={_count.reviews}
                         />
                       )
                     }
@@ -139,14 +142,14 @@ export default function Category({
                 return (
                   <CompanyGridItemWrapper
                     key={id}
-                    company={company}
-                    ratingSlot={rating && <Rating rating={rating} />}
                     categoryChipsSlot={
                       categories &&
                       categories.length > 0 && (
                         <CategoryChips categories={categories} />
                       )
                     }
+                    company={company}
+                    ratingSlot={rating && <Rating rating={rating} />}
                   />
                 );
               })}

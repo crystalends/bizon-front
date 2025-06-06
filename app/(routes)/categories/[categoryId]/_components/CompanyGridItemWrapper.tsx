@@ -1,8 +1,10 @@
+import { ReactNode } from "react";
+
+import Actions from "./Actions";
+
 import CompanyGridItem from "@/app/_components/shared/CompanyGridItem";
 import TCompany from "@/app/_types/Company";
-import { ReactNode } from "react";
 import Link from "@/app/_components/ui/Link";
-import Actions from "./Actions";
 
 type TCompanyGridItemWrapperProps = {
   company: TCompany;
@@ -17,18 +19,18 @@ export default function CompanyGridItemWrapper({
 }: TCompanyGridItemWrapperProps) {
   return (
     <CompanyGridItem
+      categoryChipsSlot={categoryChipsSlot}
+      description={description}
+      endContent={<Actions />}
+      imageProps={{ src: image }}
+      isVerified={isVerified}
       name={name}
+      ratingSlot={ratingSlot}
       renderName={(name) => (
         <Link href={`/companies/${id}`}>
           <h2 className="text-[32px] font-semibold">{name}</h2>
         </Link>
       )}
-      description={description}
-      isVerified={isVerified}
-      endContent={<Actions />}
-      ratingSlot={ratingSlot}
-      categoryChipsSlot={categoryChipsSlot}
-      imageProps={{ src: image }}
     />
   );
 }

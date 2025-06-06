@@ -11,10 +11,10 @@ export default function CompanyProducts({ products }: TCompanyProductsProps) {
         {products.map(({ id, name, image, price }) => (
           <Product
             key={id}
-            name={name}
             imageProps={{
               src: image,
             }}
+            name={name}
             price={price}
           />
         ))}

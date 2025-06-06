@@ -1,7 +1,8 @@
 import { CardBody } from "@heroui/card";
 import { ElementType, ReactNode } from "react";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import { HTMLHeroUIProps } from "@heroui/system";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TFeatureCardBodyProps<T extends ElementType = "div"> = {
   title?: string;

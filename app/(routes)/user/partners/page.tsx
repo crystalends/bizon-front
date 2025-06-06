@@ -1,5 +1,6 @@
-import TPartnerOrder from "@/app/_types/PartnerOrder";
 import MyPartnerOrders from "./_components/MyPartnerOrders";
+
+import TPartnerOrder from "@/app/_types/PartnerOrder";
 
 export default function PartnersPage() {
   const partnerOrders: TPartnerOrder[] = [

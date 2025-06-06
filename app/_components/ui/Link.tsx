@@ -1,5 +1,6 @@
 import { Link as HeroUILink, LinkProps } from "@heroui/link";
 import { ElementType } from "react";
+
 import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TLinkProps<T extends ElementType = "a"> = TPolymorphicProps<

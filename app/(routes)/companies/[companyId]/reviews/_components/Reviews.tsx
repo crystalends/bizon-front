@@ -1,5 +1,16 @@
 "use client";
 
+import { Card, CardBody } from "@heroui/card";
+import {
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  useDisclosure,
+} from "@heroui/modal";
+import { Progress } from "@heroui/progress";
+import { format } from "date-fns";
+import { ru } from "date-fns/locale";
+
 import ArrowDown from "@/app/_components/icons/ArrowDown";
 import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
 import Block from "@/app/_components/shared/Block";
@@ -11,17 +22,7 @@ import Textarea from "@/app/_components/ui/Textarea";
 import TReview from "@/app/_types/Review";
 import TStats from "@/app/_types/Stats";
 import { pluralize } from "@/app/_utils/pluralize";
-import { Card, CardBody } from "@heroui/card";
-import {
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  useDisclosure,
-} from "@heroui/modal";
-import { Progress } from "@heroui/progress";
 import "@smastrom/react-rating/style.css";
-import { format } from "date-fns";
-import { ru } from "date-fns/locale";
 
 type TReviewsProps = {
   reviews: TReview[];
@@ -48,7 +49,11 @@ export default function Reviews({
                 <div className="flex items-center gap-5">
                   <h1 className="font-medium text-8xl">{rating}</h1>
                   <div className="flex flex-col gap-1">
-                    <StarsRating value={rating} readOnly />
+                    <StarsRating
+                      readOnly
+                      value={rating}
+                      aria-label="Оценки пользователей"
+                    />
                     <p>
                       На основании {reviewsCount}{" "}
                       {pluralize(reviewsCount, {
@@ -67,11 +72,16 @@ export default function Reviews({
 
                   return (
                     <div key={star} className="flex w-full items-center gap-4">
-                      <StarsRating value={star} readOnly />
+                      <StarsRating
+                        readOnly
+                        value={star}
+                        aria-label="Отображение звезд рейтинга"
+                      />
                       <Progress
+                        className="max-w-[590]"
                         size="sm"
                         value={percentage}
-                        className="max-w-[590]"
+                        aria-label="Проценное соотношение оценок"
                       />
                       <span className="text-2xl">{stats[star]}</span>
                     </div>
@@ -80,8 +90,8 @@ export default function Reviews({
                 <Button
                   className="w-fit"
                   color="default"
-                  startContent={<PerpendicularArrows />}
                   endContent={<ArrowDown />}
+                  startContent={<PerpendicularArrows />}
                 >
                   Сортировать
                 </Button>
@@ -131,21 +141,21 @@ export default function Reviews({
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-3">
                     <h2 className="font-semibold text-2xl">Поставьте оценку</h2>
-                    <StarsRating value={2} />
+                    <StarsRating value={2} aria-label="Поставьте оценку" />
                   </div>
                   <div className="flex flex-col gap-3">
                     <h2 className="font-semibold text-2xl">
                       Как вам сотрудничество?
                     </h2>
                     <Textarea
-                      variant="bordered"
                       placeholder="Общее впечатление"
+                      variant="bordered"
                     />
                   </div>
                 </div>
               </ModalBody>
               <ModalFooter>
-                <Button onPress={onClose} fullWidth>
+                <Button fullWidth onPress={onClose}>
                   Отправить отзыв
                 </Button>
               </ModalFooter>

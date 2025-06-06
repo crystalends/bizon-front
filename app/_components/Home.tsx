@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 import Teaser from "./Teaser";
 import Promo from "./Promo";
 import About from "./About";

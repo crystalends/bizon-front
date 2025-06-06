@@ -1,7 +1,8 @@
 import { Chip as HeroUIChip, ChipProps } from "@heroui/chip";
 import { ElementType } from "react";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 type TChipProps<T extends ElementType = "div"> = TPolymorphicProps<
   T,
@@ -15,12 +16,12 @@ export default function Chip<T extends ElementType = "div">({
 }: TChipProps<T>) {
   return (
     <HeroUIChip
-      variant="light"
+      className={clsx("border border-gray-300 rounded-[4px]", className)}
       classNames={{
         content: clsx("font-medium", classNames.content),
         ...classNames,
       }}
-      className={clsx("border border-gray-300 rounded-[4px]", className)}
+      variant="light"
       {...props}
     />
   );

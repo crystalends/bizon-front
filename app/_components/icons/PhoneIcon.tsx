@@ -6,9 +6,9 @@ export default function PhoneIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="20"
       height="20"
       viewBox="0 0 20 20"
+      width="20"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -21,10 +21,10 @@ export default function PhoneIcon({
       <defs>
         <clipPath id="clip0_452_1422">
           <rect
-            width="15.519"
-            height="16.1468"
             fill="white"
+            height="16.1468"
             transform="translate(2.14307 2.14288)"
+            width="15.519"
           />
         </clipPath>
       </defs>

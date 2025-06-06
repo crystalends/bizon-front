@@ -11,10 +11,11 @@ import {
   NavbarMenuItemProps,
   NavbarMenuToggle,
 } from "@heroui/navbar";
+import { Divider } from "@heroui/divider";
+
 import Logo from "./Logo";
 import Link from "./ui/Link";
 import Button from "./ui/Button";
-import { Divider } from "@heroui/divider";
 
 export default function Navbar() {
   const navbarItems: NavbarItemProps[] = [
@@ -94,10 +95,10 @@ export default function Navbar() {
   return (
     <div className="bg-white shadow-sm">
       <HeroUINavBar
+        className="max-w-[1608px] w-full bg-white mx-auto"
         height={88}
         isBlurred={false}
         maxWidth="full"
-        className="max-w-[1608px] w-full bg-white mx-auto"
       >
         <NavbarContent>
           <NavbarBrand>

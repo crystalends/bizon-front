@@ -1,10 +1,11 @@
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import {
   BreadcrumbsProps,
   Breadcrumbs as HeroUIBreadcrumbs,
 } from "@heroui/breadcrumbs";
 import clsx from "clsx";
 import { ElementType } from "react";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 export type TBreadcrumbsProps<T extends ElementType = "div"> =
   TPolymorphicProps<T, BreadcrumbsProps>;

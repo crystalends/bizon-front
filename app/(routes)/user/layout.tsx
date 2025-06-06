@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 import User from "./_components/User";
 
 type TUserLayoutProps = {

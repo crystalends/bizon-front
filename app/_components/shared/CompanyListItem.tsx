@@ -2,9 +2,11 @@ import { Card, CardBody, CardProps } from "@heroui/card";
 import { ImageProps } from "@heroui/image";
 import { ElementType, ReactNode } from "react";
 import { Image } from "@heroui/image";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import clsx from "clsx";
+
 import DetailIsVerified from "../DetailIsVerified";
+
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 type TCompanyListItemProps<T extends ElementType = "div"> = {
   name: string;
@@ -31,12 +33,12 @@ export default function CompanyListItem<T extends ElementType = "div">({
   ...props
 }: TCompanyListItemProps<T>) {
   return (
-    <Card shadow="md" className={clsx("p-2", className)} {...props}>
+    <Card className={clsx("p-2", className)} shadow="md" {...props}>
       <CardBody>
         <div className="flex flex-wrap justify-center xl:justify-normal xl:flex-nowrap gap-5">
           {(imageProps || ratingSlot) && (
             <div className="flex xl:min-w-[223px] flex-col gap-3">
-              <Image {...imageProps} width={223} alt={name} />
+              <Image {...imageProps} alt={name} width={223} />
               {ratingSlot}
             </div>
           )}
