@@ -67,7 +67,7 @@ export default function PartnerRequests({
             </div>
           </Block>
           <Image
-            className="object-cover min-w-[638] hidden xl:inline"
+            className="object-cover min-w-[638px] hidden xl:inline"
             height={450}
             src="/images/7a0016f4d1161ba85883a2f836c017bb0a7926ca.png"
             width={638}
