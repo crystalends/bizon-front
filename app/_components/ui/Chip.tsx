@@ -15,6 +15,7 @@ export default function Chip<T extends ElementType = "div">({
 }: TChipProps<T>) {
   return (
     <HeroUIChip
+      variant="light"
       classNames={{
         content: clsx("font-medium", classNames.content),
         ...classNames,

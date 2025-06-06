@@ -8,7 +8,8 @@ export default function Actions({ className, ...props }: TActionsProps) {
   const actions: TButtonProps[] = [
     {
       key: 1,
-      color: "default",
+      color: "secondary",
+      variant: "bordered",
       children: "Посмотреть контакты",
     },
     {

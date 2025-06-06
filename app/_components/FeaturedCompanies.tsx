@@ -22,7 +22,7 @@ export default function FeaturedCompanies({ companies }: TFeaturedCompanies) {
                 <FeaturedCompany
                   name={name}
                   description={description}
-                  ratingSlot={<Rating rating={rating} />}
+                  ratingSlot={rating && <Rating rating={rating} />}
                   endContent={
                     <Button as={Link} href={`/companies/${id}`}>
                       Перейти

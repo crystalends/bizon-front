@@ -7,7 +7,7 @@ type TCompanyProductsProps = { products: TProduct[] };
 export default function CompanyProducts({ products }: TCompanyProductsProps) {
   return (
     <Block title="Товары и услуги">
-      <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(243px,1fr))] gap-5">
+      <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(243px,1fr))] gap-5 box-border">
         {products.map(({ id, name, image, price }) => (
           <Product
             key={id}

@@ -64,14 +64,18 @@ export default function Company({
           renderTitle={(title) => (
             <div className="flex gap-14 w-full xl:w-fit justify-between xl:justify-normal items-center flex-wrap">
               <h1 className="text-[44px] font-semibold">{title}</h1>
-              <Button color="default">
+              <Button isIconOnly variant="light">
                 <HeartIcon />
               </Button>
             </div>
           )}
           rightContent={
             <div className="flex w-full xl:w-fit flex-wrap gap-3">
-              <Button className="w-full xl:w-80" color="default">
+              <Button
+                variant="bordered"
+                color="secondary"
+                className="w-full xl:w-80"
+              >
                 Оставить заявку
               </Button>
               <Button className="w-full xl:w-80">Партнерство</Button>

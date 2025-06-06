@@ -27,7 +27,11 @@ const config = {
     heroui({
       layout: {
         radius: {
+          small: "4px",
           medium: "8px",
+        },
+        borderWidth: {
+          medium: "1px",
         },
         boxShadow: {
           small: "0 2px 10px rgba(0, 0, 0, 0.04)",
@@ -43,8 +47,12 @@ const config = {
             primary: {
               DEFAULT: "#1E3A8A",
             },
+
+            secondary: {
+              DEFAULT: "#2F3742",
+            },
             default: {
-              DEFAULT: "#fff",
+              DEFAULT: "#F9F9F9",
             },
           },
         },

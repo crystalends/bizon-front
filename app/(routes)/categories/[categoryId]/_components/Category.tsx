@@ -59,7 +59,7 @@ export default function Category({
     <>
       <CategoryTemplate title={name} breadcrumbItems={breadcrumbItems}>
         <div className="flex flex-col gap-5">
-          <div className="flex flex-wrap justify-between gap-5">
+          <div className="flex items-center flex-wrap justify-between gap-5">
             <div className="flex flex-wrap gap-2">
               <Button
                 onPress={onOpen}
@@ -77,10 +77,18 @@ export default function Category({
               </Button>
             </div>
             <div className="flex gap-2">
-              <Button color="default" onPress={() => setViewMode("list")}>
+              <Button
+                isIconOnly
+                variant="light"
+                onPress={() => setViewMode("list")}
+              >
                 <ListIcon fill={viewMode == "list" ? "#1E3A8A" : "#D4D4D4"} />
               </Button>
-              <Button color="default" onPress={() => setViewMode("grid")}>
+              <Button
+                isIconOnly
+                variant="light"
+                onPress={() => setViewMode("grid")}
+              >
                 <AppsIcon fill={viewMode == "grid" ? "#1E3A8A" : "#D4D4D4"} />
               </Button>
             </div>

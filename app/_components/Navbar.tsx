@@ -32,6 +32,10 @@ export default function Navbar() {
     },
     {
       key: 4,
+      children: <Link href="/blog">Блог</Link>,
+    },
+    {
+      key: 5,
       children: (
         <div className="h-12 flex items-center">
           <Divider orientation="vertical" />
@@ -39,7 +43,7 @@ export default function Navbar() {
       ),
     },
     {
-      key: 5,
+      key: 6,
       children: (
         <Link className="text-xl" href="/login">
           Войти
@@ -47,7 +51,7 @@ export default function Navbar() {
       ),
     },
     {
-      key: 6,
+      key: 7,
       children: (
         <Button as={Link} href="/register">
           Зарегистрироваться
@@ -71,10 +75,14 @@ export default function Navbar() {
     },
     {
       key: 4,
-      children: <Link href="/login">Войти</Link>,
+      children: <Link href="/blog">Блог</Link>,
     },
     {
       key: 5,
+      children: <Link href="/login">Войти</Link>,
+    },
+    {
+      key: 6,
       children: (
         <Link color="primary" href="/register">
           Зарегистрироваться
@@ -89,7 +97,7 @@ export default function Navbar() {
         height={88}
         isBlurred={false}
         maxWidth="full"
-        className="max-w-[1560px] w-full bg-white mx-auto"
+        className="max-w-[1608px] w-full bg-white mx-auto"
       >
         <NavbarContent>
           <NavbarBrand>
