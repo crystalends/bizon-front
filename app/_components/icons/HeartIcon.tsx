@@ -2,6 +2,7 @@ import { SVGProps } from "react";
 
 export default function HeartIcon({
   fill = "#2F3742",
+  ...props
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -10,6 +11,7 @@ export default function HeartIcon({
       viewBox="0 0 29 29"
       width="29"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_207_14917)">
         <path

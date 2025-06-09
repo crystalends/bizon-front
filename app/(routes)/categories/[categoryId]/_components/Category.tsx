@@ -28,15 +28,18 @@ import SlidersIcon from "@/app/_components/icons/SlidersIcon";
 import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
 import ArrowDown from "@/app/_components/icons/ArrowDown";
 import Drawer from "@/app/_components/ui/Drawer";
+import { ReactNode } from "react";
 
 type TCategoryProps = {
   category: TCategory;
   companies: TCompany[];
+  paginateSlot?: ReactNode;
 };
 
 export default function Category({
   category: { id, name },
   companies,
+  paginateSlot,
 }: TCategoryProps) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -60,7 +63,11 @@ export default function Category({
 
   return (
     <>
-      <CategoryTemplate breadcrumbItems={breadcrumbItems} title={name}>
+      <CategoryTemplate
+        paginateSlot={paginateSlot}
+        breadcrumbItems={breadcrumbItems}
+        title={name}
+      >
         <div className="flex flex-col gap-5">
           <div className="flex items-center flex-wrap justify-between gap-5">
             <div className="flex flex-wrap gap-2">

@@ -64,11 +64,20 @@ export default function Company({
         <ProfileCard title="Основная информация о компании">
           <div className="flex flex-col gap-3">
             <Label htmlFor="name">Название</Label>
-            <Input id="name" placeholder="Название компании" />
+            <Input
+              className="max-w-[618px]"
+              id="name"
+              placeholder="Название компании"
+            />
             <Label htmlFor="description">Описание</Label>
-            <Textarea id="description" placeholder="Описание компании" />
+            <Textarea
+              className="max-w-[618px]"
+              id="description"
+              placeholder="Описание компании"
+            />
             <Label htmlFor="categories">Категории</Label>
             <Select
+              className="max-w-[618px]"
               aria-label="Категории"
               items={categories}
               placeholder="Выберите категории"
@@ -84,7 +93,8 @@ export default function Company({
             />
             <Label htmlFor="subCategories">Подкатегории</Label>
             <Select
-              aria-label="Сабкатегории"
+              className="max-w-[618px]"
+              aria-label="Подкатегории"
               items={subCategories}
               placeholder="Выберите сабкатегории"
               selectedKeys={subCategoryIds}
@@ -101,6 +111,7 @@ export default function Company({
             />
             <Label htmlFor="regions">Регионы</Label>
             <Select
+              className="max-w-[618px]"
               aria-label="Регионы"
               items={regions}
               placeholder="Выберите регионы"
@@ -114,27 +125,27 @@ export default function Company({
               regions={selectedRegions}
               onClose={({ id }) => removeItem(id, regionIds, setRegionIds)}
             />
-            <FormButton className="w-fit">Сохранить</FormButton>
+            <FormButton className="max-w-[355px]">Сохранить</FormButton>
           </div>
         </ProfileCard>
         <ProfileCard title="Контактная информация">
           <div className="flex flex-col gap-3">
             <Label htmlFor="phone">Телефон</Label>
-            <Input id="phone" placeholder="Телефон" />
+            <Input className="max-w-[618px]" id="phone" placeholder="Телефон" />
             <Label htmlFor="email">Почта</Label>
-            <Input id="email" placeholder="Почта" />
-            <FormButton className="w-fit">Сохранить</FormButton>
+            <Input className="max-w-[618px]" id="email" placeholder="Почта" />
+            <FormButton className="max-w-[355px]">Сохранить</FormButton>
           </div>
         </ProfileCard>
         <ProfileCard title="Реквизиты компании">
           <div className="flex flex-col gap-3">
             <Label htmlFor="INN">ИНН</Label>
-            <Input id="INN" placeholder="ИНН" />
+            <Input className="max-w-[618px]" id="INN" placeholder="ИНН" />
             <Label htmlFor="KPP">КПП</Label>
-            <Input id="KPP" placeholder="КПП" />
+            <Input className="max-w-[618px]" id="KPP" placeholder="КПП" />
             <Label htmlFor="OGRN">ОГРН</Label>
-            <Input id="OGRN" placeholder="ОГРН" />
-            <FormButton className="w-fit">Сохранить</FormButton>
+            <Input className="max-w-[618px]" id="OGRN" placeholder="ОГРН" />
+            <FormButton className="max-w-[355px]">Сохранить</FormButton>
           </div>
         </ProfileCard>
       </div>

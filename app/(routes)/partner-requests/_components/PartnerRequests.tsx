@@ -21,13 +21,18 @@ import Input from "@/app/_components/ui/Input";
 import RegionChips from "@/app/_components/RegionChips";
 import FormButton from "@/app/_components/ui/FormButton";
 import TPartnerRequest from "@/app/_types/PartnerRequest";
+import TRegion from "@/app/_types/Region";
+import Select from "@/app/_components/ui/Select";
+import { SelectItem } from "@heroui/select";
 
 type TPartnerRequestsProps = {
   partnerRequests: TPartnerRequest[];
+  regions: TRegion[];
 };
 
 export default function PartnerRequests({
   partnerRequests,
+  regions,
 }: TPartnerRequestsProps) {
   const breadcrumbItems: BreadcrumbItemProps[] = [
     {
@@ -58,6 +63,13 @@ export default function PartnerRequests({
               </p>
               <div className="flex flex-col gap-3">
                 <Input placeholder="Товар или услуга" />
+                <Select
+                  aria-label="Регионы"
+                  items={regions}
+                  placeholder="Выберите регион"
+                >
+                  {(item) => <SelectItem key={item.id}>{item.name}</SelectItem>}
+                </Select>
                 <FormButton className="h-[66px] px-10 py-4">Поиск</FormButton>
                 <p className="text-xs">
                   Отправляя данную форму, Вы даете согласие на обработку
@@ -85,17 +97,13 @@ export default function PartnerRequests({
           }
           title="Активные запросы"
         >
-          {partnerRequests.map(({ id, product, user, createdAt }) => (
+          {partnerRequests.map(({ id, product, region, user, createdAt }) => (
             <Partner
               key={id}
               createdAt={format(createdAt, "dd.MM.yyyy", {
                 locale: ru,
               })}
-              middleContent={
-                user?.company?.regions && (
-                  <RegionChips regions={user.company.regions} />
-                )
-              }
+              middleContent={region && <RegionChips regions={[region]} />}
               product={product}
               renderSearcher={(searcher) => (
                 <p className="text-xl">Ищет: {searcher}</p>

@@ -8,7 +8,7 @@ type TCenteredContainerProps = {
 } & ComponentPropsWithoutRef<"div">;
 
 export default function CenteredContainer({
-  maxWidth = "max-w-[506px]",
+  maxWidth = "max-w-[538px]",
   children,
   className,
   ...props
@@ -16,7 +16,7 @@ export default function CenteredContainer({
   return (
     <Container
       className={clsx(
-        "pt-10 xl:pt-0 flex items-center justify-center min-h-screen",
+        "pt-10 w-full xl:pt-0 flex items-center justify-center min-h-screen",
         className,
       )}
       {...props}

@@ -23,7 +23,7 @@ export default function Partner<T extends ElementType = "div">({
   renderProduct = (product) => (
     <h3 className="font-semibold text-2xl">{product}</h3>
   ),
-  renderSearcher = (searcher) => <p className="text-xl">{searcher}</p>,
+  renderSearcher = (searcher) => <p>{searcher}</p>,
   renderCreatedAt = (createdAt) => (
     <p className="text-gray-300">Опубликовано: {createdAt}</p>
   ),
@@ -34,13 +34,17 @@ export default function Partner<T extends ElementType = "div">({
     <Card {...props}>
       <CardBody>
         <div className="flex flex-col xl:flex-row gap-5">
-          <div className="flex flex-col gap-4 flex-1">
-            {product && renderProduct(product)}
-            {searcher && renderSearcher(searcher)}
-            {middleContent}
-            {createdAt && renderCreatedAt(createdAt)}
+          <div className="flex justify-between flex-col gap-4 flex-1">
+            <div className="flex flex-col gap-4">
+              {product && renderProduct(product)}
+              {searcher && renderSearcher(searcher)}
+              {middleContent}
+            </div>
+            <div className="flex flex-col gap-4">
+              {createdAt && renderCreatedAt(createdAt)}
+            </div>
           </div>
-          {rightContent && <div>{rightContent}</div>}
+          {rightContent}
         </div>
       </CardBody>
     </Card>

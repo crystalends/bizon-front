@@ -1,5 +1,6 @@
-import Block from "@/app/_components/shared/Block";
+import CloseIcon from "@/app/_components/icons/CloseIcon";
 import Product from "@/app/_components/shared/Product";
+import SubBlock from "@/app/_components/shared/SubBlock";
 import Button from "@/app/_components/ui/Button";
 import TProduct from "@/app/_types/Product";
 
@@ -9,7 +10,7 @@ type TProductsProps = {
 
 export default function Products({ products }: TProductsProps) {
   return (
-    <Block
+    <SubBlock
       className="w-full"
       rightContent={<Button>Добавить</Button>}
       title="Товары и услуги"
@@ -21,11 +22,16 @@ export default function Products({ products }: TProductsProps) {
             imageProps={{
               src: image,
             }}
+            topRightContent={
+              <Button variant="light" isIconOnly>
+                <CloseIcon />
+              </Button>
+            }
             name={name}
             price={price}
           />
         ))}
       </div>
-    </Block>
+    </SubBlock>
   );
 }

@@ -9,6 +9,7 @@ type TProductProps = {
   price?: number;
   renderName?: (name: string) => ReactNode;
   imageProps?: ImageProps;
+  topRightContent?: ReactNode;
 } & ComponentPropsWithoutRef<"div">;
 
 export default function Product({
@@ -17,10 +18,17 @@ export default function Product({
   renderName = (name) => <p>{name}</p>,
   imageProps,
   className,
+  topRightContent,
   ...props
 }: TProductProps) {
   return (
-    <div className={clsx("flex flex-col gap-[10px]", className)} {...props}>
+    <div
+      className={clsx("flex flex-col gap-[10px] relative", className)}
+      {...props}
+    >
+      {topRightContent && (
+        <div className="absolute right-3 top-3 z-50">{topRightContent}</div>
+      )}
       <div className="flex justify-center">
         {imageProps && <Image {...imageProps} alt={name} width={243} />}
       </div>

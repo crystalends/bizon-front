@@ -1,8 +1,8 @@
-import { CardBody, CardFooter } from "@heroui/card";
+import { CardBody } from "@heroui/card";
 
 import Container from "./shared/Container";
 import PromoCard from "./PromoCard";
-import FormButton from "./ui/FormButton";
+import Button from "./ui/Button";
 
 export default function Promo() {
   return (
@@ -25,9 +25,9 @@ export default function Promo() {
                   бизнеса.
                 </p>
               </div>
-              <FormButton className="w-fit" color="default">
+              <Button className="h-[64px] w-fit px-9 py-5" color="default">
                 Разместить компанию
-              </FormButton>
+              </Button>
             </div>
           </CardBody>
         </PromoCard>

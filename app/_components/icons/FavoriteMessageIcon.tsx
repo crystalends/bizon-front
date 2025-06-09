@@ -2,6 +2,7 @@ import { SVGProps } from "react";
 
 export default function FavoriteMessageIcon({
   fill = "#2F3742",
+  ...props
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -10,6 +11,7 @@ export default function FavoriteMessageIcon({
       viewBox="0 0 28 28"
       width="28"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_672_11437)">
         <path

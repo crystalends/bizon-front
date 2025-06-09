@@ -1,8 +1,20 @@
+import TRegion from "@/app/_types/Region";
 import PartnerRequests from "./_components/PartnerRequests";
 
 import TPartnerRequest from "@/app/_types/PartnerRequest";
 
 export default function PartnerRequestsPage() {
+  const regions: TRegion[] = [
+    {
+      id: 1,
+      name: "Москва",
+    },
+    {
+      id: 2,
+      name: "Краснодар",
+    },
+  ];
+
   const partnerRequests: TPartnerRequest[] = [
     {
       id: 1,
@@ -12,6 +24,7 @@ export default function PartnerRequestsPage() {
         id: 1,
         name: "Владимир Иванов",
       },
+      region: { id: 1, name: "Москва" },
       customers: [],
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -20,6 +33,7 @@ export default function PartnerRequestsPage() {
       id: 2,
       userId: 2,
       product: "Строительство недвижемости",
+      region: { id: 1, name: "Москва" },
       user: {
         id: 2,
         name: "Андрей Алексеев",
@@ -28,16 +42,6 @@ export default function PartnerRequestsPage() {
           id: 2,
           name: "ИП Алексеев А.В.",
           rating: 5,
-          regions: [
-            {
-              id: 1,
-              name: "Москва",
-            },
-            {
-              id: 2,
-              name: "Электроугли",
-            },
-          ],
           isVerified: false,
         },
       },
@@ -47,5 +51,7 @@ export default function PartnerRequestsPage() {
     },
   ];
 
-  return <PartnerRequests partnerRequests={partnerRequests} />;
+  return (
+    <PartnerRequests partnerRequests={partnerRequests} regions={regions} />
+  );
 }

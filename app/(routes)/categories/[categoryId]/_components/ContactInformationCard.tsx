@@ -11,8 +11,8 @@ export default function ContactInfrmationCard({
   contactInformation: { phone, email, site, VK, linkedIn },
 }: TContactInfrmationCardProps) {
   return (
-    <Card className="bg-gray-50 p-5" shadow="none">
-      <CardBody>
+    <Card className="bg-gray-50" shadow="none">
+      <CardBody className="p-5">
         <div className="flex flex-col gap-4">
           <h3 className="text-2xl font-semibold">Контактная информация:</h3>
           <Divider />

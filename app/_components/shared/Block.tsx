@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 
-type TBlock = {
+export type TBlockProps = {
   title: string;
   renderTitle?: (title: string) => ReactNode;
   rightContent?: ReactNode;
@@ -17,7 +17,7 @@ export default function Block({
   rightContent,
   className,
   ...props
-}: TBlock) {
+}: TBlockProps) {
   return (
     <div className={clsx("flex flex-col gap-6", className)} {...props}>
       <div className="flex gap-5 items-center flex-wrap justify-between">

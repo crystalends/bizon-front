@@ -3,6 +3,7 @@ import { format } from "date-fns/format";
 import Partner from "@/app/_components/shared/Partner";
 import Link from "@/app/_components/ui/Link";
 import TPartnerOrder from "@/app/_types/PartnerOrder";
+import Actions from "./Actions";
 
 type TMyPartnerOrdersProps = { partnerOrders: TPartnerOrder[] };
 
@@ -27,9 +28,8 @@ export default function MyPartnerOrders({
             )
           }
           product={product}
-          renderSearcher={(searcher) => (
-            <p className="text-xl">Компания: {searcher}</p>
-          )}
+          renderSearcher={(searcher) => <p>Компания: {searcher}</p>}
+          rightContent={<Actions className="xl:max-w-[355px]" />}
           searcher={user?.company?.name}
         />
       ))}

@@ -12,40 +12,47 @@ export default function Profile() {
         <ProfileCard title="Основная информация">
           <div className="flex flex-col gap-3">
             <Label htmlFor="name">Имя и фамилия</Label>
-            <Input id="name" placeholder="Александр Петров" />
-            <FormButton className="w-fit">Сохранить</FormButton>
+            <Input
+              className="max-w-[618px]"
+              id="name"
+              placeholder="Александр Петров"
+            />
+            <FormButton className="max-w-[355px]">Сохранить</FormButton>
           </div>
         </ProfileCard>
         <ProfileCard title="Контактная информация">
           <div className="flex flex-col gap-3">
             <Label htmlFor="phone">Телефон</Label>
-            <Input id="phone" placeholder="Телефон" />
+            <Input className="max-w-[618px]" id="phone" placeholder="Телефон" />
             <Label htmlFor="email">Почта</Label>
-            <Input id="email" placeholder="Почта" />
-            <FormButton className="w-fit">Сохранить</FormButton>
+            <Input className="max-w-[618px]" id="email" placeholder="Почта" />
+            <FormButton className="max-w-[355px]">Сохранить</FormButton>
           </div>
         </ProfileCard>
         <ProfileCard title="Конфиденциальность">
           <div className="flex flex-col gap-3">
             <Label htmlFor="old-password">Старый пароль</Label>
             <Input
+              className="max-w-[618px]"
               id="old-password"
               placeholder="Старый пароль"
               type="password"
             />
             <Label htmlFor="new-password">Новый пароль</Label>
             <Input
+              className="max-w-[618px]"
               id="new-password"
               placeholder="Новый пароль"
               type="password"
             />
             <Label htmlFor="confirm-password">Подтвердите пароль</Label>
             <Input
+              className="max-w-[618px]"
               id="confirm-password"
               placeholder="Подтвердите пароль"
               type="password"
             />
-            <FormButton className="w-fit">Сохранить</FormButton>
+            <FormButton className="max-w-[355px]">Сохранить</FormButton>
           </div>
         </ProfileCard>
       </div>

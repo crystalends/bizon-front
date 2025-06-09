@@ -1,3 +1,4 @@
+import TRegion from "./Region";
 import TUser from "./User";
 
 type TPartnerRequest = {
@@ -5,6 +6,7 @@ type TPartnerRequest = {
   product: string;
   userId: number;
   user?: TUser;
+  region: TRegion;
   customers: TUser[];
   createdAt: Date;
   updatedAt: Date;

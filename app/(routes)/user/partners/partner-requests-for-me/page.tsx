@@ -12,6 +12,7 @@ export default function PartnerRequestsForMePage() {
         id: 1,
         name: "Владимир Иванов",
       },
+      region: { id: 1, name: "Москва" },
       customers: [],
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -20,6 +21,7 @@ export default function PartnerRequestsForMePage() {
       id: 2,
       userId: 2,
       product: "Строительство недвижемости",
+      region: { id: 1, name: "Москва" },
       user: {
         id: 2,
         name: "Андрей Алексеев",

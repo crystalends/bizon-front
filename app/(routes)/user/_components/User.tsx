@@ -16,6 +16,7 @@ import IconedListItem, {
   TIconedListItemProps,
 } from "@/app/_components/shared/IconedListItem";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
+import ExitIcon from "@/app/_components/icons/ExitIcon";
 
 type TUserProps = { children: ReactNode };
 
@@ -85,10 +86,17 @@ export default function User({ children }: TUserProps) {
                 <IconedListItem
                   key={key}
                   as={Link}
+                  isPressable
                   className="hover:bg-gray-50"
                   {...iconedListItem}
                 />
               ))}
+              <IconedListItem
+                name="Выйти"
+                startIcon={<ExitIcon />}
+                className="hover:bg-gray-50 cursor-pointer"
+                isPressable
+              />
             </div>
             {children}
           </div>

@@ -11,6 +11,7 @@ import Block from "@/app/_components/shared/Block";
 type TCategoryTemplateProps = {
   title: string;
   breadcrumbItems: BreadcrumbItemProps[];
+  paginateSlot?: ReactNode;
   children?: ReactNode;
   containerClassName?: string;
 };
@@ -18,6 +19,7 @@ type TCategoryTemplateProps = {
 export default function CategoryTemplate({
   title,
   breadcrumbItems,
+  paginateSlot,
   children,
 }: TCategoryTemplateProps) {
   return (
@@ -42,6 +44,7 @@ export default function CategoryTemplate({
             {children}
           </div>
         </Block>
+        {paginateSlot}
       </div>
     </Container>
   );
