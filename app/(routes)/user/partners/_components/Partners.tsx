@@ -38,7 +38,7 @@ export default function Partners({ children }: TPartnersProps) {
   ];
 
   return (
-    <div className="flex w-full flex-col gap-5">
+    <div className="flex w-full overflow-hidden flex-col gap-5">
       <Tabs items={tabs} selectedKey={pathname}>
         {({ key, ...item }) => <Tab key={key} as={Link} {...item} />}
       </Tabs>

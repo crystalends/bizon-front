@@ -19,7 +19,7 @@ export default function ChatCompany<T extends ElementType = "div">({
     <Card shadow="none" radius="none" {...props}>
       <CardBody>
         <div className="flex items-center gap-5">
-          <Image width={32} height={32} {...imageProps} radius="full" />
+          <Image width={64} height={64} {...imageProps} radius="full" />
           <h3 className="font-semibold text-xl">{name}</h3>
         </div>
       </CardBody>
