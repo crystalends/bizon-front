@@ -17,6 +17,7 @@ import IconedListItem, {
 } from "@/app/_components/shared/IconedListItem";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
 import ExitIcon from "@/app/_components/icons/ExitIcon";
+import DialogIcon from "@/app/_components/icons/DialogIcon";
 
 type TUserProps = { children: ReactNode };
 
@@ -54,6 +55,12 @@ export default function User({ children }: TUserProps) {
     },
     {
       key: 6,
+      name: "Чат",
+      startIcon: <DialogIcon />,
+      href: "/user/chat",
+    },
+    {
+      key: 7,
       name: "Отзывы",
       startIcon: <FavoriteMessageIcon />,
       href: "/user/reviews",

@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import TCategory from "../_types/Category";
-
 import PopularCategory from "./shared/PopularCategory";
 import Container from "./shared/Container";
 import Block from "./shared/Block";

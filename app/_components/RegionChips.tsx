@@ -1,5 +1,4 @@
 import TRegion from "../_types/Region";
-
 import Chip from "./ui/Chip";
 
 type TRegionChipsProps = {

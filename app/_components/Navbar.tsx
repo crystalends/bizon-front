@@ -12,7 +12,6 @@ import {
   NavbarMenuToggle,
 } from "@heroui/navbar";
 import { Divider } from "@heroui/divider";
-
 import Logo from "./Logo";
 import Link from "./ui/Link";
 import Button from "./ui/Button";

@@ -1,8 +1,6 @@
 import { Link } from "@heroui/link";
 import { ScrollShadow } from "@heroui/scroll-shadow";
-
 import TCompany from "../_types/Company";
-
 import FeaturedCompany from "./shared/FeaturedCompany";
 import Button from "./ui/Button";
 import Container from "./shared/Container";

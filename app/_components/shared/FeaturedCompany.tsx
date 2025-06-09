@@ -1,4 +1,4 @@
-import { Card, CardBody, CardFooter, CardProps } from "@heroui/card";
+import { Card, CardBody, CardProps } from "@heroui/card";
 import { ElementType, ReactNode } from "react";
 import clsx from "clsx";
 

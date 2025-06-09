@@ -1,5 +1,5 @@
 import FeatureCardBody, { TFeatureCardBodyProps } from "./FeatureCardBody";
-import DialogIcon from "./icons/DialogIcon";
+import FilledDialogIcon from "./icons/FilledDialogIcon";
 import StarInCircleIcon from "./icons/StarInCircleIcon";
 import CommunityIcon from "./icons/СommunityIcon";
 import Container from "./shared/Container";
@@ -26,7 +26,7 @@ export default function Advantages() {
       title: "Техническая поддержка",
       description:
         "Круглосуточная помощь специалистов, которые оперативно решают любые возникающие вопросы.",
-      icon: <DialogIcon />,
+      icon: <FilledDialogIcon />,
     },
   ];
 
