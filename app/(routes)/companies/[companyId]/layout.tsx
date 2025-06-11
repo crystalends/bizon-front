@@ -3,6 +3,8 @@ import { ReactNode } from "react";
 import Company from "./_components/Company";
 
 import TCompany from "@/app/_types/Company";
+import TRegion from "@/app/_types/Region";
+import TProduct from "@/app/_types/Product";
 
 type TCompanyLayoutProps = {
   children: ReactNode;
@@ -54,5 +56,22 @@ export default function CompanyLayout({ children }: TCompanyLayoutProps) {
     },
   };
 
-  return <Company company={company}>{children}</Company>;
+  const regions: TRegion[] = [
+    {
+      id: 1,
+      name: "Москва",
+    },
+    {
+      id: 2,
+      name: "Электроугли",
+    },
+  ];
+
+  const products: TProduct[] = [];
+
+  return (
+    <Company company={company} regions={regions} products={products}>
+      {children}
+    </Company>
+  );
 }

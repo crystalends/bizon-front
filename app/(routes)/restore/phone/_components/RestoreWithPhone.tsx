@@ -5,7 +5,7 @@ export default function RestoreWithPhone() {
   return (
     <div className="flex flex-col gap-3">
       <Input placeholder="Телефон" />
-      <FormButton className="h-[66px] px-10 py-4">Далее</FormButton>
+      <FormButton>Далее</FormButton>
     </div>
   );
 }

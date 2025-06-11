@@ -112,7 +112,7 @@ export default function Company({
             <Label htmlFor="regions">Регионы</Label>
             <Select
               className="max-w-[618px]"
-              aria-label="Регионы"
+              aria-label="Выберите регионы"
               items={regions}
               placeholder="Выберите регионы"
               selectedKeys={regionIds}

@@ -32,7 +32,7 @@ export default function Login({ children }: TLoginProps) {
   return (
     <CenteredContainer>
       <div className="flex flex-col gap-8 items-center">
-        <h2 className="text-[44px] font-semibold">Вход</h2>
+        <h2 className="text-[28px] xl:text-[44px] font-semibold">Вход</h2>
         <div className="flex flex-col gap-5 w-full">
           <Tabs fullWidth items={tabs} selectedKey={pathname}>
             {({ key, ...item }) => <Tab key={key} as={Link} {...item} />}
@@ -50,7 +50,7 @@ export default function Login({ children }: TLoginProps) {
         <div className="flex items-center justify-center gap-5 flex-wrap">
           <p className="text-xs">Впервые на сайте?</p>
           <CustomLink
-            className="font-medium text-xl"
+            className="font-medium text-base xl:text-xl"
             color="primary"
             href="/register"
             underline="always"

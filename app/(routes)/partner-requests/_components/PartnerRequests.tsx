@@ -8,9 +8,7 @@ import {
   Breadcrumbs,
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
-
 import Actions from "./Actions";
-
 import ArrowDown from "@/app/_components/icons/ArrowDown";
 import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
 import Block from "@/app/_components/shared/Block";
@@ -56,7 +54,7 @@ export default function PartnerRequests({
         <div className="flex gap-0 xl:gap-52">
           <Block className="w-full" title="Поиск партнера ">
             <div className="flex gap-5 flex-col">
-              <p className="text-xl">
+              <p className="text-base xl:text-xl">
                 Заполните данную форму, чтобы другие пользователи и компании
                 могли откликнуться на ваш запрос на оказание необходимой услуги
                 или доставку товара.
@@ -64,13 +62,13 @@ export default function PartnerRequests({
               <div className="flex flex-col gap-3">
                 <Input placeholder="Товар или услуга" />
                 <Select
-                  aria-label="Регионы"
+                  aria-label="Выберите регион"
                   items={regions}
                   placeholder="Выберите регион"
                 >
                   {(item) => <SelectItem key={item.id}>{item.name}</SelectItem>}
                 </Select>
-                <FormButton className="h-[66px] px-10 py-4">Поиск</FormButton>
+                <FormButton>Поиск</FormButton>
                 <p className="text-xs">
                   Отправляя данную форму, Вы даете согласие на обработку
                   персональных данных согласно нашей политике конфиденциальности

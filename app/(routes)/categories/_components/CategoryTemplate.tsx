@@ -35,7 +35,7 @@ export default function CategoryTemplate({
             <GlobalSearch
               inputProps={{
                 classNames: {
-                  input: "text-xl",
+                  inputWrapper: "shadow-none rounded-r-none xl:rounded-lg",
                 },
                 variant: "bordered",
                 color: "primary",

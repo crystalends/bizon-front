@@ -6,7 +6,7 @@ export default function LoginWithEmail() {
     <div className="flex flex-col gap-3">
       <Input placeholder="Почта" />
       <Input placeholder="Пароль" type="password" />
-      <FormButton className="h-[66px] px-10 py-4">Войти</FormButton>
+      <FormButton>Войти</FormButton>
     </div>
   );
 }

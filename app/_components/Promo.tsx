@@ -12,9 +12,9 @@ export default function Promo() {
             aria-hidden="true"
             className="absolute inset-0 bg-[#1E3A8A] opacity-[92%]"
           />
-          <CardBody className="p-10 xl:p-20">
-            <div className="flex flex-col gap-11">
-              <div className="flex flex-col gap-8">
+          <CardBody className="p-6 xl:p-20">
+            <div className="flex flex-col gap-8 xl:gap-11">
+              <div className="flex flex-col gap-5 xl:gap-8">
                 <h2 className="max-w-[521px] text-white font-semibold text-[24px] xl:text-[44px]">
                   Начните расти вместе с BizON
                 </h2>
@@ -24,7 +24,10 @@ export default function Promo() {
                   бизнеса.
                 </p>
               </div>
-              <Button className="h-[64px] w-fit px-9 py-5" color="default">
+              <Button
+                className="h-[33px] xl:h-[64px] w-fit px-9 py-5"
+                color="default"
+              >
                 Разместить компанию
               </Button>
             </div>

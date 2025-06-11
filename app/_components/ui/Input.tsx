@@ -18,8 +18,11 @@ export default function Input<T extends ElementType = "input">({
   return (
     <HeroUIInput
       classNames={{
-        input: clsx("text-base", input),
-        inputWrapper: clsx("h-[66px] px-6 py-[21px]", inputWrapper),
+        input: clsx("text-sm xl:text-base", input),
+        inputWrapper: clsx(
+          "h-[41px] xl:h-[66px] p-3 xl:px-6 xl:py-[21px]",
+          inputWrapper,
+        ),
         ...restClassNames,
       }}
       color="primary"

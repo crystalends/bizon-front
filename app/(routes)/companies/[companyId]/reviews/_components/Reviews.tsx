@@ -47,7 +47,9 @@ export default function Reviews({
             <CardBody>
               <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-5">
-                  <h1 className="font-medium text-8xl">{rating}</h1>
+                  <h1 className="font-medium text-[64px] xl:text-8xl">
+                    {rating}
+                  </h1>
                   <div className="flex flex-col gap-1">
                     <StarsRating
                       readOnly
@@ -83,7 +85,7 @@ export default function Reviews({
                         value={percentage}
                         aria-label="Проценное соотношение оценок"
                       />
-                      <span className="text-2xl">{stats[star]}</span>
+                      <span className="text-xl xl:text-2xl">{stats[star]}</span>
                     </div>
                   );
                 })}
@@ -124,7 +126,7 @@ export default function Reviews({
           <Card className="w-full h-fit xl:max-w-[507px]">
             <CardBody>
               <div className="flex flex-col gap-5">
-                <p className="text-xl">
+                <p className="text-base xl:text-xl">
                   Рейтинг — это среднее арифметическое оценок пользователей.
                 </p>
                 <Button onPress={onOpen}>Написать отзыв</Button>

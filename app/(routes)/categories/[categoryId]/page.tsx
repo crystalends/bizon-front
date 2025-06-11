@@ -195,10 +195,38 @@ export default function CategoryPage() {
     },
   ];
 
+  const categories: TCategory[] = [
+    {
+      id: 1,
+      name: "Lorem ipsum",
+    },
+    {
+      id: 2,
+      name: "Example category",
+    },
+    {
+      id: 3,
+      name: "Example category",
+    },
+    {
+      id: 4,
+      name: "Example category",
+    },
+    {
+      id: 5,
+      name: "Example category",
+    },
+    {
+      id: 6,
+      name: "Example category",
+    },
+  ];
+
   return (
     <Category
       category={category}
       companies={companies}
+      categories={categories}
       paginateSlot={<Paginate page={1} limit={20} total={1000} />}
     />
   );

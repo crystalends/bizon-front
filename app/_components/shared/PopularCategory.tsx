@@ -13,14 +13,18 @@ type TPopularCategoryProps<T extends ElementType = "div"> = {
 
 export default function PopularCategory<T extends ElementType = "div">({
   name,
-  renderName = (name) => <h3 className="text-[32px] font-semibold">{name}</h3>,
+  renderName = (name) => (
+    <h3 className="text-[16px] xl:text-[32px] font-semibold">{name}</h3>
+  ),
   imageProps,
   className,
   ...props
 }: TPopularCategoryProps<T>) {
   return (
     <Card className={clsx("bg-gray-50", className)} shadow="none" {...props}>
-      <CardHeader className="px-[32px] pt-8">{renderName(name)}</CardHeader>
+      <CardHeader className="p-[22px] xl:p-[32px]">
+        {renderName(name)}
+      </CardHeader>
       <CardBody className="p-0">
         <div className="flex justify-end">
           <Image {...imageProps} alt={name} />

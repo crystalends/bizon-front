@@ -15,7 +15,7 @@ export default function PopularCategories({
   return (
     <Container>
       <Block title="Популярные категории">
-        <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(375px,1fr))] gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-[repeat(auto-fill,minmax(375px,1fr))] gap-4 xl:gap-5">
           {categories.map(({ id, name, image }) => (
             <PopularCategory
               key={id}

@@ -31,7 +31,9 @@ export default function Restore({ children }: TRestoreProps) {
   return (
     <CenteredContainer>
       <div className="flex flex-col gap-8 items-center">
-        <h2 className="text-[44px] font-semibold">Восстановление пароля</h2>
+        <h2 className="text-[28px] xl:text-[44px] font-semibold">
+          Восстановление пароля
+        </h2>
         <Tabs fullWidth items={tabs} selectedKey={pathname}>
           {({ key, ...item }) => <Tab key={key} as={Link} {...item} />}
         </Tabs>

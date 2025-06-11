@@ -11,7 +11,7 @@ export type TBlockProps = {
 export default function Block({
   title,
   renderTitle = (title) => (
-    <h2 className="font-semibold text-[44px]">{title}</h2>
+    <h2 className="font-semibold text-[28px] xl:text-[44px]">{title}</h2>
   ),
   children,
   rightContent,

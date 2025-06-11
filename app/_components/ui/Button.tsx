@@ -18,9 +18,9 @@ export default function Button<T extends ElementType = "button">({
   return (
     <HeroUIButton
       className={clsx(
-        "text-xl",
+        "text-base xl:text-xl",
         {
-          "p-[24px]": !isIconOnly,
+          "xl:p-[24px]": !isIconOnly,
           "p-0": isIconOnly,
         },
         className,

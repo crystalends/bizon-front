@@ -14,7 +14,7 @@ export default function ProductPreviewGrid({
   productsCount,
 }: TProductPreviewGridProps) {
   return (
-    <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(112px,1fr))] gap-5">
+    <div className="grid grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(112px,1fr))] gap-5">
       {products.map(({ id, name, image }) => (
         <ProductPreview
           key={id}

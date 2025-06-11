@@ -26,7 +26,7 @@ export default function FeaturedCompany<T extends ElementType = "div">({
   ...props
 }: TFeaturedCompanyProps<T>) {
   return (
-    <Card className={clsx("p-10", className)} shadow="md" {...props}>
+    <Card className={clsx("p-4 xl:p-10", className)} shadow="md" {...props}>
       <CardBody className="h-full flex flex-col justify-between overflow-hidden">
         <div className="flex flex-col gap-5">
           <div className="flex w-full justify-between gap-5">

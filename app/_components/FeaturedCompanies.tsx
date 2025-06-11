@@ -20,7 +20,7 @@ export default function FeaturedCompanies({ companies }: TFeaturedCompanies) {
             {companies.map(({ id, name, description, rating }) => (
               <FeaturedCompany
                 key={id}
-                className="w-[506px]"
+                className="w-[440px] xl:w-[506px]"
                 description={description}
                 endContent={
                   <Button className="w-fit" as={Link} href={`/companies/${id}`}>

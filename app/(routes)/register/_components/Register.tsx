@@ -8,7 +8,9 @@ export default function Register() {
     <Container className="pt-10 xl:pt-0 flex items-center justify-center min-h-[calc(100vh-80px)]">
       <div className="mx-auto text-center w-full max-w-[506px] px-4">
         <div className="flex flex-col gap-8 items-center">
-          <h2 className="text-[44px] font-semibold">Регистрация</h2>
+          <h2 className="text-[28px] xl:text-[44px] font-semibold">
+            Регистрация
+          </h2>
           <div className="flex flex-col gap-5 w-full">
             <div className="flex flex-col gap-3">
               <Input placeholder="Имя и фамилия" />
@@ -18,9 +20,7 @@ export default function Register() {
               <Input placeholder="ИНН компании (если есть)" />
               <Input placeholder="Придумайте пароль" type="password" />
               <Input placeholder="Подтвердите пароль" type="password" />
-              <FormButton className="h-[66px] px-10 py-4">
-                Зарегистрироваться
-              </FormButton>
+              <FormButton>Зарегистрироваться</FormButton>
             </div>
             <p className="text-xs">
               Нажимая кнопку «Зарегистрироваться», Вы даете согласие на
@@ -30,7 +30,11 @@ export default function Register() {
           </div>
           <div className="flex items-center justify-center gap-5 flex-wrap">
             <p className="text-xs">Уже зарегистрированы?</p>
-            <Link className="font-medium text-xl" color="primary" href="/login">
+            <Link
+              className="font-medium text-base xl:text-xl"
+              color="primary"
+              href="/login"
+            >
               Войти
             </Link>
           </div>

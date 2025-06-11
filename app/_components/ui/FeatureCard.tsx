@@ -16,7 +16,7 @@ export default function FeatureCard<T extends ElementType = "div">({
   return (
     <HeroUICard
       fullWidth
-      className={clsx("rounded-2xl bg-gray-50 p-10", className)}
+      className={clsx("rounded-2xl bg-gray-50 p-5 xl:p-10", className)}
       shadow="none"
       {...props}
     />

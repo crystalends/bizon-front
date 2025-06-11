@@ -9,7 +9,7 @@ export default function FormButton<T extends ElementType = "button">({
 }: TButtonProps<T>) {
   return (
     <Button
-      className={clsx("h-[66px] px-10 py-4", className)}
+      className={clsx("h-[41px] xl:h-[66px] xl:px-10 xl:py-4", className)}
       {...(props as TButtonProps<T>)}
     />
   );

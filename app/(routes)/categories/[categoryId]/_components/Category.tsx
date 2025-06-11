@@ -8,14 +8,11 @@ import {
   DrawerFooter,
   DrawerHeader,
 } from "@heroui/drawer";
-
 import CategoryTemplate from "../../_components/CategoryTemplate";
-
 import CompanyListItemWrapper from "./CompanyListItemWrapper";
 import ProductPreviewGrid from "./ProductPreviewGrid";
 import DetailRating from "./DetailRating";
 import CompanyGridItemWrapper from "./CompanyGridItemWrapper";
-
 import TCategory from "@/app/_types/Category";
 import TCompany from "@/app/_types/Company";
 import CategoryChips from "@/app/_components/CategoryChips";
@@ -29,9 +26,12 @@ import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
 import ArrowDown from "@/app/_components/icons/ArrowDown";
 import Drawer from "@/app/_components/ui/Drawer";
 import { ReactNode } from "react";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
+import { CheckboxGroup, Checkbox } from "@heroui/checkbox";
 
 type TCategoryProps = {
   category: TCategory;
+  categories: TCategory[];
   companies: TCompany[];
   paginateSlot?: ReactNode;
 };
@@ -39,6 +39,7 @@ type TCategoryProps = {
 export default function Category({
   category: { id, name },
   companies,
+  categories,
   paginateSlot,
 }: TCategoryProps) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -165,13 +166,50 @@ export default function Category({
         </div>
       </CategoryTemplate>
       <Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
-        <DrawerContent>
+        <DrawerContent className="xl:max-w-[575px] xl:pr-[152px] w-full">
           {(onClose) => (
             <>
               <DrawerHeader>
-                <h1 className="text-[40px] font-semibold">Фильтры</h1>
+                <div className="w-full items-center flex flex-wrap gap-5 justify-between">
+                  <h1 className="text-[25px] xl:text-[40px] font-semibold">
+                    Фильтры
+                  </h1>
+                  <Button
+                    variant="light"
+                    className="!p-2 !text-base h-7 underline"
+                  >
+                    Сбросить все
+                  </Button>
+                </div>
               </DrawerHeader>
-              <DrawerBody />
+              <DrawerBody>
+                <Card>
+                  <CardHeader>
+                    <div className="flex w-full items-center justify-between gap-5 flex-wrap">
+                      <h3 className="text-base xl:text-2xl font-semibold">
+                        Категория
+                      </h3>
+                      <Button
+                        variant="light"
+                        color="default"
+                        className="!p-2 !text-base h-7 underline"
+                      >
+                        Сбросить все
+                      </Button>
+                    </div>
+                  </CardHeader>
+                  <CardBody className="h-[148px] overflow-y-auto">
+                    <CheckboxGroup>
+                      {categories.map(({ name, id }) => (
+                        <Checkbox key={id} value={id.toString()}>
+                          {name}
+                        </Checkbox>
+                      ))}
+                    </CheckboxGroup>
+                  </CardBody>
+                  <CardFooter />
+                </Card>
+              </DrawerBody>
               <DrawerFooter>
                 <Button fullWidth color="primary" onPress={onClose}>
                   Применить фильтры
