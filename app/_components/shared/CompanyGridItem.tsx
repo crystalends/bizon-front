@@ -1,14 +1,13 @@
-import { ImageProps } from "@heroui/image";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
-import { Image } from "@heroui/image";
+import { Image, ImageProps } from "@heroui/image";
 import clsx from "clsx";
-
 import VerifiedBadgeIcon from "../icons/VerifiedBadgeIcon";
 
 type TCompanyGridItemProps = {
   name: string;
   renderName?: (name: string) => ReactNode;
   description?: string;
+  renderDescription?: (description: string) => ReactNode;
   isVerified?: boolean;
   categoryChipsSlot?: ReactNode;
   regionChipsSlot?: ReactNode;
@@ -21,6 +20,9 @@ export default function CompanyGridItem({
   name,
   renderName = (name) => <h3 className="text-2xl font-semibold">{name}</h3>,
   description,
+  renderDescription = (description) => (
+    <p className="line-clamp-3 text-ellipsis overflow-hidden">{description}</p>
+  ),
   isVerified,
   categoryChipsSlot,
   regionChipsSlot,
@@ -55,11 +57,7 @@ export default function CompanyGridItem({
           </div>
           {ratingSlot}
         </div>
-        {description && (
-          <p className="line-clamp-3 text-ellipsis overflow-hidden">
-            {description}
-          </p>
-        )}
+        {description && renderDescription(description)}
         {categoryChipsSlot}
         {regionChipsSlot}
       </div>

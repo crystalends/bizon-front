@@ -14,7 +14,9 @@ export default function ContactInfrmationCard({
     <Card className="bg-gray-50" shadow="none">
       <CardBody className="p-5">
         <div className="flex flex-col gap-4">
-          <h3 className="text-2xl font-semibold">Контактная информация:</h3>
+          <h3 className="text-base xl:text-2xl font-semibold">
+            Контактная информация:
+          </h3>
           <Divider />
           <ContactInformation
             VK={VK}

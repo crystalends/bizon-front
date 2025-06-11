@@ -31,7 +31,7 @@ export default function CompanyListItemWrapper({
       ratingSlot={ratingSlot}
       renderName={(name) => (
         <Link href={`/companies/${id}`}>
-          <h2 className="text-[32px] font-semibold">{name}</h2>
+          <h2 className="text-[21px] xl:text-[32px] font-semibold">{name}</h2>
         </Link>
       )}
       rightContent={

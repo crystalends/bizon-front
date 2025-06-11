@@ -13,7 +13,7 @@ import ArrowDown from "@/app/_components/icons/ArrowDown";
 import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
 import Block from "@/app/_components/shared/Block";
 import Container from "@/app/_components/shared/Container";
-import Partner from "@/app/_components/shared/Partner";
+import InfoCard from "@/app/_components/shared/InfoCard";
 import Button from "@/app/_components/ui/Button";
 import Input from "@/app/_components/ui/Input";
 import RegionChips from "@/app/_components/RegionChips";
@@ -96,18 +96,21 @@ export default function PartnerRequests({
           title="Активные запросы"
         >
           {partnerRequests.map(({ id, product, region, user, createdAt }) => (
-            <Partner
+            <InfoCard
               key={id}
-              createdAt={format(createdAt, "dd.MM.yyyy", {
-                locale: ru,
-              })}
-              middleContent={region && <RegionChips regions={[region]} />}
-              product={product}
-              renderSearcher={(searcher) => (
-                <p className="text-xl">Ищет: {searcher}</p>
+              title={product}
+              renderTitle={(title) => (
+                <h2 className="font-semibold text-[21px] xl:text-[32px]">
+                  {title}
+                </h2>
               )}
+              description={`Ищет: ${user?.company?.name || user?.name}`}
+              renderDescription={(description) => (
+                <p className="text-sm xl:text-xl">{description}</p>
+              )}
+              middleContent={region ? <RegionChips regions={[region]} /> : null}
+              bottom={`Опубликовано: ${format(createdAt, "dd.MM.yyyy")}`}
               rightContent={<Actions className="xl:min-w-[487px]" />}
-              searcher={user?.company?.name || user?.name}
             />
           ))}
         </Block>

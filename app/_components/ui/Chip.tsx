@@ -17,11 +17,11 @@ export default function Chip<T extends ElementType = "div">({
   return (
     <HeroUIChip
       className={clsx(
-        "border p-2 h-[35px] border-gray-300 rounded-[4px]",
+        "border p-1 xl:p-2 h-[28px] xl:h-[35px] border-gray-300 rounded-[4px]",
         className,
       )}
       classNames={{
-        content: clsx("font-medium", classNames.content),
+        content: clsx("font-medium text-xs xl:text-sm", classNames.content),
         ...classNames,
       }}
       variant="light"

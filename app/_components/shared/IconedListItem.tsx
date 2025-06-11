@@ -17,7 +17,9 @@ export type TIconedListItemProps<T extends ElementType = "div"> = {
 
 export default function IconedListItem<T extends ElementType = "div">({
   name,
-  renderName = (name) => <h3 className="font-semibold text-xl">{name}</h3>,
+  renderName = (name) => (
+    <h3 className="font-semibold text-sm xl:text-xl">{name}</h3>
+  ),
   imageProps,
   startIcon,
   endIcon = <ArrowRightIcon />,

@@ -24,6 +24,7 @@ import Select from "@/app/_components/ui/Select";
 import { SelectItem } from "@heroui/select";
 import TProduct from "@/app/_types/Product";
 import FormButton from "@/app/_components/ui/FormButton";
+import Input from "@/app/_components/ui/Input";
 
 type TCompanyProps = {
   company: TCompany;
@@ -39,6 +40,7 @@ export default function Company({
   children,
 }: TCompanyProps) {
   const disclosureOrder = useDisclosure();
+  const disclosurePartnershipRequests = useDisclosure();
 
   const pathname = usePathname();
 
@@ -102,7 +104,12 @@ export default function Company({
                 >
                   Оставить заявку
                 </Button>
-                <Button className="w-full xl:w-80">Партнерство</Button>
+                <Button
+                  className="w-full xl:w-80"
+                  onPress={disclosurePartnershipRequests.onOpen}
+                >
+                  Партнерство
+                </Button>
               </div>
             }
             title={name}
@@ -149,7 +156,40 @@ export default function Company({
                       <SelectItem key={item.id}>{item.name}</SelectItem>
                     )}
                   </Select>
-                  <FormButton>Отправить</FormButton>
+                  <FormButton onPress={onClose}>Отправить</FormButton>
+                  <p className="text-xs">
+                    Нажимая кнопку «Отправить», вы соглашаетесь с условиями
+                    использования и обработкой персональных данных
+                  </p>
+                </div>
+              </ModalBody>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+      <Modal
+        isOpen={disclosurePartnershipRequests.isOpen}
+        onOpenChange={disclosurePartnershipRequests.onOpenChange}
+      >
+        <ModalContent className="max-w-[586px] w-full">
+          {(onClose) => (
+            <>
+              <ModalHeader>
+                <h2 className="text-[40px] font-semibold">Партнерство</h2>
+              </ModalHeader>
+              <ModalBody>
+                <div className="flex flex-col gap-3">
+                  <Input placeholder="Ваше предложение" />
+                  <Select
+                    aria-label="Выберите регион"
+                    items={regions}
+                    placeholder="Выберите регион"
+                  >
+                    {(item) => (
+                      <SelectItem key={item.id}>{item.name}</SelectItem>
+                    )}
+                  </Select>
+                  <FormButton onPress={onClose}>Отправить</FormButton>
                   <p className="text-xs">
                     Нажимая кнопку «Отправить», вы соглашаетесь с условиями
                     использования и обработкой персональных данных

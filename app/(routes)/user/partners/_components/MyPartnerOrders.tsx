@@ -1,6 +1,5 @@
-import { format } from "date-fns/format";
-
-import Partner from "@/app/_components/shared/Partner";
+import { format } from "date-fns";
+import InfoCard from "@/app/_components/shared/InfoCard";
 import Link from "@/app/_components/ui/Link";
 import TPartnerOrder from "@/app/_types/PartnerOrder";
 import Actions from "./Actions";
@@ -13,11 +12,12 @@ export default function MyPartnerOrders({
   return (
     <div className="flex flex-col gap-5">
       {partnerOrders.map(({ id, product, user, createdAt }) => (
-        <Partner
+        <InfoCard
           key={id}
-          createdAt={format(createdAt, "dd.MM.yyyy")}
+          title={product}
+          description={`Компания: ${user?.company?.name}`}
           middleContent={
-            user && (
+            user?.companyId && (
               <Link
                 color="primary"
                 href={`/companies/${user.companyId}`}
@@ -27,10 +27,8 @@ export default function MyPartnerOrders({
               </Link>
             )
           }
-          product={product}
-          renderSearcher={(searcher) => <p>Компания: {searcher}</p>}
+          bottom={`Опубликовано: ${format(createdAt, "dd.MM.yyyy")}`}
           rightContent={<Actions className="xl:max-w-[355px]" />}
-          searcher={user?.company?.name}
         />
       ))}
     </div>

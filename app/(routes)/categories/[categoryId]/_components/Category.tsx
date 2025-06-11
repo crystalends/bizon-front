@@ -143,7 +143,7 @@ export default function Category({
               })}
             </div>
           ) : (
-            <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5">
+            <div className="grid sm:grid-cols-[repeat(auto-fill,minmax(375px,1fr))] gap-4 xl:gap-5">
               {companies.map((company) => {
                 const { id, rating, categories } = company;
 

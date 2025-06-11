@@ -1,9 +1,8 @@
 import { format } from "date-fns";
-
-import Partner from "@/app/_components/shared/Partner";
+import InfoCard from "@/app/_components/shared/InfoCard";
+import RegionChips from "@/app/_components/RegionChips";
 import TPartnerRequest from "@/app/_types/PartnerRequest";
 import Actions from "./Actions";
-import RegionChips from "@/app/_components/RegionChips";
 
 type TMyPartnerRequestsProps = { partnerRequests: TPartnerRequest[] };
 
@@ -13,11 +12,11 @@ export default function MyPartnerRequests({
   return (
     <div className="flex flex-col gap-5">
       {partnerRequests.map(({ id, product, region, createdAt }) => (
-        <Partner
+        <InfoCard
           key={id}
-          createdAt={format(createdAt, "dd.MM.yyyy")}
-          product={product}
+          title={product}
           middleContent={region && <RegionChips regions={[region]} />}
+          bottom={`Опубликовано: ${format(createdAt, "dd.MM.yyyy")}`}
           rightContent={
             <div className="flex xl:max-w-[355px] w-full flex-col gap-5">
               <Actions />

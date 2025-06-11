@@ -12,6 +12,7 @@ type TCompanyListItemProps<T extends ElementType = "div"> = {
   name: string;
   renderName?: (name: string) => ReactNode;
   description?: string;
+  renderDescription?: (description: string) => ReactNode;
   isVerified?: boolean;
   categoryChipsSlot?: ReactNode;
   productsPreviewGridSlot?: ReactNode;
@@ -21,8 +22,13 @@ type TCompanyListItemProps<T extends ElementType = "div"> = {
 } & TPolymorphicProps<T, Omit<CardProps, "children">>;
 export default function CompanyListItem<T extends ElementType = "div">({
   name,
-  renderName = (name) => <h2 className="text-[32px] font-semibold">{name}</h2>,
+  renderName = (name) => (
+    <h2 className="text-[21px] xl:text-[32px] font-semibold">{name}</h2>
+  ),
   description,
+  renderDescription = (description) => (
+    <p className="text-[11px] xl:text-base">{description}</p>
+  ),
   isVerified,
   categoryChipsSlot,
   productsPreviewGridSlot,
