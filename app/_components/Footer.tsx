@@ -36,7 +36,7 @@ export default function Footer() {
                 <VKIcon height={32} width={32} />
               </Link>
             </div>
-            <div className="flex gap-10">
+            <div className="flex flex-wrap gap-10">
               {links.map((link) => (
                 <Link key={link.href} {...link} />
               ))}

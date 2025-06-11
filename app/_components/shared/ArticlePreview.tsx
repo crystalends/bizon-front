@@ -17,8 +17,8 @@ export default function ArticlePreview({
   imageProps,
 }: TArticlePreviewProps) {
   return (
-    <div className="flex w-fit flex-col gap-4">
-      {imageProps && <Image width={600} {...imageProps} />}
+    <div className="flex flex-col gap-4">
+      {imageProps && <Image width={900} {...imageProps} />}
       <div className="flex flex-col gap-2">
         {renderCreatedAt(createdAt)}
         {renderTitle(title)}

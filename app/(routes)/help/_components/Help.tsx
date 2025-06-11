@@ -11,7 +11,6 @@ import {
   Breadcrumbs,
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
-
 import FeatureCardBody, {
   TFeatureCardBodyProps,
 } from "@/app/_components/FeatureCardBody";
@@ -37,49 +36,29 @@ export default function Help() {
   const accordionItems: AccordionItemProps[] = [
     {
       key: 1,
-      title: (
-        <h3 className="text-2xl font-medium">Как начать работу с BizON?</h3>
-      ),
+      title: "Как начать работу с BizON?",
     },
     {
       key: 2,
-      title: (
-        <h3 className="text-2xl font-medium">Как проверяются документы?</h3>
-      ),
+      title: "Как проверяются документы?",
       children:
         "Да, платформа оптимизирована для малых и средних компаний. Бесплатный тариф позволяет тестировать функционал, а гибкие опции масштабируются под рост бизнеса.",
     },
     {
       key: 3,
-      title: (
-        <h3 className="text-2xl font-medium">
-          Подходит ли BizON для малого бизнеса?
-        </h3>
-      ),
+      title: "Подходит ли BizON для малого бизнеса?",
     },
     {
       key: 4,
-      title: (
-        <h3 className="text-2xl font-medium">
-          Что делать, если не нашёл нужную услугу?
-        </h3>
-      ),
+      title: "Что делать, если не нашёл нужную услугу?",
     },
     {
       key: 5,
-      title: (
-        <h3 className="text-2xl font-medium">
-          Есть ли ограничения на количество товаров/услуг?
-        </h3>
-      ),
+      title: "Есть ли ограничения на количество товаров/услуг?",
     },
     {
       key: 6,
-      title: (
-        <h3 className="text-2xl font-medium">
-          Как работает техническая поддержка?
-        </h3>
-      ),
+      title: "Как работает техническая поддержка?",
     },
   ];
 
@@ -119,7 +98,13 @@ export default function Help() {
           <Block className="w-full" title="Частые вопросы">
             <Accordion className="break-all">
               {accordionItems.map(({ key, ...item }) => (
-                <AccordionItem key={key} {...item} />
+                <AccordionItem
+                  classNames={{
+                    title: "text-lg xl:text-2xl font-medium",
+                  }}
+                  key={key}
+                  {...item}
+                />
               ))}
             </Accordion>
           </Block>
