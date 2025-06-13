@@ -2,15 +2,16 @@
 
 import clsx from "clsx";
 import { ComponentPropsWithoutRef } from "react";
-import Button, { TButtonProps } from "@/app/_components/ui/Button";
-import Modal from "@/app/_components/ui/Modal";
 import {
   ModalBody,
   ModalContent,
   ModalHeader,
   useDisclosure,
 } from "@heroui/modal";
-import Partner from "@/app/_components/shared/InfoCard";
+
+import Button, { TButtonProps } from "@/app/_components/ui/Button";
+import Modal from "@/app/_components/ui/Modal";
+import Partner from "@/app/_components/shared/InfoListItem";
 import RegionChips from "@/app/_components/RegionChips";
 
 type TActionsProps = ComponentPropsWithoutRef<"div">;
@@ -51,12 +52,6 @@ export default function Actions({ className, ...props }: TActionsProps) {
               <ModalBody>
                 <div className="flex flex-col gap-5">
                   <Partner
-                    title="Имя и фамилия или название компании"
-                    rightContent={
-                      <Button fullWidth className="xl:max-w-[355px]">
-                        Перейти в чат
-                      </Button>
-                    }
                     middleContent={
                       <RegionChips
                         regions={[
@@ -65,14 +60,14 @@ export default function Actions({ className, ...props }: TActionsProps) {
                         ]}
                       />
                     }
+                    rightContent={
+                      <Button fullWidth className="xl:max-w-[355px]">
+                        Перейти в чат
+                      </Button>
+                    }
+                    title="Имя и фамилия или название компании"
                   />
                   <Partner
-                    title="Имя и фамилия или название компании"
-                    rightContent={
-                      <Button fullWidth className="xl:max-w-[355px]">
-                        Перейти в чат
-                      </Button>
-                    }
                     middleContent={
                       <RegionChips
                         regions={[
@@ -81,6 +76,12 @@ export default function Actions({ className, ...props }: TActionsProps) {
                         ]}
                       />
                     }
+                    rightContent={
+                      <Button fullWidth className="xl:max-w-[355px]">
+                        Перейти в чат
+                      </Button>
+                    }
+                    title="Имя и фамилия или название компании"
                   />
                 </div>
               </ModalBody>

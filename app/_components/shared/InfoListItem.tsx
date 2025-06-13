@@ -3,7 +3,7 @@ import { ElementType, ReactNode } from "react";
 
 import TPolymorphicProps from "@/app/_types/Polymorphic";
 
-type TInfoCardProps<T extends ElementType = "div"> = {
+type TInfoListItemProps<T extends ElementType = "div"> = {
   title?: string;
   description?: string;
   middleContent?: ReactNode;
@@ -14,7 +14,7 @@ type TInfoCardProps<T extends ElementType = "div"> = {
   renderBottom?: (bottom: string) => ReactNode;
 } & TPolymorphicProps<T, Omit<CardProps, "children">>;
 
-export default function InfoCard<T extends ElementType = "div">({
+export default function InfoListItem<T extends ElementType = "div">({
   title,
   description,
   bottom,
@@ -31,7 +31,7 @@ export default function InfoCard<T extends ElementType = "div">({
   ),
   className,
   ...props
-}: TInfoCardProps<T>) {
+}: TInfoListItemProps<T>) {
   return (
     <Card {...props}>
       <CardBody className="p-5">

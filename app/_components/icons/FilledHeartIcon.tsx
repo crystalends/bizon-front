@@ -6,9 +6,9 @@ export default function FilledHeartIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="31"
       height="28"
       viewBox="0 0 31 28"
+      width="31"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -21,10 +21,10 @@ export default function FilledHeartIcon({
       <defs>
         <clipPath id="clip0_738_10750">
           <rect
-            width="29.3136"
-            height="28"
             fill="white"
+            height="28"
             transform="translate(0.84375)"
+            width="29.3136"
           />
         </clipPath>
       </defs>

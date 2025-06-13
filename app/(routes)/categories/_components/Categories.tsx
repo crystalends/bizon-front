@@ -4,10 +4,10 @@ import { BreadcrumbItemProps } from "@heroui/breadcrumbs";
 import Link from "next/link";
 
 import CategoryTemplate from "./CategoryTemplate";
+import SubCategories from "./SubCategories";
 
 import TCategory from "@/app/_types/Category";
 import IconedListItem from "@/app/_components/shared/IconedListItem";
-import SubCategories from "./SubCategories";
 
 type TCategoriesProps = {
   categories: TCategory[];
@@ -43,10 +43,10 @@ export default function Categories({ categories }: TCategoriesProps) {
               isPressable
               as={Link}
               className="hover:bg-gray-50"
+              endContent={childs && <SubCategories categories={childs} />}
               href={`/categories/${id}`}
               imageProps={{ src: image }}
               name={name}
-              endContent={childs && <SubCategories categories={childs} />}
             />
           </div>
         ))}

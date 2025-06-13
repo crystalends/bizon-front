@@ -2,10 +2,11 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { Pagination, PaginationProps } from "@heroui/pagination";
-import TPaginate from "@/app/_types/Paginate";
-import TPolymorphicProps from "@/app/_types/Polymorphic";
 import { ElementType } from "react";
 import clsx from "clsx";
+
+import TPaginate from "@/app/_types/Paginate";
+import TPolymorphicProps from "@/app/_types/Polymorphic";
 
 type TPaginateProps<T extends ElementType = "nav"> = {
   divClassName?: string;
@@ -27,13 +28,16 @@ export default function Paginate({
 
   const createPageURL = (page: string) => {
     const params = new URLSearchParams(searchParams);
+
     params.set("page", page);
+
     return params.toString();
   };
 
   return (
     <div className={clsx("flex justify-center", divClassName)}>
       <Pagination
+        showControls
         classNames={{
           base: clsx(classNames.base),
           wrapper: clsx("gap-3", classNames.wrapper),
@@ -45,11 +49,10 @@ export default function Paginate({
         }}
         initialPage={point}
         total={totalPageCount}
+        variant="light"
         onChange={(page: number) =>
           router.push(`?${createPageURL(page.toString())}`)
         }
-        showControls
-        variant="light"
         {...props}
       />
     </div>

@@ -1,8 +1,10 @@
-import TChatMessage from "@/app/_types/ChatMessage";
+import Link from "next/link";
+
 import ChatMessages from "./_components/ChatWithCompany";
+
+import TChatMessage from "@/app/_types/ChatMessage";
 import TCompany from "@/app/_types/Company";
 import ChatCompany from "@/app/_components/shared/ChatCompany";
-import Link from "next/link";
 
 export default function ChatMessagesPage() {
   const company: TCompany = {
@@ -60,12 +62,12 @@ export default function ChatMessagesPage() {
     <ChatMessages
       chatCompanySlot={
         <ChatCompany
-          name={company.name}
-          imageProps={{ src: company.image }}
           isOnline
           isPressable
           as={Link}
           href={`/companies/${company.id}`}
+          imageProps={{ src: company.image }}
+          name={company.name}
         />
       }
       chatMessages={chatMessages}

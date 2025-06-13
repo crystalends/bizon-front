@@ -1,6 +1,6 @@
-import Paginate from "@/app/_components/shared/Paginate";
 import Category from "./_components/Category";
 
+import Paginate from "@/app/_components/shared/Paginate";
 import TCategory from "@/app/_types/Category";
 import TCompany from "@/app/_types/Company";
 
@@ -224,10 +224,10 @@ export default function CategoryPage() {
 
   return (
     <Category
+      categories={categories}
       category={category}
       companies={companies}
-      categories={categories}
-      paginateSlot={<Paginate page={1} limit={20} total={1000} />}
+      paginateSlot={<Paginate limit={20} page={1} total={1000} />}
     />
   );
 }

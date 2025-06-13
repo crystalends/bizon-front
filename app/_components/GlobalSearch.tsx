@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { TButtonProps } from "./ui/Button";
 import FormButton from "./ui/FormButton";
 import Input, { TInputProps } from "./ui/Input";
@@ -47,8 +48,8 @@ export default function GlobalSearch({
         {...inputProps}
       />
       <FormButton
-        isIconOnly={isSmallerThanXl}
         className="min-w-[51px] xl:min-w-[166px] shadow-lg xl:shadow-none rounded-l-none xl:rounded-lg"
+        isIconOnly={isSmallerThanXl}
         {...buttonProps}
       >
         {isSmallerThanXl ? <SearchIcon /> : "Поиск"}

@@ -77,8 +77,8 @@ export default function Company({
             />
             <Label htmlFor="categories">Категории</Label>
             <Select
-              className="max-w-[618px]"
               aria-label="Категории"
+              className="max-w-[618px]"
               items={categories}
               placeholder="Выберите категории"
               selectedKeys={categoryIds}
@@ -93,8 +93,8 @@ export default function Company({
             />
             <Label htmlFor="subCategories">Подкатегории</Label>
             <Select
-              className="max-w-[618px]"
               aria-label="Подкатегории"
+              className="max-w-[618px]"
               items={subCategories}
               placeholder="Выберите сабкатегории"
               selectedKeys={subCategoryIds}
@@ -111,8 +111,8 @@ export default function Company({
             />
             <Label htmlFor="regions">Регионы</Label>
             <Select
-              className="max-w-[618px]"
               aria-label="Выберите регионы"
+              className="max-w-[618px]"
               items={regions}
               placeholder="Выберите регионы"
               selectedKeys={regionIds}

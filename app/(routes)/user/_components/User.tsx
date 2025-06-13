@@ -45,7 +45,7 @@ export default function User({ children }: TUserProps) {
       key: 4,
       name: "Заявки и запросы",
       startIcon: <SearchInFolder />,
-      href: "/user/partners",
+      href: "/user/orders-and-requests",
     },
     {
       key: 5,
@@ -92,17 +92,17 @@ export default function User({ children }: TUserProps) {
               {iconedListItems.map(({ key, ...iconedListItem }) => (
                 <IconedListItem
                   key={key}
-                  as={Link}
                   isPressable
+                  as={Link}
                   className="hover:bg-gray-50"
                   {...iconedListItem}
                 />
               ))}
               <IconedListItem
+                isPressable
+                className="hover:bg-gray-50 cursor-pointer"
                 name="Выйти"
                 startIcon={<ExitIcon />}
-                className="hover:bg-gray-50 cursor-pointer"
-                isPressable
               />
             </div>
             {children}

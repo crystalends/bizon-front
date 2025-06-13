@@ -6,9 +6,9 @@ export default function ExitIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="30"
       height="28"
       viewBox="0 0 30 28"
+      width="30"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -29,10 +29,10 @@ export default function ExitIcon({
       <defs>
         <clipPath id="clip0_738_11602">
           <rect
-            width="29.4727"
-            height="25.1367"
             fill="white"
+            height="25.1367"
             transform="matrix(-1 0 0 1 29.4727 1)"
+            width="29.4727"
           />
         </clipPath>
       </defs>

@@ -1,6 +1,8 @@
-import TCompany from "@/app/_types/Company";
 import { ReactNode } from "react";
+
 import Chat from "./_components/Chat";
+
+import TCompany from "@/app/_types/Company";
 import ChatCompanies from "@/app/(routes)/user/chat/_components/ChatCompanies";
 
 type TChatLayoutProps = {

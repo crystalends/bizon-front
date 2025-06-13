@@ -8,11 +8,17 @@ import {
   DrawerFooter,
   DrawerHeader,
 } from "@heroui/drawer";
+import { ReactNode } from "react";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
+import { CheckboxGroup, Checkbox } from "@heroui/checkbox";
+
 import CategoryTemplate from "../../_components/CategoryTemplate";
+
 import CompanyListItemWrapper from "./CompanyListItemWrapper";
 import ProductPreviewGrid from "./ProductPreviewGrid";
 import DetailRating from "./DetailRating";
 import CompanyGridItemWrapper from "./CompanyGridItemWrapper";
+
 import TCategory from "@/app/_types/Category";
 import TCompany from "@/app/_types/Company";
 import CategoryChips from "@/app/_components/CategoryChips";
@@ -25,9 +31,6 @@ import SlidersIcon from "@/app/_components/icons/SlidersIcon";
 import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
 import ArrowDown from "@/app/_components/icons/ArrowDown";
 import Drawer from "@/app/_components/ui/Drawer";
-import { ReactNode } from "react";
-import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
-import { CheckboxGroup, Checkbox } from "@heroui/checkbox";
 
 type TCategoryProps = {
   category: TCategory;
@@ -65,8 +68,8 @@ export default function Category({
   return (
     <>
       <CategoryTemplate
-        paginateSlot={paginateSlot}
         breadcrumbItems={breadcrumbItems}
+        paginateSlot={paginateSlot}
         title={name}
       >
         <div className="flex flex-col gap-5">
@@ -175,8 +178,8 @@ export default function Category({
                     Фильтры
                   </h1>
                   <Button
-                    variant="light"
                     className="!p-2 !text-base h-7 underline"
+                    variant="light"
                   >
                     Сбросить все
                   </Button>
@@ -190,9 +193,9 @@ export default function Category({
                         Категория
                       </h3>
                       <Button
-                        variant="light"
-                        color="default"
                         className="!p-2 !text-base h-7 underline"
+                        color="default"
+                        variant="light"
                       >
                         Сбросить все
                       </Button>

@@ -36,11 +36,6 @@ export default function FavoriteCompanies({
                     <CategoryChips categories={categories} />
                   )
                 }
-                topRightContent={
-                  <Button isIconOnly variant="light">
-                    <FilledHeartIcon />
-                  </Button>
-                }
                 description={description}
                 imageProps={{
                   src: image,
@@ -53,6 +48,11 @@ export default function FavoriteCompanies({
                     <h2 className="text-[32px] font-semibold">{name}</h2>
                   </Link>
                 )}
+                topRightContent={
+                  <Button isIconOnly variant="light">
+                    <FilledHeartIcon />
+                  </Button>
+                }
               />
             );
           },

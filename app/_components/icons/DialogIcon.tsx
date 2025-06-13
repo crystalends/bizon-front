@@ -6,9 +6,9 @@ export default function DialogIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="34"
       height="28"
       viewBox="0 0 34 28"
+      width="34"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -29,10 +29,10 @@ export default function DialogIcon({
       <defs>
         <clipPath id="clip0_738_11359">
           <rect
-            width="33.6562"
-            height="26.8477"
             fill="white"
+            height="26.8477"
             transform="translate(0 1)"
+            width="33.6562"
           />
         </clipPath>
       </defs>

@@ -1,13 +1,14 @@
 "use client";
 
 import { format } from "date-fns";
+import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
+
 import ArticlePreview from "@/app/_components/shared/ArticlePreview";
 import Block from "@/app/_components/shared/Block";
 import Container from "@/app/_components/shared/Container";
 import TArticle from "@/app/_types/Article";
 import Link from "@/app/_components/ui/Link";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
-import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
 
 type TBlogProps = {
   articles: TArticle[];
@@ -43,12 +44,12 @@ export default function Blog({ articles }: TBlogProps) {
                   imageProps={{
                     src: image,
                   }}
-                  title={title}
                   renderTitle={(title) => (
                     <Link href={`/blog/${id}`}>
                       <h4 className="text-xl font-semibold">{title}</h4>
                     </Link>
                   )}
+                  title={title}
                 />
               );
             })}

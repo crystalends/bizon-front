@@ -1,9 +1,9 @@
-import PartnerRequestsForMe from "./_components/PartnerRequestsForMe";
+import RequestsForMe from "./_components/RequestsForMe";
 
-import TPartnerRequest from "@/app/_types/PartnerRequest";
+import TRequest from "@/app/_types/Request";
 
-export default function PartnerRequestsForMePage() {
-  const partnerRequests: TPartnerRequest[] = [
+export default function RequestsForMePage() {
+  const requests: TRequest[] = [
     {
       id: 1,
       userId: 1,
@@ -49,5 +49,5 @@ export default function PartnerRequestsForMePage() {
     },
   ];
 
-  return <PartnerRequestsForMe partnerRequests={partnerRequests} />;
+  return <RequestsForMe requests={requests} />;
 }

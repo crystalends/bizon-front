@@ -5,6 +5,14 @@ import { usePathname } from "next/navigation";
 import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
 import { ReactNode } from "react";
 import Link from "next/link";
+import {
+  ModalBody,
+  ModalContent,
+  ModalHeader,
+  useDisclosure,
+} from "@heroui/modal";
+import { SelectItem } from "@heroui/select";
+
 import HeartIcon from "@/app/_components/icons/HeartIcon";
 import Container from "@/app/_components/shared/Container";
 import Button from "@/app/_components/ui/Button";
@@ -12,16 +20,9 @@ import TCompany from "@/app/_types/Company";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
 import Tabs from "@/app/_components/ui/Tabs";
 import Block from "@/app/_components/shared/Block";
-import {
-  ModalBody,
-  ModalContent,
-  ModalHeader,
-  useDisclosure,
-} from "@heroui/modal";
 import Modal from "@/app/_components/ui/Modal";
 import TRegion from "@/app/_types/Region";
 import Select from "@/app/_components/ui/Select";
-import { SelectItem } from "@heroui/select";
 import TProduct from "@/app/_types/Product";
 import FormButton from "@/app/_components/ui/FormButton";
 import Input from "@/app/_components/ui/Input";
@@ -97,10 +98,10 @@ export default function Company({
             rightContent={
               <div className="flex w-full xl:w-fit flex-wrap gap-3">
                 <Button
-                  onPress={disclosureOrder.onOpen}
                   className="w-full xl:w-80"
                   color="secondary"
                   variant="bordered"
+                  onPress={disclosureOrder.onOpen}
                 >
                   Оставить заявку
                 </Button>

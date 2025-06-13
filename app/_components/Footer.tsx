@@ -1,5 +1,7 @@
 import { LinkProps } from "@heroui/link";
+
 import { contacts, externalLinks } from "../_config/constants";
+
 import Logo from "./Logo";
 import Container from "./shared/Container";
 import Link from "./ui/Link";
@@ -11,7 +13,7 @@ export default function Footer() {
     { children: "Категории", href: "/categories" },
     {
       children: "Поиск партнера",
-      href: "/partner-requests",
+      href: "/requests",
     },
     {
       children: "Центр помощи",

@@ -1,7 +1,8 @@
 import { ComponentPropsWithoutRef } from "react";
+import Link from "next/link";
+
 import TCompany from "../../../../_types/Company";
 import ChatCompany from "../../../../_components/shared/ChatCompany";
-import Link from "next/link";
 
 type TChatCompaniesProps = {
   companies: TCompany[];
@@ -19,15 +20,15 @@ export default function ChatCompanies({
       {companies.map(({ id, name, image }) => (
         <ChatCompany
           key={id}
-          as={Link}
-          href={`/user/chat/${id}`}
-          className="hover:bg-gray-50"
+          isOnline
           isPressable
-          name={name}
+          as={Link}
+          className="hover:bg-gray-50"
+          href={`/user/chat/${id}`}
           imageProps={{
             src: image,
           }}
-          isOnline
+          name={name}
         />
       ))}
     </div>

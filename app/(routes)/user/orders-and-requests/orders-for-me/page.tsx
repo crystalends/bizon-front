@@ -1,9 +1,9 @@
-import PartnerOrdersForMe from "./_components/PartnerOrdersForMe";
+import OrdersForMe from "./_components/OrdersForMe";
 
-import TPartnerOrder from "@/app/_types/PartnerOrder";
+import TOrder from "@/app/_types/Order";
 
-export default function PartnerOrdersForMePage() {
-  const partnerOrders: TPartnerOrder[] = [
+export default function OrdersForMePage() {
+  const orders: TOrder[] = [
     {
       id: 1,
       product: "Разработка корпоративного сайта",
@@ -327,5 +327,5 @@ export default function PartnerOrdersForMePage() {
     },
   ];
 
-  return <PartnerOrdersForMe partnerOrders={partnerOrders} />;
+  return <OrdersForMe orders={orders} />;
 }

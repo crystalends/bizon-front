@@ -1,37 +1,35 @@
 "use client";
 
 import { format } from "date-fns";
-import { ru } from "date-fns/locale";
 import {
   BreadcrumbItem,
   BreadcrumbItemProps,
   Breadcrumbs,
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
+import { SelectItem } from "@heroui/select";
+
 import Actions from "./Actions";
+
 import ArrowDown from "@/app/_components/icons/ArrowDown";
 import PerpendicularArrows from "@/app/_components/icons/PerpendicularArrows";
 import Block from "@/app/_components/shared/Block";
 import Container from "@/app/_components/shared/Container";
-import InfoCard from "@/app/_components/shared/InfoCard";
+import InfoListItem from "@/app/_components/shared/InfoListItem";
 import Button from "@/app/_components/ui/Button";
 import Input from "@/app/_components/ui/Input";
 import RegionChips from "@/app/_components/RegionChips";
 import FormButton from "@/app/_components/ui/FormButton";
-import TPartnerRequest from "@/app/_types/PartnerRequest";
+import TRequest from "@/app/_types/Request";
 import TRegion from "@/app/_types/Region";
 import Select from "@/app/_components/ui/Select";
-import { SelectItem } from "@heroui/select";
 
-type TPartnerRequestsProps = {
-  partnerRequests: TPartnerRequest[];
+type TRequestsProps = {
+  requests: TRequest[];
   regions: TRegion[];
 };
 
-export default function PartnerRequests({
-  partnerRequests,
-  regions,
-}: TPartnerRequestsProps) {
+export default function Requests({ requests, regions }: TRequestsProps) {
   const breadcrumbItems: BreadcrumbItemProps[] = [
     {
       children: "Главная",
@@ -95,22 +93,22 @@ export default function PartnerRequests({
           }
           title="Активные запросы"
         >
-          {partnerRequests.map(({ id, product, region, user, createdAt }) => (
-            <InfoCard
+          {requests.map(({ id, product, region, user, createdAt }) => (
+            <InfoListItem
               key={id}
-              title={product}
+              bottom={`Опубликовано: ${format(createdAt, "dd.MM.yyyy")}`}
+              description={`Ищет: ${user?.company?.name || user?.name}`}
+              middleContent={region ? <RegionChips regions={[region]} /> : null}
+              renderDescription={(description) => (
+                <p className="text-sm xl:text-xl">{description}</p>
+              )}
               renderTitle={(title) => (
                 <h2 className="font-semibold text-[21px] xl:text-[32px]">
                   {title}
                 </h2>
               )}
-              description={`Ищет: ${user?.company?.name || user?.name}`}
-              renderDescription={(description) => (
-                <p className="text-sm xl:text-xl">{description}</p>
-              )}
-              middleContent={region ? <RegionChips regions={[region]} /> : null}
-              bottom={`Опубликовано: ${format(createdAt, "dd.MM.yyyy")}`}
               rightContent={<Actions className="xl:min-w-[487px]" />}
+              title={product}
             />
           ))}
         </Block>

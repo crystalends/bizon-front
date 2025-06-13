@@ -1,5 +1,6 @@
-import TArticle from "@/app/_types/Article";
 import Article from "./_components/Article";
+
+import TArticle from "@/app/_types/Article";
 
 export default function ArticlePage() {
   const article: TArticle = {

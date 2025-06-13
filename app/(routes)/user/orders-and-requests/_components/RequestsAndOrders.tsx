@@ -7,33 +7,35 @@ import { ReactNode } from "react";
 
 import Tabs from "@/app/_components/ui/Tabs";
 
-type TPartnersProps = {
+type TRequestsAndOrdersProps = {
   children: ReactNode;
 };
 
-export default function Partners({ children }: TPartnersProps) {
+export default function RequestsAndOrders({
+  children,
+}: TRequestsAndOrdersProps) {
   const pathname = usePathname();
 
   const tabs: TabItemProps[] = [
     {
-      key: "/user/partners",
+      key: "/user/orders-and-requests",
       title: "Мои заявки",
-      href: "/user/partners",
+      href: "/user/orders-and-requests",
     },
     {
-      key: "/user/partners/partner-orders-for-me",
+      key: "/user/orders-and-requests/orders-for-me",
       title: "Заявки для меня",
-      href: "/user/partners/partner-orders-for-me",
+      href: "/user/orders-and-requests/orders-for-me",
     },
     {
-      key: "/user/partners/my-partner-requests",
+      key: "/user/orders-and-requests/my-requests",
       title: "Мои запросы",
-      href: "/user/partners/my-partner-requests",
+      href: "/user/orders-and-requests/my-requests",
     },
     {
-      key: "/user/partners/partner-requests-for-me",
+      key: "/user/orders-and-requests/requests-for-me",
       title: "Мои отклики на запросы",
-      href: "/user/partners/partner-requests-for-me",
+      href: "/user/orders-and-requests/requests-for-me",
     },
   ];
 

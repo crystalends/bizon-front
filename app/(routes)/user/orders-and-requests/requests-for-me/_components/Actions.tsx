@@ -2,14 +2,15 @@
 
 import clsx from "clsx";
 import { ComponentPropsWithoutRef } from "react";
-import Button, { TButtonProps } from "@/app/_components/ui/Button";
-import Modal from "@/app/_components/ui/Modal";
 import {
   ModalBody,
   ModalContent,
   ModalHeader,
   useDisclosure,
 } from "@heroui/modal";
+
+import Button, { TButtonProps } from "@/app/_components/ui/Button";
+import Modal from "@/app/_components/ui/Modal";
 import ContactInformation from "@/app/_components/shared/ContactInformation";
 
 type TActionsProps = ComponentPropsWithoutRef<"div">;
@@ -49,8 +50,8 @@ export default function Actions({ className, ...props }: TActionsProps) {
               </ModalHeader>
               <ModalBody>
                 <ContactInformation
-                  phone="+79263057575"
                   email="lorem@gmail.com"
+                  phone="+79263057575"
                 />
               </ModalBody>
             </>

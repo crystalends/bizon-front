@@ -1,15 +1,13 @@
-import TRegion from "./Region";
 import TUser from "./User";
 
-type TPartnerRequest = {
+type TOrder = {
   id: number;
   product: string;
   userId: number;
   user?: TUser;
-  region: TRegion;
-  customers: TUser[];
+  executors: TUser[];
   createdAt: Date;
   updatedAt: Date;
 };
 
-export default TPartnerRequest;
+export default TOrder;

@@ -1,9 +1,9 @@
-import MyPartnerRequests from "./_components/MyPartnerRequests";
+import MyRequests from "./_components/MyRequests";
 
-import TPartnerRequest from "@/app/_types/PartnerRequest";
+import TRequest from "@/app/_types/Request";
 
-export default function MyPartnerRequestsPage() {
-  const partnerRequests: TPartnerRequest[] = [
+export default function MyRequestsPage() {
+  const requests: TRequest[] = [
     {
       id: 1,
       userId: 1,
@@ -39,5 +39,5 @@ export default function MyPartnerRequestsPage() {
     },
   ];
 
-  return <MyPartnerRequests partnerRequests={partnerRequests} />;
+  return <MyRequests requests={requests} />;
 }

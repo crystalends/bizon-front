@@ -6,9 +6,9 @@ export default function PaperPlaneIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="32"
       height="32"
       viewBox="0 0 32 32"
+      width="32"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -21,10 +21,10 @@ export default function PaperPlaneIcon({
       <defs>
         <clipPath id="clip0_207_14040">
           <rect
-            width="24.5508"
-            height="25.6758"
             fill="white"
+            height="25.6758"
             transform="translate(4 3)"
+            width="24.5508"
           />
         </clipPath>
       </defs>

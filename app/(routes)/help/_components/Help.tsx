@@ -11,6 +11,7 @@ import {
   Breadcrumbs,
 } from "@heroui/breadcrumbs";
 import { Image } from "@heroui/image";
+
 import FeatureCardBody, {
   TFeatureCardBodyProps,
 } from "@/app/_components/FeatureCardBody";
@@ -99,10 +100,10 @@ export default function Help() {
             <Accordion className="break-all">
               {accordionItems.map(({ key, ...item }) => (
                 <AccordionItem
+                  key={key}
                   classNames={{
                     title: "text-lg xl:text-2xl font-medium",
                   }}
-                  key={key}
                   {...item}
                 />
               ))}

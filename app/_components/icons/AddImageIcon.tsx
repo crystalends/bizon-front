@@ -6,9 +6,9 @@ export default function AddImageIcon({
 }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="35"
       height="32"
       viewBox="0 0 35 32"
+      width="35"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -33,10 +33,10 @@ export default function AddImageIcon({
       <defs>
         <clipPath id="clip0_207_14038">
           <rect
-            width="34.2539"
-            height="29.2148"
             fill="white"
+            height="29.2148"
             transform="translate(0 1)"
+            width="34.2539"
           />
         </clipPath>
       </defs>

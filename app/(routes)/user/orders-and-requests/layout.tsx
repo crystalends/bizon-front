@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
-import Partners from "./_components/Partners";
+import RequestsAndOrders from "./_components/RequestsAndOrders";
 
 type TPartnersLayoutProps = {
   children: ReactNode;
 };
 
 export default function PartnersLayout({ children }: TPartnersLayoutProps) {
-  return <Partners>{children}</Partners>;
+  return <RequestsAndOrders>{children}</RequestsAndOrders>;
 }

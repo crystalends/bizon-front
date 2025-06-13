@@ -70,7 +70,7 @@ export default function CompanyLayout({ children }: TCompanyLayoutProps) {
   const products: TProduct[] = [{ id: 1, name: "Lorem ipsum" }];
 
   return (
-    <Company company={company} regions={regions} products={products}>
+    <Company company={company} products={products} regions={regions}>
       {children}
     </Company>
   );

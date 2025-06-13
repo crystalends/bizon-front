@@ -1,6 +1,7 @@
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { Image, ImageProps } from "@heroui/image";
 import clsx from "clsx";
+
 import VerifiedBadgeIcon from "../icons/VerifiedBadgeIcon";
 
 type TCompanyGridItemProps = {

@@ -1,10 +1,11 @@
 "use client";
 
+import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
+import { Image } from "@heroui/image";
+
 import Container from "@/app/_components/shared/Container";
 import Breadcrumbs from "@/app/_components/ui/Breadcrumbs";
 import TArticle from "@/app/_types/Article";
-import { BreadcrumbItem, BreadcrumbItemProps } from "@heroui/breadcrumbs";
-import { Image } from "@heroui/image";
 
 type TArticleProps = {
   article: TArticle;

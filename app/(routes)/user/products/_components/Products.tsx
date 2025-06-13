@@ -22,13 +22,13 @@ export default function Products({ products }: TProductsProps) {
             imageProps={{
               src: image,
             }}
+            name={name}
+            price={price}
             topRightContent={
-              <Button variant="light" isIconOnly>
+              <Button isIconOnly variant="light">
                 <CloseIcon />
               </Button>
             }
-            name={name}
-            price={price}
           />
         ))}
       </div>

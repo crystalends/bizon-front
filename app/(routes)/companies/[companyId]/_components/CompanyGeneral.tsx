@@ -1,5 +1,6 @@
 import { Image } from "@heroui/image";
 import { Card, CardBody } from "@heroui/card";
+
 import TCompany from "@/app/_types/Company";
 import CategoryChips from "@/app/_components/CategoryChips";
 import RegionChips from "@/app/_components/RegionChips";

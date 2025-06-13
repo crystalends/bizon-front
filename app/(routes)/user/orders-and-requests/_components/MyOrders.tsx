@@ -1,20 +1,20 @@
 import { format } from "date-fns";
-import InfoCard from "@/app/_components/shared/InfoCard";
-import Link from "@/app/_components/ui/Link";
-import TPartnerOrder from "@/app/_types/PartnerOrder";
+
 import Actions from "./Actions";
 
-type TMyPartnerOrdersProps = { partnerOrders: TPartnerOrder[] };
+import InfoListItem from "@/app/_components/shared/InfoListItem";
+import Link from "@/app/_components/ui/Link";
+import TOrder from "@/app/_types/Order";
 
-export default function MyPartnerOrders({
-  partnerOrders,
-}: TMyPartnerOrdersProps) {
+type TMyOrdersProps = { orders: TOrder[] };
+
+export default function MyOrders({ orders }: TMyOrdersProps) {
   return (
     <div className="flex flex-col gap-5">
-      {partnerOrders.map(({ id, product, user, createdAt }) => (
-        <InfoCard
+      {orders.map(({ id, product, user, createdAt }) => (
+        <InfoListItem
           key={id}
-          title={product}
+          bottom={`Опубликовано: ${format(createdAt, "dd.MM.yyyy")}`}
           description={`Компания: ${user?.company?.name}`}
           middleContent={
             user?.companyId && (
@@ -27,8 +27,8 @@ export default function MyPartnerOrders({
               </Link>
             )
           }
-          bottom={`Опубликовано: ${format(createdAt, "dd.MM.yyyy")}`}
           rightContent={<Actions className="xl:max-w-[355px]" />}
+          title={product}
         />
       ))}
     </div>

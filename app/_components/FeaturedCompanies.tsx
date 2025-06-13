@@ -1,6 +1,8 @@
 import { Link } from "@heroui/link";
 import { ScrollShadow } from "@heroui/scroll-shadow";
+
 import TCompany from "../_types/Company";
+
 import FeaturedCompany from "./shared/FeaturedCompany";
 import Button from "./ui/Button";
 import Container from "./shared/Container";
@@ -23,7 +25,7 @@ export default function FeaturedCompanies({ companies }: TFeaturedCompanies) {
                 className="w-[440px] xl:w-[506px]"
                 description={description}
                 endContent={
-                  <Button className="w-fit" as={Link} href={`/companies/${id}`}>
+                  <Button as={Link} className="w-fit" href={`/companies/${id}`}>
                     Перейти
                   </Button>
                 }

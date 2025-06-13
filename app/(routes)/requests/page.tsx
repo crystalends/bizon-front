@@ -1,9 +1,8 @@
+import Requests from "./_components/Requests";
 import TRegion from "@/app/_types/Region";
-import PartnerRequests from "./_components/PartnerRequests";
+import TRequest from "@/app/_types/Request";
 
-import TPartnerRequest from "@/app/_types/PartnerRequest";
-
-export default function PartnerRequestsPage() {
+export default function RequestsPage() {
   const regions: TRegion[] = [
     {
       id: 1,
@@ -15,7 +14,7 @@ export default function PartnerRequestsPage() {
     },
   ];
 
-  const partnerRequests: TPartnerRequest[] = [
+  const requests: TRequest[] = [
     {
       id: 1,
       userId: 1,
@@ -51,7 +50,5 @@ export default function PartnerRequestsPage() {
     },
   ];
 
-  return (
-    <PartnerRequests partnerRequests={partnerRequests} regions={regions} />
-  );
+  return <Requests regions={regions} requests={requests} />;
 }

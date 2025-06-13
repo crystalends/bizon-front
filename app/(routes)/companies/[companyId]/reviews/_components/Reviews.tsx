@@ -53,8 +53,8 @@ export default function Reviews({
                   <div className="flex flex-col gap-1">
                     <StarsRating
                       readOnly
-                      value={rating}
                       aria-label="Оценки пользователей"
+                      value={rating}
                     />
                     <p>
                       На основании {reviewsCount}{" "}
@@ -76,14 +76,14 @@ export default function Reviews({
                     <div key={star} className="flex w-full items-center gap-4">
                       <StarsRating
                         readOnly
-                        value={star}
                         aria-label="Отображение звезд рейтинга"
+                        value={star}
                       />
                       <Progress
+                        aria-label="Проценное соотношение оценок"
                         className="max-w-[590]"
                         size="sm"
                         value={percentage}
-                        aria-label="Проценное соотношение оценок"
                       />
                       <span className="text-xl xl:text-2xl">{stats[star]}</span>
                     </div>
@@ -143,7 +143,7 @@ export default function Reviews({
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-3">
                     <h2 className="font-semibold text-2xl">Поставьте оценку</h2>
-                    <StarsRating value={5} aria-label="Поставьте оценку" />
+                    <StarsRating aria-label="Поставьте оценку" value={5} />
                   </div>
                   <div className="flex flex-col gap-3">
                     <h2 className="font-semibold text-2xl">

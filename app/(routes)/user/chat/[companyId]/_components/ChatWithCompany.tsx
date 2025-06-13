@@ -1,10 +1,11 @@
+import { Divider } from "@heroui/divider";
+import { Input } from "@heroui/input";
+import { ReactNode } from "react";
+
 import AddImageIcon from "@/app/_components/icons/AddImageIcon";
 import PaperPlaneIcon from "@/app/_components/icons/PaperPlaneIcon";
 import Button from "@/app/_components/ui/Button";
 import TChatMessage from "@/app/_types/ChatMessage";
-import { Divider } from "@heroui/divider";
-import { Input } from "@heroui/input";
-import { ReactNode } from "react";
 
 type TChatMessagesProps = {
   chatCompanySlot: ReactNode;
@@ -19,21 +20,21 @@ export default function ChatMessages({
     <div className="flex flex-col shadow-md rounded-lg w-full overflow-hidden">
       {chatCompanySlot}
       <Divider />
-      <div className="flex-1 overflow-y-auto px-4 py-2"></div>
+      <div className="flex-1 overflow-y-auto px-4 py-2" />
       <Divider />
       <div className="flex items-center px-4 py-2 gap-3">
-        <Button variant="light" isIconOnly>
+        <Button isIconOnly variant="light">
           <AddImageIcon />
         </Button>
         <Input
+          fullWidth
           classNames={{
             inputWrapper: "!bg-transparent shadow-none",
             base: "!bg-transparent shadow-none",
           }}
           placeholder="Напишите сообщение"
-          fullWidth
         />
-        <Button variant="light" isIconOnly>
+        <Button isIconOnly variant="light">
           <PaperPlaneIcon />
         </Button>
       </div>
